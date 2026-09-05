@@ -1,3 +1,6 @@
 [submodule "fprime-billee-rcm"]
 	path = fprime-billee-rcm
 	url = https://github.com/LucaLanzi/fprime-billee-rcm.git
+[submodule "arduino-billee-scm"]
+	path = arduino-billee-scm
+	url = https://github.com/LucaLanzi/arduino-billee-scm.git

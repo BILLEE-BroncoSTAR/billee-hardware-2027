@@ -52,13 +52,21 @@ if pkill -f -- "--user-data-dir=$PROFILE_DIR" 2>/dev/null; then
 fi
 rm -f "$PROFILE_DIR"/Singleton{Lock,Socket,Cookie}
 
+# When a caller (start-remote-kiosk.sh) pins an explicit window size, honour it
+# and place the window at the top-left so the fluxbox toolbar/menu below it stay
+# reachable over VNC. Otherwise fall back to the old maximized behaviour for
+# standalone desktop use.
+if [ -n "${WINDOW_SIZE:-}" ]; then
+  window_flags=(--window-position=0,0 --window-size="$WINDOW_SIZE")
+else
+  window_flags=(--start-maximized)
+fi
+
 exec "$CHROMIUM_BIN" \
   --user-data-dir="$PROFILE_DIR" \
   --app="$APP_URL" \
-  --start-maximized \
   --disable-gpu \
   --disable-software-rasterizer \
   --ozone-platform=x11 \
-  --window-position=0,0 \
-  ${WINDOW_SIZE:+--window-size="$WINDOW_SIZE"} \
+  "${window_flags[@]}" \
   "$@"

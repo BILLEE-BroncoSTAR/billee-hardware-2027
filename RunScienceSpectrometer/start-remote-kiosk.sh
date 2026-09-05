@@ -6,8 +6,8 @@
 # One-time install: sudo apt install -y xvfb x11vnc fluxbox
 set -euo pipefail
 
-RESOLUTION="1600x900x24"
-WINDOW_SIZE="1600,900"
+RESOLUTION="640x480x24"
+WINDOW_SIZE="640,430"
 VNC_PORT="5900"
 VNC_PASSWD_FILE="${HOME}/.vnc/spectral-analysis.passwd"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

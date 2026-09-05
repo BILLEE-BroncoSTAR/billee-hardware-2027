@@ -80,9 +80,29 @@ if [ "$EUID" -eq 0 ]; then
 
   echo "Installing required packages..."
   apt-get update
-  apt-get install -y chromium-browser bluez xvfb x11vnc fluxbox util-linux curl
+  apt-get install -y chromium-browser bluez blueman dbus-x11 \
+    xvfb x11vnc fluxbox util-linux curl
 
   systemctl enable --now bluetooth
+
+  # The remote kiosk runs a bare Xvfb + fluxbox session with no login manager
+  # and no interactive polkit agent, so blueman's adapter/pairing actions have
+  # nothing to authenticate against. Put the user in the 'bluetooth' group and
+  # add a polkit rule letting that group manage BlueZ/blueman unprompted.
+  echo "Granting '${SUDO_USER}' GUI Bluetooth control..."
+  usermod -aG bluetooth "$SUDO_USER"
+  install -d -m 755 /etc/polkit-1/rules.d
+  cat > /etc/polkit-1/rules.d/51-blueman.rules <<'EOF'
+// Installed by jetson_install_me.sh for the headless Spectral Analysis kiosk.
+// Members of the 'bluetooth' group may manage BlueZ/blueman without a prompt.
+polkit.addRule(function(action, subject) {
+    if ((action.id.indexOf("org.blueman") === 0 ||
+         action.id.indexOf("org.bluez") === 0) &&
+        subject.isInGroup("bluetooth")) {
+        return polkit.Result.YES;
+    }
+});
+EOF
 
   echo "Caching the app as ${SUDO_USER}..."
   exec runuser -u "$SUDO_USER" -- "$SCRIPT_PATH" --cache-only
@@ -95,6 +115,10 @@ if [ "${1:-}" = "--cache-only" ]; then
   echo "Done — Spectral Analysis is cached and can now run fully offline."
   echo "Launch it any time with:      ./launch-spectral-analysis.sh"
   echo "Or for remote/VNC access:     ./start-remote-kiosk.sh"
+  echo
+  echo "Note: you were added to the 'bluetooth' group — log out and back in"
+  echo "(or reboot) before running the kiosk so the Bluetooth widget can"
+  echo "control the adapter."
   exit 0
 fi
 

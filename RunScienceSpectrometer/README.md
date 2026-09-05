@@ -91,13 +91,22 @@ Bluetooth-capable browser. Since this Jetson has no monitor, use a virtual
 display + VNC instead:
 
 ```bash
-sudo apt install -y xvfb x11vnc fluxbox
+sudo apt install -y xvfb x11vnc fluxbox blueman dbus-x11
 ./start-remote-kiosk.sh
 ```
 
 First run asks you to set a VNC password, then it prints the Jetson's IP.
 From another machine on the same network, connect to it with a VNC viewer at
 `<jetson-ip>:5900`.
+
+The kiosk also starts **blueman-applet**, a Bluetooth tray widget that docks
+into the fluxbox toolbar (the strip along the bottom of the VNC screen). Click
+it to scan, pair, connect, or toggle the adapter with a GUI. For it to control
+the adapter (not just view it), your user must be in the `bluetooth` group and
+the polkit rule at `/etc/polkit-1/rules.d/51-blueman.rules` must be present —
+`jetson_install_me.sh` sets both up; log out/in once after that first install
+so the group membership takes effect. If `blueman`/`dbus-x11` aren't installed
+the kiosk just skips the widget and runs the spectrometer as before.
 
 The viewing machine needs an **x86 Linux-compatible VNC viewer** — on that
 machine (not the Jetson), run:
@@ -108,7 +117,8 @@ vncviewer <jetson-ip>:5900
 ```
 
 Ctrl-C in the terminal running the script shuts down the virtual display,
-Chromium, and the VNC server together.
+Chromium, the VNC server, and the Bluetooth widget / its D-Bus session
+together.
 
 ## Troubleshooting
 
@@ -120,6 +130,14 @@ Chromium, and the VNC server together.
   `chrome://serviceworker-internals` for its registration status.
 - **Web Bluetooth option missing entirely** — update Chromium; very old
   builds may need `chrome://flags/#enable-web-bluetooth` enabled manually.
+- **Bluetooth widget icon isn't in the toolbar** — the kiosk prints a `Note:`
+  line at startup if `blueman-applet`/`dbus-launch` are missing; install
+  `blueman dbus-x11`. If it's installed but the icon never appears, the
+  fluxbox toolbar's `systemtray` may be disabled in `~/.fluxbox/init` — remove
+  that override or delete `~/.fluxbox` to fall back to defaults.
+- **Widget opens but "Not authorized" / can't toggle the adapter** — you're
+  not in the `bluetooth` group yet (log out/in after `jetson_install_me.sh`),
+  or `/etc/polkit-1/rules.d/51-blueman.rules` is missing; re-run the installer.
 - **`Failed to create ... SingletonLock: Permission denied`** — on Ubuntu,
   `chromium-browser` is usually the **snap** build, and its AppArmor
   confinement blocks writing a profile under `~/.config`. Check with

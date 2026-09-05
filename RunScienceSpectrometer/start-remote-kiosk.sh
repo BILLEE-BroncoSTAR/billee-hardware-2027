@@ -3,7 +3,7 @@
 # shares that display over VNC, so it can be viewed/controlled from another
 # machine on the same network with any VNC viewer.
 #
-# One-time install: sudo apt install -y xvfb x11vnc fluxbox
+# One-time install: sudo apt install -y xvfb x11vnc fluxbox blueman dbus-x11
 set -euo pipefail
 
 RESOLUTION="640x480x24"
@@ -16,6 +16,16 @@ for bin in Xvfb x11vnc fluxbox setsid; do
   command -v "$bin" >/dev/null 2>&1 || {
     echo "Missing '$bin'. Install with: sudo apt install -y xvfb x11vnc fluxbox util-linux" >&2
     exit 1
+  }
+done
+
+# Optional: the Bluetooth tray widget. Missing pieces just disable it — the
+# spectrometer kiosk still works without them. Run jetson_install_me.sh to add.
+BT_WIDGET=1
+for bin in blueman-applet dbus-launch; do
+  command -v "$bin" >/dev/null 2>&1 || {
+    echo "Note: '$bin' not found — skipping the Bluetooth widget." >&2
+    BT_WIDGET=0
   }
 done
 
@@ -58,7 +68,8 @@ cleanup() {
   fi
 
   echo "Tearing down virtual display and VNC..."
-  kill "${X11VNC_PID:-}" "${FLUXBOX_PID:-}" "${XVFB_PID:-}" 2>/dev/null || true
+  kill "${X11VNC_PID:-}" "${BLUEMAN_PID:-}" "${FLUXBOX_PID:-}" "${XVFB_PID:-}" 2>/dev/null || true
+  [ -n "${DBUS_SESSION_BUS_PID:-}" ] && kill "$DBUS_SESSION_BUS_PID" 2>/dev/null || true
 }
 trap cleanup EXIT INT TERM
 
@@ -87,6 +98,20 @@ export DISPLAY="$DISPLAY_NUM"
 export WINDOW_SIZE
 echo "Using X display ${DISPLAY_NUM}"
 
+# blueman-applet (the Bluetooth tray widget) needs a D-Bus *session* bus, which
+# a bare Xvfb + fluxbox session doesn't have. Start one scoped to this run and
+# tear it down in cleanup(). Also silences a batch of Chromium/GTK D-Bus noise.
+if [ "$BT_WIDGET" = 1 ]; then
+  if dbus_env="$(dbus-launch --sh-syntax)"; then
+    eval "$dbus_env"
+    export DBUS_SESSION_BUS_ADDRESS
+    echo "D-Bus session bus up (pid ${DBUS_SESSION_BUS_PID:-?})"
+  else
+    echo "Warning: dbus-launch failed — disabling the Bluetooth widget." >&2
+    BT_WIDGET=0
+  fi
+fi
+
 setsid fluxbox &
 FLUXBOX_PID=$!
 
@@ -96,6 +121,16 @@ X11VNC_PID=$!
 
 echo "VNC ready on port ${VNC_PORT}."
 echo "From another machine on the same network, connect a VNC viewer to: $(hostname -I | awk '{print $1}'):${VNC_PORT}"
+
+# Bluetooth tray widget — docks into the fluxbox toolbar's system tray (the
+# strip along the bottom). Click it to scan / pair / connect / toggle the
+# adapter. fluxbox needs a moment to bring its tray up first so the icon docks.
+if [ "$BT_WIDGET" = 1 ]; then
+  sleep 1
+  setsid blueman-applet >/dev/null 2>&1 &
+  BLUEMAN_PID=$!
+  echo "Bluetooth widget started — look for its icon in the toolbar tray."
+fi
 
 setsid bash "$LAUNCH_SCRIPT" &
 CHROME_PID=$!

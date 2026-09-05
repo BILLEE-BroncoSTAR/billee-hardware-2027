@@ -134,4 +134,16 @@ fi
 
 setsid bash "$LAUNCH_SCRIPT" &
 CHROME_PID=$!
-wait "$CHROME_PID"
+chrome_started_at=$SECONDS
+wait "$CHROME_PID" || true
+
+# A near-instant exit almost always means Chromium forwarded its URL to an
+# orphaned instance still holding the profile (from a killed run or a crashed
+# install pass) and quit, rather than opening a window here.
+if (( SECONDS - chrome_started_at < 5 )); then
+  echo >&2
+  echo "Chromium exited immediately — most likely an orphaned Chromium is still" >&2
+  echo "holding the profile. Clear it and retry:" >&2
+  echo "  pkill -9 -f spectral-analysis-app; pkill -x Xvfb" >&2
+  echo "  rm -f ~/snap/chromium/common/spectral-analysis-app/Singleton{Lock,Socket,Cookie}" >&2
+fi

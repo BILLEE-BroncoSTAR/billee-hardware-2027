@@ -46,9 +46,22 @@ mkdir -p "$PROFILE_DIR"
 # If a previous run (e.g. an interrupted install-me.sh caching pass) left a
 # Chromium process still holding this profile, a new launch just silently
 # forwards the URL to that orphaned instance and exits immediately instead
-# of opening a real window on the current display. Clear it out first.
-if pkill -f -- "--user-data-dir=$PROFILE_DIR" 2>/dev/null; then
-  sleep 1
+# of opening a real window on the current display. Kill it and *wait for it
+# to actually die* before clearing the singleton files — snap Chromium can
+# take several seconds to exit, and if it's still alive it just recreates
+# them and the forward-and-exit happens anyway.
+profile_procs() { pgrep -f -- "--user-data-dir=$PROFILE_DIR" >/dev/null 2>&1; }
+if profile_procs; then
+  echo "Stopping an earlier Chromium still holding this profile..." >&2
+  pkill -f -- "--user-data-dir=$PROFILE_DIR" 2>/dev/null || true
+  for _ in $(seq 1 20); do
+    profile_procs || break
+    sleep 0.5
+  done
+  if profile_procs; then
+    pkill -9 -f -- "--user-data-dir=$PROFILE_DIR" 2>/dev/null || true
+    sleep 1
+  fi
 fi
 rm -f "$PROFILE_DIR"/Singleton{Lock,Socket,Cookie}
 

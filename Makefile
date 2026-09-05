@@ -4,6 +4,7 @@
 #   make rover      # sync this repo (lucadev) + every submodule, recursively
 #   make science host    # install the spectrometer VNC viewer on your laptop
 #   make science rover   # install the spectrometer stack on the Jetson
+#   make science run     # start the remote VNC kiosk on the Jetson
 
 BRANCH      ?= lucadev
 SCIENCE_DIR := RunScienceSpectrometer
@@ -39,13 +40,15 @@ help: ## Show this list of targets
 	@echo
 	@echo "  science host    Install the spectrometer VNC viewer (your laptop)"
 	@echo "  science rover   Install the spectrometer stack on the Jetson"
+	@echo "  science run     Start the remote VNC kiosk on the Jetson"
 
-science: ## Run a spectrometer installer: 'make science host' or 'make science rover'
+science: ## Spectrometer module: 'make science host|rover' to install, 'make science run' to start the kiosk
 	@case "$(SCIENCE_ARGS)" in \
 	  host)  sudo bash $(SCIENCE_DIR)/host_install_me.sh ;; \
 	  rover) sudo bash $(SCIENCE_DIR)/jetson_install_me.sh ;; \
-	  "")    echo "usage: make science host   |   make science rover"; exit 2 ;; \
-	  *)     echo "unknown science target '$(SCIENCE_ARGS)' — want: host | rover"; exit 2 ;; \
+	  run)   exec bash $(SCIENCE_DIR)/start-remote-kiosk.sh ;; \
+	  "")    echo "usage: make science host | make science rover | make science run"; exit 2 ;; \
+	  *)     echo "unknown science target '$(SCIENCE_ARGS)' — want: host | rover | run"; exit 2 ;; \
 	esac
 
 banner:

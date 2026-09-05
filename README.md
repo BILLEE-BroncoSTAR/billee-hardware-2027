@@ -154,6 +154,9 @@ billee-hardware-2027/
    ```
    git clone --recurse-submodules https://github.com/BroncoSpace-BILLEE/billee-hardware-2027.git
    ```
+   Already cloned, or need to resync after a branch change? Run `make rover` from
+   the repo root — it checks out `lucadev`, pulls, and updates every submodule
+   recursively. `make help` lists all targets.
 2. Open `BILLEE_Rover_Control_Module_V1/BILLEE_Rover_Control_Module_V1.kicad_pro` in KiCad. The custom library footprints under `lib/` are wired up via the project's `fp-lib-table`/`sym-lib-table` — no extra setup needed.
 3. To order the board: everything JLCPCB needs is pre-generated in `BILLEE_Rover_Control_Module_V1/jlcpcb/production_files/` — `BOM-*.csv`, `CPL-*.csv`, and `GERBER-*.zip`. If you change the design, regenerate these (via the KiCad JLCPCB/Fabrication-Toolkit plugin) before ordering — the production files are a separate export step from the schematic/PCB and don't update automatically.
 4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule.

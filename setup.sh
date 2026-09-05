@@ -1,5 +1,5 @@
 #!/bin/bash
-git checkout lucadev || git submodule update --init --recursive
+git checkout lucadev | git submodule update --init --recursive
 echo "All repositories pulled and up to date"
 echo ""
 echo "██████╗ ██╗██╗     ██╗     ███████╗███████╗    ██╗  ██╗██╗    ██╗"

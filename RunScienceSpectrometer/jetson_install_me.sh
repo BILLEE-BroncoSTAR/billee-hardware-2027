@@ -66,6 +66,13 @@ cache_app() {
 
   echo "Letting the service worker finish caching everything for offline use..."
   sleep 15
+
+  # Tear down Chromium + Xvfb now, while chrome_pid / xvfb_pid are still in
+  # scope, then disarm the trap. Otherwise it fires again at the script's
+  # `exit 0` below — after cache_app has returned and those locals are gone —
+  # and `set -u` turns it into a fatal "unbound variable".
+  trap - EXIT
+  cleanup
 }
 
 # Root pass: install packages, then re-run this same script as the real user

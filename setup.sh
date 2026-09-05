@@ -9,6 +9,6 @@ echo "██╔══██╗██║██║     ██║     ██╔═�
 echo "██████╔╝██║███████╗███████╗███████╗███████╗    ██║  ██║╚███╔███╔╝"
 echo "╚═════╝ ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝    ╚═╝  ╚═╝ ╚══╝╚══╝ "
 echo "                                                                "
-echo "    Rover Control Module  ·  Science Control Module"
+echo "          Rover Control Module  ·  Science Control Module"
 echo "Powered by ROS2 Humble and F\` Flight Software (NASA/JPL)"
 echo ""         

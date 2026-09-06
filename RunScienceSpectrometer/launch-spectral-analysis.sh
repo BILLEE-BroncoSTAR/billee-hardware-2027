@@ -5,33 +5,56 @@
 set -euo pipefail
 
 APP_URL="https://spectralanalysis.app/"
+FLATPAK_APP="org.chromium.Chromium"
 
-find_chromium() {
+# flatpak (and Chromium's own profile handling) want XDG_RUNTIME_DIR; it isn't
+# set under `runuser` or a bare cron/ssh context.
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+
+# Pick the browser:
+#   CHROMIUM_CMD=...  caller override (space-separated), wins outright
+#   else Flatpak org.chromium.Chromium if installed — the supported path on the
+#        Jetson; Ubuntu's "chromium-browser" is the broken snap wrapper
+#   else a native chromium/chrome on PATH
+browser_kind="native"
+native_bin=""
+if [ -n "${CHROMIUM_CMD:-}" ]; then
+  browser_kind="custom"
+elif command -v flatpak >/dev/null 2>&1 && \
+     flatpak info "$FLATPAK_APP" >/dev/null 2>&1; then
+  browser_kind="flatpak"
+else
   for bin in chromium-browser chromium google-chrome-stable google-chrome; do
     if command -v "$bin" >/dev/null 2>&1; then
-      echo "$bin"
-      return 0
+      native_bin="$bin"
+      break
     fi
   done
-  return 1
-}
+  if [ -z "$native_bin" ]; then
+    echo "Error: no browser found — install Flatpak Chromium with:" >&2
+    echo "  flatpak install -y flathub $FLATPAK_APP" >&2
+    echo "(or run jetson_install_me.sh, which does this for you)." >&2
+    exit 1
+  fi
+fi
 
-CHROMIUM_BIN="$(find_chromium)" || {
-  echo "Error: no Chromium/Chrome binary found on PATH." >&2
-  echo "Install one with: sudo apt install chromium-browser" >&2
-  exit 1
-}
-
-# The snap build of Chromium is AppArmor-confined to its own ~/snap/chromium
-# tree; a --user-data-dir under ~/.config gets denied when it tries to create
-# the SingletonLock symlink, no matter the file ownership. Use the snap's
-# writable "common" area when the snap package is installed, otherwise fall
-# back to a normal ~/.config profile for non-snap Chromium/Chrome builds.
-if snap list chromium >/dev/null 2>&1; then
+# Dedicated profile so the installed PWA / service-worker cache persists between
+# runs. The snap build has its own AppArmor-confined area; everything else
+# (including the flatpak, via an explicit --filesystem grant below) uses the
+# usual ~/.config path.
+if [ "$browser_kind" = native ] && command -v snap >/dev/null 2>&1 && \
+   snap list chromium >/dev/null 2>&1; then
   PROFILE_DIR="${HOME}/snap/chromium/common/spectral-analysis-app"
 else
   PROFILE_DIR="${HOME}/.config/spectral-analysis-app"
 fi
+
+# Build the launch command as an array (flatpak needs several words).
+case "$browser_kind" in
+  custom)  read -r -a chromium_cmd <<<"$CHROMIUM_CMD" ;;
+  flatpak) chromium_cmd=(flatpak run "--filesystem=${PROFILE_DIR}" "$FLATPAK_APP") ;;
+  native)  chromium_cmd=("$native_bin") ;;
+esac
 
 if command -v bluetoothctl >/dev/null 2>&1; then
   if ! bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
@@ -75,7 +98,7 @@ else
   window_flags=(--start-maximized)
 fi
 
-exec "$CHROMIUM_BIN" \
+exec "${chromium_cmd[@]}" \
   --user-data-dir="$PROFILE_DIR" \
   --app="$APP_URL" \
   --disable-gpu \

@@ -7,6 +7,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SCRIPT_PATH="$SCRIPT_DIR/$(basename "${BASH_SOURCE[0]}")"
 LAUNCH_SCRIPT="$SCRIPT_DIR/launch-spectral-analysis.sh"
+FLATPAK_APP="org.chromium.Chromium"  # must match launch-spectral-analysis.sh
 
 cache_app() {
   [ -f "$LAUNCH_SCRIPT" ] || {
@@ -87,10 +88,20 @@ if [ "$EUID" -eq 0 ]; then
 
   echo "Installing required packages..."
   apt-get update
-  apt-get install -y chromium-browser bluez blueman dbus-x11 \
+  # No chromium-browser: on noble that package is the snap wrapper, and snap
+  # Chromium won't launch from the headless kiosk session. Use Flatpak instead.
+  apt-get install -y flatpak bluez blueman dbus-x11 \
     xvfb x11vnc fluxbox util-linux curl
 
   systemctl enable --now bluetooth
+
+  echo "Installing Flatpak Chromium (${FLATPAK_APP})..."
+  flatpak remote-add --if-not-exists flathub \
+    https://flathub.org/repo/flathub.flatpakrepo
+  flatpak install -y --noninteractive flathub "$FLATPAK_APP"
+  # Let the sandboxed browser reach BlueZ (Web Bluetooth) and USB devices.
+  flatpak override --system --device=all \
+    --system-talk-name=org.bluez "$FLATPAK_APP"
 
   # The remote kiosk runs a bare Xvfb + fluxbox session with no login manager
   # and no interactive polkit agent, so blueman's adapter/pairing actions have
@@ -111,6 +122,11 @@ polkit.addRule(function(action, subject) {
 });
 EOF
 
+  # Keep a systemd --user instance (and the per-user D-Bus bus at
+  # /run/user/UID/bus) running even with nobody logged in graphically, so the
+  # kiosk's blueman has a real session bus over SSH.
+  loginctl enable-linger "$SUDO_USER"
+
   echo "Caching the app as ${SUDO_USER}..."
   exec runuser -u "$SUDO_USER" -- "$SCRIPT_PATH" --cache-only
 fi
@@ -123,9 +139,10 @@ if [ "${1:-}" = "--cache-only" ]; then
   echo "Launch it any time with:      ./launch-spectral-analysis.sh"
   echo "Or for remote/VNC access:     ./start-remote-kiosk.sh"
   echo
-  echo "Note: you were added to the 'bluetooth' group — log out and back in"
-  echo "(or reboot) before running the kiosk so the Bluetooth widget can"
-  echo "control the adapter."
+  echo "Note: you were added to the 'bluetooth' group and linger was enabled —"
+  echo "log out and back in (or reboot) before running the kiosk so both take"
+  echo "effect. The kiosk opens the spectrometer and a Bluetooth Devices window"
+  echo "and stays up until you Ctrl-C it, even if one of them has trouble."
   exit 0
 fi
 

@@ -3,32 +3,33 @@
 # shares that display over VNC, so it can be viewed/controlled from another
 # machine on the same network with any VNC viewer.
 #
-# One-time install: sudo apt install -y xvfb x11vnc fluxbox blueman dbus-x11
+# One-time setup: run ./jetson_install_me.sh  (installs xvfb x11vnc fluxbox
+# blueman dbus-x11 flatpak + Flatpak Chromium, and caches the app offline).
 set -euo pipefail
 
 RESOLUTION="640x480x24"
 WINDOW_SIZE="640,430"
 VNC_PORT="5900"
 APP_URL="https://spectralanalysis.app/"  # must match launch-spectral-analysis.sh
+FLATPAK_APP="org.chromium.Chromium"      # must match launch-spectral-analysis.sh
 VNC_PASSWD_FILE="${HOME}/.vnc/spectral-analysis.passwd"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 for bin in Xvfb x11vnc fluxbox setsid; do
   command -v "$bin" >/dev/null 2>&1 || {
-    echo "Missing '$bin'. Install with: sudo apt install -y xvfb x11vnc fluxbox util-linux" >&2
+    echo "Missing '$bin' — run ./jetson_install_me.sh first." >&2
     exit 1
   }
 done
 
-# Optional: the Bluetooth tray widget. Missing pieces just disable it — the
-# spectrometer kiosk still works without them. Run jetson_install_me.sh to add.
-BT_WIDGET=1
-for bin in blueman-applet dbus-launch; do
-  command -v "$bin" >/dev/null 2>&1 || {
-    echo "Note: '$bin' not found — skipping the Bluetooth widget." >&2
-    BT_WIDGET=0
-  }
-done
+# Bluetooth GUI is optional: if blueman isn't installed the spectrometer kiosk
+# still runs. Run jetson_install_me.sh to add it.
+BT_WIDGET=0
+if command -v blueman-applet >/dev/null 2>&1; then
+  BT_WIDGET=1
+else
+  echo "Note: blueman not found — skipping the Bluetooth GUI." >&2
+fi
 
 LAUNCH_SCRIPT="$SCRIPT_DIR/launch-spectral-analysis.sh"
 [ -f "$LAUNCH_SCRIPT" ] || {
@@ -55,7 +56,10 @@ wait_for_exit() {
   return 1
 }
 
+_cleaned=0
 cleanup() {
+  if [ "$_cleaned" = 1 ]; then return 0; fi
+  _cleaned=1
   echo "Shutting down..."
 
   if [ -n "${CHROME_PID:-}" ] && kill -0 "$CHROME_PID" 2>/dev/null; then
@@ -67,12 +71,17 @@ cleanup() {
       wait_for_exit "$CHROME_PID" 5 || true
     fi
   fi
+  # The flatpak'd browser may be reparented away from us; make sure it's gone.
+  pkill -f -- "--app=${APP_URL}" 2>/dev/null || true
+  command -v flatpak >/dev/null 2>&1 && flatpak kill "$FLATPAK_APP" 2>/dev/null || true
 
   echo "Tearing down virtual display and VNC..."
-  kill "${X11VNC_PID:-}" "${BLUEMAN_PID:-}" "${FLUXBOX_PID:-}" "${XVFB_PID:-}" 2>/dev/null || true
-  [ -n "${DBUS_SESSION_BUS_PID:-}" ] && kill "$DBUS_SESSION_BUS_PID" 2>/dev/null || true
+  kill "${X11VNC_PID:-}" "${BLUEMAN_PID:-}" "${BLUEMAN_MGR_PID:-}" \
+    "${FLUXBOX_PID:-}" "${XVFB_PID:-}" 2>/dev/null || true
+  [ -n "${PRIVATE_DBUS_PID:-}" ] && kill "$PRIVATE_DBUS_PID" 2>/dev/null || true
 }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'cleanup; exit 130' INT TERM
 
 # Each child runs in its own session (setsid) so Ctrl-C at the terminal only
 # signals this script, not Chromium/Xvfb/x11vnc directly — cleanup() above
@@ -99,17 +108,23 @@ export DISPLAY="$DISPLAY_NUM"
 export WINDOW_SIZE
 echo "Using X display ${DISPLAY_NUM}"
 
-# blueman-applet (the Bluetooth tray widget) needs a D-Bus *session* bus, which
-# a bare Xvfb + fluxbox session doesn't have. Start one scoped to this run and
-# tear it down in cleanup(). Also silences a batch of Chromium/GTK D-Bus noise.
-if [ "$BT_WIDGET" = 1 ]; then
+# blueman needs a D-Bus *session* bus. Prefer the real per-user bus (present
+# when `loginctl enable-linger` has been run — jetson_install_me.sh does that),
+# since that's also where systemd --user lives. Otherwise fall back to a
+# private bus for this run, torn down in cleanup().
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+if [ -S "${XDG_RUNTIME_DIR}/bus" ]; then
+  export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
+  echo "Using the per-user D-Bus session bus (${XDG_RUNTIME_DIR}/bus)."
+elif [ "$BT_WIDGET" = 1 ] && command -v dbus-launch >/dev/null 2>&1; then
   if dbus_env="$(dbus-launch --sh-syntax)"; then
     eval "$dbus_env"
     export DBUS_SESSION_BUS_ADDRESS
-    echo "D-Bus session bus up (pid ${DBUS_SESSION_BUS_PID:-?})"
+    PRIVATE_DBUS_PID="${DBUS_SESSION_BUS_PID:-}"
+    echo "Started a private D-Bus session bus (pid ${PRIVATE_DBUS_PID:-?})."
+    echo "Tip: 'sudo loginctl enable-linger \$USER' gives a persistent one." >&2
   else
-    echo "Warning: dbus-launch failed — disabling the Bluetooth widget." >&2
-    BT_WIDGET=0
+    echo "Warning: no session bus available — Bluetooth GUI may misbehave." >&2
   fi
 fi
 
@@ -123,41 +138,80 @@ X11VNC_PID=$!
 echo "VNC ready on port ${VNC_PORT}."
 echo "From another machine on the same network, connect a VNC viewer to: $(hostname -I | awk '{print $1}'):${VNC_PORT}"
 
-# Bluetooth tray widget — docks into the fluxbox toolbar's system tray (the
-# strip along the bottom). Click it to scan / pair / connect / toggle the
-# adapter. fluxbox needs a moment to bring its tray up first so the icon docks.
+# Bluetooth GUI: the applet docks in the fluxbox toolbar tray (adapter toggle,
+# notifications); the manager is the full "Bluetooth Devices" window for
+# scanning / pairing / removing. Both, so nothing has to be hunted for on a
+# 640x480 VNC. fluxbox needs a moment to bring its tray up first.
 if [ "$BT_WIDGET" = 1 ]; then
   sleep 1
   setsid blueman-applet >/dev/null 2>&1 &
   BLUEMAN_PID=$!
-  echo "Bluetooth widget started — look for its icon in the toolbar tray."
+  if command -v blueman-manager >/dev/null 2>&1; then
+    setsid blueman-manager >/dev/null 2>&1 &
+    BLUEMAN_MGR_PID=$!
+  fi
+  echo "Bluetooth GUI started (tray applet + Bluetooth Devices window)."
 fi
 
-setsid bash "$LAUNCH_SCRIPT" &
-CHROME_LAUNCHER=$!
-wait "$CHROME_LAUNCHER" || true
+# Is the spectrometer browser (the process carrying our --app= URL) running?
+browser_running() { pgrep -f -- "--app=${APP_URL}" >/dev/null 2>&1; }
 
-# The snap build of Chromium hands the real browser off to its own systemd
-# scope, so the launcher above returns within ~1s while Chromium keeps running
-# elsewhere. Waiting on the launcher would tear the display down under it —
-# instead find the actual browser process (the one carrying our --app= URL)
-# and block on that until it exits.
-CHROME_MATCH="--app=${APP_URL}"
+# Start the browser and wait up to ~15s for it to actually appear. Records the
+# main pid in CHROME_PID for cleanup()'s graceful close.
+launch_browser() {
+  echo "Launching the spectrometer..."
+  setsid bash "$LAUNCH_SCRIPT" &
+  for _ in $(seq 1 30); do
+    if browser_running; then
+      CHROME_PID="$(pgrep -f -- "--app=${APP_URL}" | head -1 || true)"
+      echo "Spectrometer window is up (pid ${CHROME_PID:-?})."
+      return 0
+    fi
+    sleep 0.5
+  done
+  return 1
+}
+
 CHROME_PID=""
-for _ in $(seq 1 30); do
-  CHROME_PID="$(pgrep -f -- "$CHROME_MATCH" | head -1 || true)"
-  [ -n "$CHROME_PID" ] && break
-  sleep 0.5
-done
+browser_warned=0
+browser_retried=0
+launch_browser || true
 
-if [ -n "$CHROME_PID" ]; then
-  echo "Chromium is up (pid ${CHROME_PID}). Ctrl-C here to stop the kiosk."
-  while kill -0 "$CHROME_PID" 2>/dev/null; do sleep 2; done
-  echo "Chromium exited."
-else
-  echo >&2
-  echo "Chromium never appeared on the virtual display. On snap Chromium over" >&2
-  echo "SSH this usually means snap can't place it in a user session — try:" >&2
-  echo "  sudo loginctl enable-linger \"\$USER\"    # then log out/in and retry" >&2
-  echo "If it still fails, install a non-snap Chromium (see README)." >&2
-fi
+echo
+echo "Kiosk is running. Press Ctrl-C here to stop everything."
+
+# Supervise until Ctrl-C. The session (VNC + Bluetooth GUI) stays up even if
+# the browser never starts or crashes — only Xvfb/x11vnc dying ends it.
+while true; do
+  sleep 5
+
+  if ! kill -0 "${XVFB_PID:-}" 2>/dev/null; then
+    echo "Xvfb died — ending the session." >&2
+    exit 1
+  fi
+  if ! kill -0 "${X11VNC_PID:-}" 2>/dev/null; then
+    echo "x11vnc died — ending the session." >&2
+    exit 1
+  fi
+
+  if browser_running; then
+    browser_warned=0
+    continue
+  fi
+
+  # Browser is not up.
+  if [ "$browser_retried" -eq 0 ]; then
+    echo "Spectrometer browser isn't running — retrying once..." >&2
+    browser_retried=1
+    launch_browser || true
+  elif [ "$browser_warned" -eq 0 ]; then
+    browser_warned=1
+    echo >&2
+    echo "Spectrometer browser still won't stay up. The VNC + Bluetooth GUI" >&2
+    echo "session is still running. To debug the browser, on the Jetson run:" >&2
+    echo "  flatpak run ${FLATPAK_APP} --version" >&2
+    echo "  flatpak run ${FLATPAK_APP} ${APP_URL}     # watch for the real error" >&2
+    echo "If Web Bluetooth can't see the adapter, re-run jetson_install_me.sh" >&2
+    echo "or: flatpak override --user --device=all --system-talk-name=org.bluez ${FLATPAK_APP}" >&2
+  fi
+done

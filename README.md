@@ -1,4 +1,4 @@
-# BILLEE HARDWARE 2027
+# BILLEE Hardware 2027
 ### By Luca Lanzillotta
 
 This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, F´/Zephyr firmware, Science Arduino firmware, and all supporting resources required to operate BILLEE for URC 2027.

@@ -9,6 +9,7 @@ set -euo pipefail
 RESOLUTION="640x480x24"
 WINDOW_SIZE="640,430"
 VNC_PORT="5900"
+APP_URL="https://spectralanalysis.app/"  # must match launch-spectral-analysis.sh
 VNC_PASSWD_FILE="${HOME}/.vnc/spectral-analysis.passwd"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -133,17 +134,30 @@ if [ "$BT_WIDGET" = 1 ]; then
 fi
 
 setsid bash "$LAUNCH_SCRIPT" &
-CHROME_PID=$!
-chrome_started_at=$SECONDS
-wait "$CHROME_PID" || true
+CHROME_LAUNCHER=$!
+wait "$CHROME_LAUNCHER" || true
 
-# A near-instant exit almost always means Chromium forwarded its URL to an
-# orphaned instance still holding the profile (from a killed run or a crashed
-# install pass) and quit, rather than opening a window here.
-if (( SECONDS - chrome_started_at < 5 )); then
+# The snap build of Chromium hands the real browser off to its own systemd
+# scope, so the launcher above returns within ~1s while Chromium keeps running
+# elsewhere. Waiting on the launcher would tear the display down under it —
+# instead find the actual browser process (the one carrying our --app= URL)
+# and block on that until it exits.
+CHROME_MATCH="--app=${APP_URL}"
+CHROME_PID=""
+for _ in $(seq 1 30); do
+  CHROME_PID="$(pgrep -f -- "$CHROME_MATCH" | head -1 || true)"
+  [ -n "$CHROME_PID" ] && break
+  sleep 0.5
+done
+
+if [ -n "$CHROME_PID" ]; then
+  echo "Chromium is up (pid ${CHROME_PID}). Ctrl-C here to stop the kiosk."
+  while kill -0 "$CHROME_PID" 2>/dev/null; do sleep 2; done
+  echo "Chromium exited."
+else
   echo >&2
-  echo "Chromium exited immediately — most likely an orphaned Chromium is still" >&2
-  echo "holding the profile. Clear it and retry:" >&2
-  echo "  pkill -9 -f spectral-analysis-app; pkill -x Xvfb" >&2
-  echo "  rm -f ~/snap/chromium/common/spectral-analysis-app/Singleton{Lock,Socket,Cookie}" >&2
+  echo "Chromium never appeared on the virtual display. On snap Chromium over" >&2
+  echo "SSH this usually means snap can't place it in a user session — try:" >&2
+  echo "  sudo loginctl enable-linger \"\$USER\"    # then log out/in and retry" >&2
+  echo "If it still fails, install a non-snap Chromium (see README)." >&2
 fi

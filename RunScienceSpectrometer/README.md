@@ -102,28 +102,12 @@ wrapper and snap Chromium won't launch from this headless session, so the
 kiosk uses the Flatpak build instead.
 
 ```bash
-./start-remote-kiosk.sh      # runs in the foreground; Ctrl-C stops it
+./start-remote-kiosk.sh      # or: make science run  (from the repo root)
 ```
 
 First run asks you to set a VNC password, then it prints the Jetson's IP.
 From another machine on the same network, connect to it with a VNC viewer at
 `<jetson-ip>:5900`.
-
-### Detached (so you can close the SSH session)
-
-From the repo root, `make science run` starts the kiosk inside a detached
-`screen` session (`billee-kiosk`) instead — it installs `screen` if missing,
-prompts once for the VNC password, then leaves the kiosk running when you log
-out:
-
-```bash
-make science run       # start detached
-make science attach    # re-attach to watch it   (Ctrl-A then D to detach)
-make science stop      # Ctrl-C the kiosk and close the screen session
-```
-
-This is a plain `screen` session, not a boot service — it does not restart the
-kiosk after a reboot or a crash.
 
 The kiosk opens two things on the virtual display:
 

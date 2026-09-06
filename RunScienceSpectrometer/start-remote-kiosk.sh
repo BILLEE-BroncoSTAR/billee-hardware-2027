@@ -37,6 +37,25 @@ LAUNCH_SCRIPT="$SCRIPT_DIR/launch-spectral-analysis.sh"
   exit 1
 }
 
+# A previous kiosk run that was killed hard (SSH drop, `screen` dying, SIGKILL)
+# leaves orphans behind: an x11vnc still bound to our port, a stray Xvfb,
+# fluxbox, blueman, the flatpak browser. The next run's x11vnc then can't bind
+# 5900 and the whole session collapses. Clear our own leftovers first — this is
+# a single-purpose appliance, nothing else here uses these.
+reap_orphans() {
+  local uid; uid="$(id -u)"
+  pkill -u "$uid" -f -- "--app=${APP_URL}" 2>/dev/null || true
+  command -v flatpak >/dev/null 2>&1 && flatpak kill "$FLATPAK_APP" 2>/dev/null || true
+  pkill -u "$uid" -x blueman-applet 2>/dev/null || true
+  pkill -u "$uid" -x blueman-manager 2>/dev/null || true
+  pkill -u "$uid" -f "x11vnc .*-rfbport ${VNC_PORT} " 2>/dev/null || true
+  pkill -u "$uid" -x fluxbox 2>/dev/null || true
+  pkill -u "$uid" -x Xvfb 2>/dev/null || true
+  sleep 1
+}
+echo "Clearing any leftovers from a previous run..."
+reap_orphans
+
 mkdir -p "$(dirname "$VNC_PASSWD_FILE")"
 if [ ! -f "$VNC_PASSWD_FILE" ]; then
   echo "No VNC password set yet — choose one now (first-time setup only):"
@@ -82,6 +101,7 @@ cleanup() {
 }
 trap cleanup EXIT
 trap 'cleanup; exit 130' INT TERM
+trap 'cleanup; exit 129' HUP
 
 # Each child runs in its own session (setsid) so Ctrl-C at the terminal only
 # signals this script, not Chromium/Xvfb/x11vnc directly — cleanup() above
@@ -131,9 +151,20 @@ fi
 setsid fluxbox &
 FLUXBOX_PID=$!
 
+VNC_LOG="${HOME}/.vnc/spectral-analysis.log"
 setsid x11vnc -display "$DISPLAY_NUM" -forever -shared -rfbport "$VNC_PORT" \
-  -rfbauth "$VNC_PASSWD_FILE" -o "${HOME}/.vnc/spectral-analysis.log" &
+  -rfbauth "$VNC_PASSWD_FILE" -o "$VNC_LOG" &
 X11VNC_PID=$!
+
+# Make sure x11vnc actually came up (bound the port, didn't crash on an X
+# extension) before telling the user it's ready.
+sleep 2
+if ! kill -0 "$X11VNC_PID" 2>/dev/null; then
+  echo "x11vnc failed to start. Last lines of ${VNC_LOG}:" >&2
+  tail -n 15 "$VNC_LOG" 2>/dev/null | sed 's/^/  /' >&2
+  echo "If it says the port is in use, a stray x11vnc survived — 'pkill -x x11vnc' and retry." >&2
+  exit 1
+fi
 
 echo "VNC ready on port ${VNC_PORT}."
 echo "From another machine on the same network, connect a VNC viewer to: $(hostname -I | awk '{print $1}'):${VNC_PORT}"
@@ -190,7 +221,8 @@ while true; do
     exit 1
   fi
   if ! kill -0 "${X11VNC_PID:-}" 2>/dev/null; then
-    echo "x11vnc died — ending the session." >&2
+    echo "x11vnc died — ending the session. Last lines of ${VNC_LOG}:" >&2
+    tail -n 15 "$VNC_LOG" 2>/dev/null | sed 's/^/  /' >&2
     exit 1
   fi
 

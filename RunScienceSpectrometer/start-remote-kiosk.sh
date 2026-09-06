@@ -9,7 +9,7 @@ set -euo pipefail
 
 RESOLUTION="640x480x24"
 WINDOW_SIZE="640,430"
-VNC_PORT="5900"
+VNC_PORT="${VNC_PORT:-5900}"
 APP_URL="https://spectralanalysis.app/"  # must match launch-spectral-analysis.sh
 FLATPAK_APP="org.chromium.Chromium"      # must match launch-spectral-analysis.sh
 VNC_PASSWD_FILE="${HOME}/.vnc/spectral-analysis.passwd"
@@ -40,18 +40,40 @@ LAUNCH_SCRIPT="$SCRIPT_DIR/launch-spectral-analysis.sh"
 # A previous kiosk run that was killed hard (SSH drop, `screen` dying, SIGKILL)
 # leaves orphans behind: an x11vnc still bound to our port, a stray Xvfb,
 # fluxbox, blueman, the flatpak browser. The next run's x11vnc then can't bind
-# 5900 and the whole session collapses. Clear our own leftovers first — this is
-# a single-purpose appliance, nothing else here uses these.
+# the port and the whole session collapses. Clear our own leftovers first —
+# this is a single-purpose appliance, nothing else here uses these.
+
+# True while something is listening on the VNC port (bash /dev/tcp, no deps).
+vnc_port_busy() {
+  (exec 3<>"/dev/tcp/127.0.0.1/${VNC_PORT}") 2>/dev/null || return 1
+  exec 3>&- 3<&- 2>/dev/null || true
+  return 0
+}
+
 reap_orphans() {
   local uid; uid="$(id -u)"
   pkill -u "$uid" -f -- "--app=${APP_URL}" 2>/dev/null || true
   command -v flatpak >/dev/null 2>&1 && flatpak kill "$FLATPAK_APP" 2>/dev/null || true
   pkill -u "$uid" -x blueman-applet 2>/dev/null || true
   pkill -u "$uid" -x blueman-manager 2>/dev/null || true
-  pkill -u "$uid" -f "x11vnc .*-rfbport ${VNC_PORT} " 2>/dev/null || true
   pkill -u "$uid" -x fluxbox 2>/dev/null || true
+  pkill -u "$uid" -x x11vnc 2>/dev/null || true
   pkill -u "$uid" -x Xvfb 2>/dev/null || true
+
+  # x11vnc can sit on the port for a few seconds after SIGTERM. Wait it out,
+  # then SIGKILL, then report if something we don't manage still owns it.
+  local i
+  for ((i = 0; i < 20; i++)); do
+    vnc_port_busy || return 0
+    sleep 0.5
+  done
+  pkill -9 -u "$uid" -x x11vnc 2>/dev/null || true
   sleep 1
+  if vnc_port_busy; then
+    echo "Warning: port ${VNC_PORT} is still in use by something this script" >&2
+    echo "doesn't manage. Stop it, or rerun with VNC_PORT=<n>." >&2
+    command -v ss >/dev/null 2>&1 && ss -tlnp "sport = :${VNC_PORT}" >&2 || true
+  fi
 }
 echo "Clearing any leftovers from a previous run..."
 reap_orphans

@@ -4,3 +4,5 @@
 [submodule "arduino-billee-scm"]
 	path = arduino-billee-scm
 	url = https://github.com/LucaLanzi/arduino-billee-scm.git
+[submodule "arduino-billee-scm/"]
+	url = https://github.com/LucaLanzi/fprime-arduino-billee-scm.git

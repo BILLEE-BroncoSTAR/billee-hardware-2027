@@ -3,7 +3,3 @@
 	url = https://github.com/LucaLanzi/fprime-billee-rcm.git
 [submodule "arduino-billee-scm/"]
 	url = https://github.com/LucaLanzi/fprime-arduino-billee-scm.git
-[submodule "fprime-arduino-billee-scm"]
-	path = fprime-arduino-billee-scm
-	url = https://github.com/LucaLanzi/fprime-arduino-billee-scm.git
-	branch = main

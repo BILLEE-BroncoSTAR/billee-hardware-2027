@@ -4,25 +4,76 @@
 This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, F´/Zephyr firmware, Science Arduino firmware, and all supporting resources required to operate BILLEE for URC 2027.
 If you are looking for our ROS2 Humble Software Stack, refer to [billee-software-2027](https://github.com/BroncoSpace-BILLEE/URC-2027).
 
-BILLEE is a Mars-rover-style rover platform built as a university project. This repository holds the hardware for the **Rover Control Module (RCM)** — the rover's central power distribution and control board. It takes in power from up to four independent battery packs, gates and protects eight switched high-current outputs (six drivetrain channels plus dedicated ARM and SCIENCE subsystem outputs), and hosts the RP2350 microcontroller that supervises the whole board, running [NASA JPL's F´ (F Prime)](https://fprime.jpl.nasa.gov/) flight software framework on Zephyr RTOS.
-
-## BILLEE Rover Control Module PCB
-<img width="3699" height="1419" alt="8afec47decc148f8b1116c42bb107dc9_T" src="https://github.com/user-attachments/assets/d00cf2bb-edf0-404a-ab80-497a4c8bc438" />
-
-
-
-
 ## Table of contents
 
+- [System architecture](#system-architecture)
+- [BILLEE Rover Control Module PCB](#billee-rover-control-module-pcb)
 - [System overview](#system-overview)
 - [Power architecture](#power-architecture)
 - [Per-channel protection chain](#per-channel-protection-chain)
 - [Subsystems](#subsystems)
 - [Connectors](#connectors)
+- [RCM Firmware](#rcm-firmware)
+- [BILLEE Science Control Module (SCM)](#billee-science-control-module-scm)
+- [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
+- [Science spectrometer tooling](#science-spectrometer-tooling)
 - [Repository layout](#repository-layout)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
+
+## System architecture
+
+BILLEE's compute and control hardware breaks down into a Jetson Orin AGX main
+compute module, the Rover Control Module (RCM, this repo's primary board),
+the Science Control Module (SCM), and the drivetrain's ODESC motor
+controllers. The RCM both powers the Jetson and exchanges F´ telemetry/
+commands with it; the SCM and the Jetson each run their own F´ deployment,
+talking over separate USB connections and separate GDS dashboard ports so
+both can be open at once.
+
+```mermaid
+flowchart TB
+    Jetson["Jetson Orin AGX<br/>Main compute<br/>(ROS2 stack — billee-software-2027)"]
+
+    subgraph RCM["Rover Control Module — BILLEE_Rover_Control_Module_V1 (KiCad)"]
+        RCM_FW["RP2350<br/>fprime-billee-rcm (F´ / Zephyr)"]
+    end
+
+    subgraph SCM["Science Control Module — BILLEE_Science_Control_Module_V1 (KiCad, TODO)"]
+        SCM_FW["Teensy 4.1<br/>fprime-arduino-billee-scm (F´)"]
+    end
+
+    RCM_FW -- "+20V power (CN2)" --> Jetson
+    Jetson -- "USB CDC / F´ GDS :5000" --> RCM_FW
+    Jetson -- "USB CDC / F´ GDS :5001" --> SCM_FW
+    Jetson -- "Bluetooth LE" --> SPEC["Vernier Go Direct spectrometer<br/>(RunScienceSpectrometer)"]
+
+    RCM_FW -- "6x switched DRIVE outputs" --> ODESC["ODESC motor controllers<br/>(drivetrain)"]
+    RCM_FW -- "switched ARM output" --> ARM["Arm actuators"]
+    RCM_FW -- "switched SCIENCE output" --> SCM_FW
+
+    ODESC -. "USB, one-time calibration" .-> TOOL["BILLEE_ODESC_CONFIGURATION<br/>(odrive Python tool)"]
+```
+
+Solid arrows are runtime power/data paths; the dashed arrow is the ODESC
+calibration tool's occasional USB connection, not part of the running
+topology. Runtime drivetrain/arm motor commands come from the ROS2 stack in
+[billee-software-2027](https://github.com/BroncoSpace-BILLEE/URC-2027), outside
+this repo's scope — the RCM only switches and protects their power.
+
+### Hardware ↔ Firmware
+
+| Hardware (KiCad project) | Firmware | Target | Role |
+|---|---|---|---|
+| [`BILLEE_Rover_Control_Module_V1/`](BILLEE_Rover_Control_Module_V1/) | [`fprime-billee-rcm`](fprime-billee-rcm/README.md) | RP2350 (F´ / Zephyr) | Power distribution/gating for DRIVE, ARM, and SCIENCE; powers the Jetson; reports subsystem/E-Stop/thermal telemetry over USB |
+| [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/) — **TODO** | [`fprime-arduino-billee-scm`](fprime-arduino-billee-scm/README.md) | Teensy 4.1 (F´) | Science instrument control, USB CDC to Jetson |
+| *(ODESC motor controllers — third-party hardware, not a KiCad project here)* | [`BILLEE_ODESC_CONFIGURATION`](BILLEE_ODESC_CONFIGURATION/README.md) | ODrive-based ODESC | One-time/occasional USB calibration tool (encoder/motor cal, CAN node ID) — not runtime firmware |
+
+BILLEE is a Mars-rover-style rover platform built as a university project. This repository holds the hardware for the **Rover Control Module (RCM)** — the rover's central power distribution and control board. It takes in power from up to four independent battery packs, gates and protects eight switched high-current outputs (six drivetrain channels plus dedicated ARM and SCIENCE subsystem outputs), and hosts the RP2350 microcontroller that supervises the whole board, running [NASA JPL's F´ (F Prime)](https://fprime.jpl.nasa.gov/) flight software framework on Zephyr RTOS.
+
+## BILLEE Rover Control Module PCB
+<img width="3699" height="1419" alt="8afec47decc148f8b1116c42bb107dc9_T" src="https://github.com/user-attachments/assets/d00cf2bb-edf0-404a-ab80-497a4c8bc438" />
 
 ## System overview
 
@@ -130,6 +181,56 @@ Each channel's overvoltage lockout trips at roughly the same ~32V threshold rega
 | USB1 | USB-C | 1 | RP2350 USB |
 | J1 | 2.54mm header | 1 | SWD debug (SWCLK/SWD/GND) |
 
+## RCM Firmware
+
+The RCM's RP2350 runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr RTOS —
+subsystem power enable/disable, E-Stop handling, and MCP9808/INA780B thermal
+and power telemetry, communicating with the Jetson over USB CDC. To get
+started:
+
+```bash
+cd fprime-billee-rcm
+make setup      # creates fprime-venv, inits submodules, installs requirements.txt
+```
+
+See [`fprime-billee-rcm/README.md`](fprime-billee-rcm/README.md) for the rest
+(`make setup-zephyr`, `make build-rp2350`, flashing, GDS), and
+[`docs/OPERATOR_MANUAL.md`](fprime-billee-rcm/docs/OPERATOR_MANUAL.md) for the
+command/telemetry reference.
+
+## BILLEE Science Control Module (SCM)
+
+**Hardware — TODO.** [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/)
+is an early-stage KiCad project; this section will be filled in once the
+board design is integrated.
+
+**Firmware.** The SCM runs F´ on a Teensy 4.1, communicating with the Jetson
+over its own USB CDC connection (GDS on port 5001, alongside the RCM's on
+port 5000). To get started:
+
+```bash
+cd fprime-arduino-billee-scm
+make setup      # creates fprime-venv, inits submodules, installs Python deps
+```
+
+See [`fprime-arduino-billee-scm/README.md`](fprime-arduino-billee-scm/README.md)
+for the rest (`make setup-arduino`, `make generate`, `make build`, flashing).
+
+## Drivetrain motor calibration — ODESC Configuration
+
+[`BILLEE_ODESC_CONFIGURATION`](BILLEE_ODESC_CONFIGURATION/README.md) is a
+Python tool (not firmware) for calibrating an ODESC-controlled drivetrain
+motor over USB — encoder/motor calibration, CAN node ID setup, and saving
+config to flash. It's a one-time/occasional setup step per motor, separate
+from runtime motor control.
+
+## Science spectrometer tooling
+
+[`RunScienceSpectrometer`](RunScienceSpectrometer/README.md) sets up an
+offline-capable copy of Vernier's Spectral Analysis PWA on the Jetson, talking
+to a Go Direct spectrometer over Bluetooth LE, with an optional headless
+VNC kiosk mode.
+
 ## Repository layout
 
 ```
@@ -147,9 +248,11 @@ billee-hardware-2027/
 │   └── jlcpcb/                           # fab outputs
 │       ├── gerber/                       # Gerber + drill files
 │       └── production_files/             # BOM, CPL, packaged GERBER.zip for JLCPCB
-├── BILLEE_Science_Control_Module_V1/     # separate KiCad project (early stage)
-├── fprime-billee-rcm/                    # F´ component library for this board (git submodule)
-└── arduino-billee-scm/                   # Arduino sketch for the Science Control Module
+├── BILLEE_Science_Control_Module_V1/     # TODO — placeholder, KiCad project not yet started
+├── BILLEE_ODESC_CONFIGURATION/           # Python tool: USB ODESC motor calibration
+├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
+├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
+└── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
 ```
 
 ## Getting started
@@ -164,6 +267,8 @@ billee-hardware-2027/
 2. Open `BILLEE_Rover_Control_Module_V1/BILLEE_Rover_Control_Module_V1.kicad_pro` in KiCad. The custom library footprints under `lib/` are wired up via the project's `fp-lib-table`/`sym-lib-table` — no extra setup needed.
 3. To order the board: everything JLCPCB needs is pre-generated in `BILLEE_Rover_Control_Module_V1/jlcpcb/production_files/` — `BOM-*.csv`, `CPL-*.csv`, and `GERBER-*.zip`. If you change the design, regenerate these (via the KiCad JLCPCB/Fabrication-Toolkit plugin) before ordering — the production files are a separate export step from the schematic/PCB and don't update automatically.
 4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule.
+5. To calibrate a drivetrain motor's ODESC, see [`BILLEE_ODESC_CONFIGURATION/README.md`](BILLEE_ODESC_CONFIGURATION/README.md).
+6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
 
 ## Design status
 

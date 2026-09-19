@@ -1,26 +1,39 @@
 # BILLEE Hardware 2027
 ### By Luca Lanzillotta
 
-This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, F´/Zephyr firmware, Science Arduino firmware, and all supporting resources required to operate BILLEE for URC 2027.
+This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, schematic diagrams for the Science Control Module, F´/Zephyr firmware, Science Arduino firmware, and all supporting resources required to operate BILLEE for URC 2027.
 If you are looking for our ROS2 Humble Software Stack, refer to [billee-software-2027](https://github.com/BroncoSpace-BILLEE/URC-2027).
 
 ## Table of contents
 
+- [Repository layout](#repository-layout)
 - [System architecture](#system-architecture)
 - [BILLEE Rover Control Module PCB](#billee-rover-control-module-pcb)
-- [System overview](#system-overview)
-- [Power architecture](#power-architecture)
-- [Per-channel protection chain](#per-channel-protection-chain)
-- [Subsystems](#subsystems)
-- [Connectors](#connectors)
-- [RCM Firmware](#rcm-firmware)
-- [BILLEE Science Control Module (SCM)](#billee-science-control-module-scm)
+  - [System overview](#system-overview)
+  - [Power architecture](#power-architecture)
+  - [Per-channel protection chain](#per-channel-protection-chain)
+  - [Subsystems](#subsystems)
+  - [Connectors](#connectors)
+  - [RCM Firmware](#rcm-firmware)
+- [BILLEE Science Control Module Schematic](#billee-science-control-module-schematic)
+  - [SCM Firmware](#scm-firmware)
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
-- [Repository layout](#repository-layout)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
+
+## Repository layout
+
+```
+billee-hardware-2027/
+├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the RCM board (this board)
+├── BILLEE_Science_Control_Module_V1/     # TODO — placeholder, KiCad project not yet started
+├── BILLEE_ODESC_CONFIGURATION/           # Python tool: USB ODESC motor calibration
+├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
+├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
+└── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
+```
 
 ## System architecture
 
@@ -198,15 +211,17 @@ See [`fprime-billee-rcm/README.md`](fprime-billee-rcm/README.md) for the rest
 [`docs/OPERATOR_MANUAL.md`](fprime-billee-rcm/docs/OPERATOR_MANUAL.md) for the
 command/telemetry reference.
 
-## BILLEE Science Control Module (SCM)
+## BILLEE Science Control Module Schematic
 
-**Hardware — TODO.** [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/)
-is an early-stage KiCad project; this section will be filled in once the
-board design is integrated.
+**TODO** — [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/)
+is an early-stage KiCad project; this section will be filled in with the
+schematic and hardware documentation once the board design is integrated.
 
-**Firmware.** The SCM runs F´ on a Teensy 4.1, communicating with the Jetson
-over its own USB CDC connection (GDS on port 5001, alongside the RCM's on
-port 5000). To get started:
+## SCM Firmware
+
+The SCM runs F´ on a Teensy 4.1, communicating with the Jetson over its own
+USB CDC connection (GDS on port 5001, alongside the RCM's on port 5000). To
+get started:
 
 ```bash
 cd fprime-arduino-billee-scm
@@ -230,30 +245,6 @@ from runtime motor control.
 offline-capable copy of Vernier's Spectral Analysis PWA on the Jetson, talking
 to a Go Direct spectrometer over Bluetooth LE, with an optional headless
 VNC kiosk mode.
-
-## Repository layout
-
-```
-billee-hardware-2027/
-├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the RCM board (this board)
-│   ├── BILLEE_Rover_Control_Module_V1.kicad_sch   # top-level schematic
-│   ├── mcurp2350.kicad_sch                        # RP2350A sheet
-│   ├── power.kicad_sch                            # Logic Subsystem sheet
-│   ├── estop.kicad_sch                            # Subsystem Power Control sheet
-│   ├── BILLEE_Rover_Control_Module_V1.kicad_pcb    # PCB layout
-│   ├── BILLEE_RCM.step                             # 3D STEP export
-│   ├── PDB_Engineering_Requirements_and_Design_Guide_Rev_H.docx
-│   ├── lib/                              # custom KiCad symbol/footprint libraries
-│   ├── sims/                             # LTspice simulations per subsystem
-│   └── jlcpcb/                           # fab outputs
-│       ├── gerber/                       # Gerber + drill files
-│       └── production_files/             # BOM, CPL, packaged GERBER.zip for JLCPCB
-├── BILLEE_Science_Control_Module_V1/     # TODO — placeholder, KiCad project not yet started
-├── BILLEE_ODESC_CONFIGURATION/           # Python tool: USB ODESC motor calibration
-├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
-├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
-└── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
-```
 
 ## Getting started
 

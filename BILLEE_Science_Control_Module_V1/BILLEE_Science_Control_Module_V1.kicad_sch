@@ -1,0 +1,70 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6")
+	(paper "A4")
+	(lib_symbols)
+	(text "Block Diagram"
+		(exclude_from_sim no)
+		(at 25.908 17.526 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "78f08311-992b-41c0-9444-58d6bb53e4bb")
+	)
+	(sheet
+		(at 22.606 48.006)
+		(size 72.39 80.264)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ede39417-05b3-40b9-ae34-8a64f10d05f8")
+		(property "Sheetname" "Teensy4.1"
+			(at 22.606 47.2944 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "teensy.kicad_sch"
+			(at 22.606 128.8546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

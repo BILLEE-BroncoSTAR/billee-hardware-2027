@@ -1,0 +1,389 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6")
+	(paper "A4")
+	(title_block
+		(title "Science Control Module")
+		(date "2026-10-22")
+		(rev "V1")
+		(company "Bronco STAR")
+	)
+	(lib_symbols)
+	(rectangle
+		(start 177.8 12.7)
+		(end 284.48 165.1)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "85cb5c90-6f38-49c4-9507-fd8760457153")
+	)
+	(rectangle
+		(start 180.34 41.91)
+		(end 281.94 80.01)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ff1f222a-8de1-48a4-9332-5caaf2b5ff74")
+	)
+	(text "Resources:"
+		(exclude_from_sim no)
+		(at 190.754 45.466 0)
+		(effects
+			(font
+				(size 2.286 2.286)
+				(thickness 0.4572)
+				(bold yes)
+			)
+		)
+		(uuid "4b13fa00-589b-48f2-96c5-0819d2ae98a7")
+	)
+	(text "BILLEE Science Control Module"
+		(exclude_from_sim no)
+		(at 233.172 17.526 0)
+		(effects
+			(font
+				(size 3.556 3.556)
+				(thickness 0.7112)
+				(bold yes)
+			)
+		)
+		(uuid "cb9930b6-534c-4240-953a-2d73ceeba461")
+	)
+	(text "* Science Control Module Hardware Architecture"
+		(exclude_from_sim no)
+		(at 232.41 55.88 0)
+		(effects
+			(font
+				(size 2.286 2.286)
+				(thickness 0.4572)
+				(bold yes)
+			)
+			(href "https://drive.google.com/file/d/1ck7Ld7ZZcWodHgeC9vC30HTaD0EvUFqo/view?usp=sharing")
+		)
+		(uuid "dd6621f9-0fe2-4f47-ba34-81895b58166d")
+	)
+	(text "* Billee-RCM Flight Software Deployment"
+		(exclude_from_sim no)
+		(at 226.568 61.722 0)
+		(effects
+			(font
+				(size 2.286 2.286)
+				(thickness 0.4572)
+				(bold yes)
+			)
+			(href "https://github.com/LucaLanzi/fprime-billee-scm.git")
+		)
+		(uuid "ee156a79-95a4-4c70-808a-c3793f812f20")
+	)
+	(text_box "This schematic describes the connections necessary to drive the BILLEE Science Module in conjunction with the required Fprime Software Deployment.\n"
+		(exclude_from_sim no)
+		(at 180.34 24.13 0)
+		(size 101.6 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 2.286 2.286)
+			)
+			(justify left top)
+		)
+		(uuid "5924e5a0-a69c-432f-89e8-57e683b8b27e")
+	)
+	(polyline
+		(pts
+			(xy 218.44 114.3) (xy 246.38 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cdd1863-2225-4e59-8d35-c0ff528b5d1c")
+	)
+	(polyline
+		(pts
+			(xy 218.44 135.89) (xy 246.38 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a50d209-d34b-4014-8bf5-3a4774ff4fd9")
+	)
+	(polyline
+		(pts
+			(xy 218.44 93.98) (xy 246.38 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f98b914-ee20-4f0e-be95-f05289ff9f17")
+	)
+	(polyline
+		(pts
+			(xy 218.44 153.67) (xy 246.38 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c774b641-8ef2-4f5c-8673-6da4c08a4444")
+	)
+	(sheet
+		(at 190.5 88.9)
+		(size 27.94 69.85)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "431a2b87-8d6b-4f12-9148-b0247a47a425")
+		(property "Sheetname" "Science Control Module"
+			(at 190.5 88.1884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "scm.kicad_sch"
+			(at 190.5 159.3346 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 246.38 107.95)
+		(size 29.21 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "71fd1384-bb2a-4bd8-90d1-b8d99655a51e")
+		(property "Sheetname" "UV Spectroscopy Module"
+			(at 246.38 107.2384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "uvs.kicad_sch"
+			(at 246.38 122.5046 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 246.38 148.59)
+		(size 29.21 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d9bdcb07-506c-4c87-923e-d52824c363f0")
+		(property "Sheetname" "Sample Cache and Rotation System"
+			(at 246.38 147.8784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "scrs.kicad_sch"
+			(at 246.38 160.6046 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 246.38 86.36)
+		(size 29.21 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "de3d3e42-5061-4ff0-a289-ee8fdb592457")
+		(property "Sheetname" "Regolith Extraction Module"
+			(at 246.38 85.6484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rem.kicad_sch"
+			(at 246.38 102.1846 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 246.38 128.27)
+		(size 29.21 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f648039a-a10d-477c-8899-da113d97dc9e")
+		(property "Sheetname" "Chemical Management System"
+			(at 246.38 127.5584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cms.kicad_sch"
+			(at 246.38 144.0946 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

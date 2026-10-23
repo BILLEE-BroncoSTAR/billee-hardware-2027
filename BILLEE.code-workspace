@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "name": "Arduino SCM",
+            "path": "fprime-arduino-billee-scm"
+        },
+        {
+            "name": "RCM",
+            "path": "fprime-billee-rcm"
+        }
+    ]
+}

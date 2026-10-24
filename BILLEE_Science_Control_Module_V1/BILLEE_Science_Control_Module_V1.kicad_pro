@@ -287,8 +287,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": {},
-    "netclass_assignments": {},
+    "net_colors": null,
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -420,7 +420,7 @@
         "uuid": "0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6"
       }
     ],
-    "used_designators": "",
+    "used_designators": "IC1,SW1-6,X1,M1,U1-17",
     "variants": []
   },
   "sheets": [

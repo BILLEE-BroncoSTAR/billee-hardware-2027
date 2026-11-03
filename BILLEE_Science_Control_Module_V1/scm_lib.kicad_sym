@@ -3446,7 +3446,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 0 0 0)
+			(at 0 -2.032 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3456,7 +3456,7 @@
 			)
 		)
 		(property "Value" "RoboClaw_2x7A"
-			(at 0 0 0)
+			(at 0.254 0.254 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3477,7 +3477,7 @@
 			)
 		)
 		(property "Datasheet" "https://downloads.basicmicro.com/docs/roboclaw_user_manual.pdf"
-			(at 0 0 0)
+			(at 0 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -3488,7 +3488,7 @@
 			)
 		)
 		(property "Description" "RoboClaw 2x7A Dual Motor Controller"
-			(at 0 0 0)
+			(at 0 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -3500,8 +3500,8 @@
 		)
 		(symbol "Roboclaw2x7A_0_1"
 			(rectangle
-				(start -15.24 36.83)
-				(end 15.24 -39.37)
+				(start -15.24 31.75)
+				(end 15.24 -26.67)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3513,7 +3513,7 @@
 		)
 		(symbol "Roboclaw2x7A_1_1"
 			(pin power_in line
-				(at -17.78 34.29 0)
+				(at -17.78 29.21 0)
 				(length 2.54)
 				(name "LB_IN+"
 					(effects
@@ -3531,7 +3531,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 31.75 0)
+				(at -17.78 26.67 0)
 				(length 2.54)
 				(name "LB_IN-"
 					(effects
@@ -3549,9 +3549,81 @@
 				)
 			)
 			(pin input line
-				(at -17.78 24.13 0)
+				(at -17.78 19.05 0)
 				(length 2.54)
-				(name "S1"
+				(name "S1_I/O"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -17.78 10.16 0)
+				(length 2.54)
+				(name "S2_I/O"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -17.78 1.27 0)
+				(length 2.54)
+				(name "S3_I/O"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -17.78 -7.62 0)
+				(length 2.54)
+				(name "S4_I/O"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -17.78 -16.51 0)
+				(length 2.54)
+				(name "S5_I/O"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3567,25 +3639,7 @@
 				)
 			)
 			(pin power_out line
-				(at -17.78 21.59 0)
-				(length 2.54)
-				(name "S1_5V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 19.05 0)
+				(at -17.78 16.51 0)
 				(length 2.54)
 				(name "S1_PWR"
 					(effects
@@ -3602,8 +3656,80 @@
 					)
 				)
 			)
+			(pin power_out line
+				(at -17.78 7.62 0)
+				(length 2.54)
+				(name "S2_PWR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -17.78 -1.27 0)
+				(length 2.54)
+				(name "S3_PWR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -17.78 -10.16 0)
+				(length 2.54)
+				(name "S4_PWR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at -17.78 -19.05 0)
+				(length 2.54)
+				(name "S5_PWR"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin power_in line
-				(at -17.78 16.51 0)
+				(at -17.78 13.97 0)
 				(length 2.54)
 				(name "S1_GND"
 					(effects
@@ -3620,62 +3746,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at -17.78 11.43 0)
-				(length 2.54)
-				(name "S2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 8.89 0)
-				(length 2.54)
-				(name "S2_5V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 6.35 0)
-				(length 2.54)
-				(name "S2_PWR"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_in line
-				(at -17.78 3.81 0)
+				(at -17.78 5.08 0)
 				(length 2.54)
 				(name "S2_GND"
 					(effects
@@ -3684,61 +3756,7 @@
 						)
 					)
 				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -17.78 -1.27 0)
-				(length 2.54)
-				(name "S3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -3.81 0)
-				(length 2.54)
-				(name "S3_5V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -6.35 0)
-				(length 2.54)
-				(name "S3_PWR"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3747,7 +3765,7 @@
 				)
 			)
 			(pin power_in line
-				(at -17.78 -8.89 0)
+				(at -17.78 -3.81 0)
 				(length 2.54)
 				(name "S3_GND"
 					(effects
@@ -3756,7 +3774,7 @@
 						)
 					)
 				)
-				(number "14"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3764,53 +3782,17 @@
 					)
 				)
 			)
-			(pin input line
-				(at -17.78 -13.97 0)
+			(pin power_in line
+				(at -17.78 -12.7 0)
 				(length 2.54)
-				(name "S4"
+				(name "S4_GND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "15"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -16.51 0)
-				(length 2.54)
-				(name "S4_5V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "16"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -19.05 0)
-				(length 2.54)
-				(name "S4_PWR"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "17"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3821,78 +3803,6 @@
 			(pin power_in line
 				(at -17.78 -21.59 0)
 				(length 2.54)
-				(name "S4_GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -17.78 -26.67 0)
-				(length 2.54)
-				(name "S5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -29.21 0)
-				(length 2.54)
-				(name "S5_5V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at -17.78 -31.75 0)
-				(length 2.54)
-				(name "S5_PWR"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "21"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -17.78 -34.29 0)
-				(length 2.54)
 				(name "S5_GND"
 					(effects
 						(font
@@ -3900,7 +3810,7 @@
 						)
 					)
 				)
-				(number "22"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3909,7 +3819,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 24.13 180)
+				(at 17.78 19.05 180)
 				(length 2.54)
 				(name "EN1+"
 					(effects
@@ -3927,7 +3837,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 21.59 180)
+				(at 17.78 16.51 180)
 				(length 2.54)
 				(name "EN1-"
 					(effects
@@ -3945,7 +3855,7 @@
 				)
 			)
 			(pin power_out line
-				(at 17.78 19.05 180)
+				(at 17.78 13.97 180)
 				(length 2.54)
 				(name "EN1_5V"
 					(effects
@@ -3963,7 +3873,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 16.51 180)
+				(at 17.78 11.43 180)
 				(length 2.54)
 				(name "EN1_GND"
 					(effects
@@ -3981,7 +3891,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 11.43 180)
+				(at 17.78 6.35 180)
 				(length 2.54)
 				(name "EN2+"
 					(effects
@@ -3999,7 +3909,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 8.89 180)
+				(at 17.78 3.81 180)
 				(length 2.54)
 				(name "EN2-"
 					(effects
@@ -4017,7 +3927,7 @@
 				)
 			)
 			(pin power_out line
-				(at 17.78 6.35 180)
+				(at 17.78 1.27 180)
 				(length 2.54)
 				(name "EN2_5V"
 					(effects
@@ -4035,7 +3945,7 @@
 				)
 			)
 			(pin power_in line
-				(at 17.78 3.81 180)
+				(at 17.78 -1.27 180)
 				(length 2.54)
 				(name "EN2_GND"
 					(effects
@@ -4125,7 +4035,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 -33.02 180)
+				(at 17.78 -20.32 180)
 				(length 2.54)
 				(name "M_VIN"
 					(effects
@@ -4134,7 +4044,7 @@
 						)
 					)
 				)
-				(number "36"
+				(number "35"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4143,7 +4053,7 @@
 				)
 			)
 			(pin input line
-				(at 17.78 -35.56 180)
+				(at 17.78 -22.86 180)
 				(length 2.54)
 				(name "M_GND"
 					(effects

@@ -1834,8 +1834,8 @@
 		)
 	)
 	(rectangle
-		(start 60.96 29.21)
-		(end 186.69 54.61)
+		(start 58.42 12.7)
+		(end 196.85 53.34)
 		(stroke
 			(width 0)
 			(type default)
@@ -1858,8 +1858,8 @@
 		(uuid "a46a5771-1464-4429-85d6-3d9d9682dd47")
 	)
 	(rectangle
-		(start 128.27 59.69)
-		(end 158.75 68.58)
+		(start 161.29 62.23)
+		(end 195.58 78.74)
 		(stroke
 			(width 0)
 			(type default)
@@ -1871,7 +1871,7 @@
 	)
 	(text "SERVOS"
 		(exclude_from_sim no)
-		(at 123.19 27.94 0)
+		(at 62.738 14.732 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1891,7 +1891,7 @@
 	)
 	(text "LINEAR ACTUATOR"
 		(exclude_from_sim no)
-		(at 143.51 58.42 0)
+		(at 170.434 64.516 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1900,15 +1900,15 @@
 		(uuid "f846249d-808a-4f85-9ee2-92a3fc158117")
 	)
 	(no_connect
-		(at 38.1 54.61)
+		(at 31.75 55.88)
 		(uuid "2f2a6cd9-9dd7-458c-a21b-f9c4edbbccc6")
 	)
 	(no_connect
-		(at 38.1 34.29)
+		(at 31.75 35.56)
 		(uuid "85efcd19-d684-4372-9a57-c16ad2f9b8f7")
 	)
 	(no_connect
-		(at 38.1 44.45)
+		(at 31.75 45.72)
 		(uuid "94189039-cc60-4458-afcf-6273f689a7d4")
 	)
 	(global_label "WS1_END_B"
@@ -1937,17 +1937,17 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 38.1 69.85 0)
+		(at 31.75 71.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "01ae3bf0-c0f9-4c97-b1fb-d8ad55ad114a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2137 69.85 0)
+			(at 35.8637 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1961,7 +1961,7 @@
 	)
 	(global_label "PCA_S6"
 		(shape input)
-		(at 109.22 45.72 180)
+		(at 114.3 36.83 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1971,7 +1971,7 @@
 		)
 		(uuid "01cd8d61-3649-47c3-8385-97687a94712b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.2195 45.72 0)
+			(at 108.2995 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2009,17 +2009,17 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 38.1 62.23 0)
+		(at 31.75 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "0fd5f9b7-68d7-4aee-9275-f7f4a8d3883a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2137 62.23 0)
+			(at 35.8637 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2033,7 +2033,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 152.4 39.37 180)
+		(at 157.48 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2043,7 +2043,7 @@
 		)
 		(uuid "12353e26-0590-4b51-a887-1b3a470c8696")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.2863 39.37 0)
+			(at 153.3663 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2057,17 +2057,17 @@
 	)
 	(global_label "PCA_S6"
 		(shape input)
-		(at 38.1 80.01 0)
+		(at 31.75 81.28 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "1ed432bf-0a08-4da4-a105-eab7bc4a45e2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1005 80.01 0)
+			(at 37.7505 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2105,7 +2105,7 @@
 	)
 	(global_label "PCA_S7"
 		(shape input)
-		(at 152.4 45.72 180)
+		(at 157.48 36.83 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2115,7 +2115,7 @@
 		)
 		(uuid "255a2884-ac79-4cff-b0f9-cd05c682b421")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.3995 45.72 0)
+			(at 151.4795 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2129,7 +2129,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 152.4 48.26 180)
+		(at 157.48 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2139,7 +2139,7 @@
 		)
 		(uuid "25c7d22f-ff06-4b74-96f5-bcdb3ca886cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.2864 48.26 0)
+			(at 153.3664 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2153,7 +2153,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 109.22 39.37 180)
+		(at 114.3 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2163,7 +2163,7 @@
 		)
 		(uuid "294fde94-5b64-4f38-9a54-44fbe558a239")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.1063 39.37 0)
+			(at 110.1863 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2177,17 +2177,17 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 38.1 92.71 0)
+		(at 31.75 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "374dfc7b-9bad-4cfa-b4ca-44516f12c455")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2137 92.71 0)
+			(at 35.8637 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2201,17 +2201,17 @@
 	)
 	(global_label "WS1_CENTER"
 		(shape input)
-		(at 38.1 29.21 0)
+		(at 31.75 30.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "3bc009bd-b91d-46b4-b4fa-12f5f891899e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.076 29.21 0)
+			(at 40.726 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2225,17 +2225,17 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 38.1 85.09 0)
+		(at 31.75 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "3e4b43a3-61c8-4b5e-ba85-997e2e472b4e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2137 85.09 0)
+			(at 35.8637 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2249,7 +2249,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 109.22 36.83 180)
+		(at 114.3 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2259,7 +2259,7 @@
 		)
 		(uuid "3fee1fdc-aa00-4511-86da-de27114e2b44")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.1064 36.83 0)
+			(at 110.1864 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2273,17 +2273,17 @@
 	)
 	(global_label "LA_M1+"
 		(shape input)
-		(at 38.1 95.25 0)
+		(at 31.75 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "48a87c97-d5a8-4e57-8177-f25179cf13df")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.282 95.25 0)
+			(at 37.932 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2297,17 +2297,17 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 38.1 67.31 0)
+		(at 31.75 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "4a05835d-41b3-4aed-8b0c-b5b3d0047345")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2136 67.31 0)
+			(at 35.8636 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2321,17 +2321,17 @@
 	)
 	(global_label "WS1_END_A"
 		(shape input)
-		(at 38.1 26.67 0)
+		(at 31.75 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "4df55f2b-bd2a-4bbc-abf1-221e739cb21f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.2777 26.67 0)
+			(at 39.9277 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2345,7 +2345,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 152.4 50.8 180)
+		(at 157.48 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2355,7 +2355,7 @@
 		)
 		(uuid "51c7e2c2-40ee-47e0-9cb7-a579705e9ac9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.2863 50.8 0)
+			(at 153.3663 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2393,17 +2393,17 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 38.1 74.93 0)
+		(at 31.75 76.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "58d82613-2664-454f-b44e-11a66637fe5a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2136 74.93 0)
+			(at 35.8636 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2417,7 +2417,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 67.31 40.64 180)
+		(at 72.39 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2427,7 +2427,7 @@
 		)
 		(uuid "626160b9-2cbc-4606-a9e1-9384f1c27896")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.1964 40.64 0)
+			(at 68.2764 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2441,7 +2441,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 109.22 48.26 180)
+		(at 114.3 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2451,7 +2451,7 @@
 		)
 		(uuid "729bd0d3-75be-4567-8c79-cee882cbf2eb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.1064 48.26 0)
+			(at 110.1864 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2465,17 +2465,17 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 38.1 90.17 0)
+		(at 31.75 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "76690a3a-1d48-4569-8c7e-9de72d96e9a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2136 90.17 0)
+			(at 35.8636 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2489,17 +2489,17 @@
 	)
 	(global_label "WS2_END_A"
 		(shape input)
-		(at 38.1 36.83 0)
+		(at 31.75 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "812ad321-f56c-4f03-be1b-43c86e2b7791")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.2777 36.83 0)
+			(at 39.9277 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2513,7 +2513,7 @@
 	)
 	(global_label "PCA_S4"
 		(shape input)
-		(at 109.22 34.29 180)
+		(at 114.3 25.4 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2523,7 +2523,7 @@
 		)
 		(uuid "85d3ab4f-c29f-4150-acb5-e6414df23644")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.2195 34.29 0)
+			(at 108.2995 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2537,17 +2537,17 @@
 	)
 	(global_label "WS2_END_B"
 		(shape input)
-		(at 38.1 41.91 0)
+		(at 31.75 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "879366db-1918-456e-bb1a-96918530cde6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.3866 41.91 0)
+			(at 40.0366 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2561,17 +2561,17 @@
 	)
 	(global_label "LA_M1-"
 		(shape input)
-		(at 38.1 97.79 0)
+		(at 31.75 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "88aa99f3-9c26-4884-987a-53d97549cd2e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.282 97.79 0)
+			(at 37.932 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2585,17 +2585,17 @@
 	)
 	(global_label "PCA_S4"
 		(shape input)
-		(at 38.1 64.77 0)
+		(at 31.75 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "8d024837-4730-40b4-ba9d-988f79081edd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1005 64.77 0)
+			(at 37.7505 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2609,7 +2609,7 @@
 	)
 	(global_label "PCA_S5"
 		(shape input)
-		(at 152.4 34.29 180)
+		(at 157.48 25.4 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2619,7 +2619,7 @@
 		)
 		(uuid "9725eebb-20e7-41bd-bc03-a75a6cc76ccc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.3995 34.29 0)
+			(at 151.4795 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2633,17 +2633,17 @@
 	)
 	(global_label "WS3_CENTER"
 		(shape input)
-		(at 38.1 49.53 0)
+		(at 31.75 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "a430dbf3-c321-4182-8cf5-2180a8a6dbe0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.076 49.53 0)
+			(at 40.726 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2657,17 +2657,17 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 38.1 82.55 0)
+		(at 31.75 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "a51df87b-fafa-4bcf-ac8c-2a0031f2546f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2136 82.55 0)
+			(at 35.8636 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2681,17 +2681,17 @@
 	)
 	(global_label "LA_M1+"
 		(shape input)
-		(at 135.89 63.5 180)
+		(at 172.72 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "b2266ec2-b888-4581-964a-9027db61398f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.708 63.5 0)
+			(at 166.538 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2729,7 +2729,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 109.22 50.8 180)
+		(at 114.3 41.91 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2739,7 +2739,7 @@
 		)
 		(uuid "b55410b3-dac4-4d9f-9517-3a9b6cd851cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.1063 50.8 0)
+			(at 110.1863 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2753,17 +2753,17 @@
 	)
 	(global_label "LA_M1-"
 		(shape input)
-		(at 135.89 66.04 180)
+		(at 172.72 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify right)
 		)
 		(uuid "bd119ab3-2297-4bde-91e6-ffc80f0c00d7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.708 66.04 0)
+			(at 166.538 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2777,7 +2777,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 67.31 43.18 180)
+		(at 72.39 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2787,7 +2787,7 @@
 		)
 		(uuid "c16b3b05-c9a3-4d91-aa77-362dddb9cad4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.1963 43.18 0)
+			(at 68.2763 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2801,17 +2801,17 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 38.1 59.69 0)
+		(at 31.75 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "c400f683-415f-49fb-9099-fce08fca0260")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2136 59.69 0)
+			(at 35.8636 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2849,7 +2849,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 152.4 36.83 180)
+		(at 157.48 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2859,7 +2859,7 @@
 		)
 		(uuid "c5380ff1-ec75-4a3c-8ffa-71ad80b202e4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.2864 36.83 0)
+			(at 153.3664 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2873,17 +2873,17 @@
 	)
 	(global_label "PCA_S7"
 		(shape input)
-		(at 38.1 87.63 0)
+		(at 31.75 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "cae8f4b9-8b9d-414b-87e4-42e81dea7887")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1005 87.63 0)
+			(at 37.7505 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2897,17 +2897,17 @@
 	)
 	(global_label "WS2_CENTER"
 		(shape input)
-		(at 38.1 39.37 0)
+		(at 31.75 40.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "cc4cc993-15a8-4807-a670-049111fffade")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.076 39.37 0)
+			(at 40.726 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2921,17 +2921,17 @@
 	)
 	(global_label "WS3_END_A"
 		(shape input)
-		(at 38.1 46.99 0)
+		(at 31.75 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "ceee24df-68e3-4f45-91ec-c5e54d3b035a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.2777 46.99 0)
+			(at 39.9277 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2945,17 +2945,17 @@
 	)
 	(global_label "WS1_END_B"
 		(shape input)
-		(at 38.1 31.75 0)
+		(at 31.75 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "cf84bcf9-0c04-49f9-8ddd-a29a2fb2580f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.3866 31.75 0)
+			(at 40.0366 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2993,7 +2993,7 @@
 	)
 	(global_label "PCA_S3"
 		(shape input)
-		(at 67.31 38.1 180)
+		(at 72.39 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3003,7 +3003,7 @@
 		)
 		(uuid "e72888d9-736a-440d-95aa-f04de8fa91cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.3095 38.1 0)
+			(at 66.3895 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3017,17 +3017,17 @@
 	)
 	(global_label "PCA_S3"
 		(shape input)
-		(at 38.1 57.15 0)
+		(at 31.75 58.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "e9ca1edd-5bbf-4bb7-bfd0-251eb4fbc711")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1005 57.15 0)
+			(at 37.7505 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3041,17 +3041,17 @@
 	)
 	(global_label "PCA_S5"
 		(shape input)
-		(at 38.1 72.39 0)
+		(at 31.75 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "ebd5c96e-3779-4a37-b7c7-7f237d533a9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.1005 72.39 0)
+			(at 37.7505 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3065,17 +3065,17 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 38.1 77.47 0)
+		(at 31.75 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "f009fdc1-8a71-46af-9fe9-cb4fe046b057")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.2137 77.47 0)
+			(at 35.8637 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3137,17 +3137,17 @@
 	)
 	(global_label "WS3_END_B"
 		(shape input)
-		(at 38.1 52.07 0)
+		(at 31.75 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
 		(uuid "fc7e212a-cfb7-4ba9-a7bb-97b21faee555")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.3866 52.07 0)
+			(at 40.0366 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3161,7 +3161,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 116.84 36.83 0)
+		(at 121.92 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3172,7 +3172,7 @@
 		(fields_autoplaced yes)
 		(uuid "0a63cffc-6515-411a-a956-6e7187999547")
 		(property "Reference" "M13"
-			(at 125.73 35.1268 0)
+			(at 130.81 26.2368 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3183,7 +3183,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_1"
-			(at 125.73 37.6668 0)
+			(at 130.81 28.7768 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3194,7 +3194,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 41.656 0)
+			(at 121.92 32.766 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3205,7 +3205,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 116.84 41.656 0)
+			(at 121.92 32.766 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3216,7 +3216,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 116.84 36.83 0)
+			(at 121.92 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3227,7 +3227,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 116.84 36.83 0)
+			(at 121.92 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3257,7 +3257,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x37")
-		(at 33.02 72.39 180)
+		(at 26.67 73.66 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3268,7 +3268,7 @@
 		(fields_autoplaced yes)
 		(uuid "1503941f-f7b2-4ca0-92df-286112c95b9c")
 		(property "Reference" "J14"
-			(at 33.02 20.32 0)
+			(at 26.67 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3278,7 +3278,7 @@
 			)
 		)
 		(property "Value" "DB37_Connector"
-			(at 33.02 22.86 0)
+			(at 26.67 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3288,7 +3288,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 72.39 0)
+			(at 26.67 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3299,7 +3299,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 72.39 0)
+			(at 26.67 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3310,7 +3310,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x37, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 33.02 72.39 0)
+			(at 26.67 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3442,7 +3442,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 160.02 36.83 0)
+		(at 165.1 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3453,7 +3453,7 @@
 		(fields_autoplaced yes)
 		(uuid "1cb00ba9-716f-4de3-9161-10dc26f14a5f")
 		(property "Reference" "M14"
-			(at 168.91 35.1268 0)
+			(at 173.99 26.2368 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3464,7 +3464,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_2"
-			(at 168.91 37.6668 0)
+			(at 173.99 28.7768 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3475,7 +3475,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 41.656 0)
+			(at 165.1 32.766 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3486,7 +3486,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 160.02 41.656 0)
+			(at 165.1 32.766 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3497,7 +3497,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 160.02 36.83 0)
+			(at 165.1 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3508,7 +3508,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 160.02 36.83 0)
+			(at 165.1 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3730,7 +3730,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 74.93 40.64 0)
+		(at 80.01 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3741,7 +3741,7 @@
 		(fields_autoplaced yes)
 		(uuid "73625807-03e9-4b9a-bc3a-e8a37eea18f4")
 		(property "Reference" "M12"
-			(at 83.82 38.9368 0)
+			(at 88.9 30.0468 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3752,7 +3752,7 @@
 			)
 		)
 		(property "Value" "Cache_Lid_Servo"
-			(at 83.82 41.4768 0)
+			(at 88.9 32.5868 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3763,7 +3763,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 45.466 0)
+			(at 80.01 36.576 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3774,7 +3774,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 74.93 45.466 0)
+			(at 80.01 36.576 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3785,7 +3785,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 74.93 40.64 0)
+			(at 80.01 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3796,7 +3796,7 @@
 			)
 		)
 		(property "Purchase URL" "DIYMall 25KG/CM Digital Servo https://a.co/d/0cSCRf30"
-			(at 74.93 40.64 0)
+			(at 80.01 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3826,7 +3826,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 140.97 63.5 0)
+		(at 177.8 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3837,7 +3837,7 @@
 		(fields_autoplaced yes)
 		(uuid "95024818-e34d-4809-b202-3d15269c268c")
 		(property "Reference" "J15"
-			(at 143.51 63.4999 0)
+			(at 180.34 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3848,7 +3848,7 @@
 			)
 		)
 		(property "Value" "Linear_Actuator"
-			(at 143.51 66.0399 0)
+			(at 180.34 74.9299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3859,7 +3859,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 63.5 0)
+			(at 177.8 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3870,7 +3870,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 63.5 0)
+			(at 177.8 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3881,7 +3881,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 140.97 63.5 0)
+			(at 177.8 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3892,7 +3892,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.ebay.com/itm/205169644339"
-			(at 140.97 63.5 0)
+			(at 177.8 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3919,7 +3919,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 160.02 48.26 0)
+		(at 165.1 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3930,7 +3930,7 @@
 		(fields_autoplaced yes)
 		(uuid "ceaebf06-9bae-4c37-8ec6-8468ea2ed81d")
 		(property "Reference" "M16"
-			(at 168.91 46.5568 0)
+			(at 173.99 37.6668 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3941,7 +3941,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_4"
-			(at 168.91 49.0968 0)
+			(at 173.99 40.2068 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3952,7 +3952,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 53.086 0)
+			(at 165.1 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3963,7 +3963,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 160.02 53.086 0)
+			(at 165.1 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3974,7 +3974,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 160.02 48.26 0)
+			(at 165.1 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3985,7 +3985,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 160.02 48.26 0)
+			(at 165.1 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4111,7 +4111,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 116.84 48.26 0)
+		(at 121.92 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4122,7 +4122,7 @@
 		(fields_autoplaced yes)
 		(uuid "f6ec0402-325a-4978-bcec-ec642399976f")
 		(property "Reference" "M15"
-			(at 125.73 46.5568 0)
+			(at 130.81 37.6668 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4133,7 +4133,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_3"
-			(at 125.73 49.0968 0)
+			(at 130.81 40.2068 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4144,7 +4144,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 53.086 0)
+			(at 121.92 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4155,7 +4155,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 116.84 53.086 0)
+			(at 121.92 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4166,7 +4166,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 116.84 48.26 0)
+			(at 121.92 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4177,7 +4177,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 116.84 48.26 0)
+			(at 121.92 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

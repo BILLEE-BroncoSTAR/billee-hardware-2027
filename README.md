@@ -254,9 +254,21 @@ VNC kiosk mode.
 submodule) streams live video and audio from a USB camera on a Raspberry Pi 4B
 to the Jetson over the Jetson's Wi-Fi hotspot. The Jetson forwards it to a
 browser at the ground station over the Ubiquiti Prism link, at
-`http://10.110.0.230:8080`. The bench-check tools are in; streaming comes
-next. See its [README](astronaut-streamer/README.md) and
-[PLAN.md](astronaut-streamer/PLAN.md).
+`http://10.110.0.230:8080`. Everything installs from this repo's root:
+
+```bash
+make astronaut jetson   # on the Jetson: packages, media server, dashboard, services, hotspot
+make astronaut pi       # on the Pi: packages, Wi-Fi, SSH, sender service
+make astronaut probe    # on the Pi: bench check (camera, mic, speaker, encoders, Wi-Fi)
+make astronaut status   # on either: what's running
+make astronaut          # every command (logs, restart, test-pattern, view, test, e2e, ...)
+```
+
+Full guide, from flashing the Pi to troubleshooting:
+[`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
+Hardware test plan:
+[`astronaut-streamer/docs/TEST_CHECKLIST.md`](astronaut-streamer/docs/TEST_CHECKLIST.md).
+Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).
 
 ## Getting started
 
@@ -272,6 +284,7 @@ next. See its [README](astronaut-streamer/README.md) and
 4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule.
 5. To calibrate a drivetrain motor's ODESC, see [`BILLEE_ODESC_CONFIGURATION/README.md`](BILLEE_ODESC_CONFIGURATION/README.md).
 6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
+7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 
 ## Design status
 

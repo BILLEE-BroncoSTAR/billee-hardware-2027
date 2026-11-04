@@ -34,7 +34,7 @@ setup: ## Check out lucadev and init/update every submodule recursively
 MODULE_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
 ifneq ($(filter science astronaut,$(firstword $(MAKECMDGOALS))),)
 ifneq ($(MODULE_ARGS),)
-$(eval $(MODULE_ARGS):;@:)
+$(eval $(sort $(MODULE_ARGS)):;@:)
 endif
 else
 

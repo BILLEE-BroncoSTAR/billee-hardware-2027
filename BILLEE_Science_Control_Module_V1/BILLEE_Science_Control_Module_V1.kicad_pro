@@ -8,7 +8,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "V1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -237,6 +237,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -286,8 +287,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -296,6 +297,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -427,8 +429,24 @@
       "BILLEE_Science_Control_Module_V1"
     ],
     [
-      "ede39417-05b3-40b9-ae34-8a64f10d05f8",
-      "Teensy4.1"
+      "431a2b87-8d6b-4f12-9148-b0247a47a425",
+      "Science Control Module"
+    ],
+    [
+      "de3d3e42-5061-4ff0-a289-ee8fdb592457",
+      "Regolith Extraction Module"
+    ],
+    [
+      "71fd1384-bb2a-4bd8-90d1-b8d99655a51e",
+      "UV Spectroscopy Module"
+    ],
+    [
+      "f648039a-a10d-477c-8899-da113d97dc9e",
+      "Chemical Management System"
+    ],
+    [
+      "d9bdcb07-506c-4c87-923e-d52824c363f0",
+      "Sample Cache and Rotation System"
     ]
   ],
   "text_variables": {},

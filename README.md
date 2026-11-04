@@ -19,6 +19,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
   - [SCM Firmware](#scm-firmware)
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
+- [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
@@ -31,6 +32,7 @@ billee-hardware-2027/
 ├── BILLEE_Science_Control_Module_V1/     # TODO — placeholder, KiCad project not yet started
 ├── BILLEE_ODESC_CONFIGURATION/           # Python tool: USB ODESC motor calibration
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
+├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
 ├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
 └── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
 ```
@@ -246,6 +248,30 @@ offline-capable copy of Vernier's Spectral Analysis PWA on the Jetson, talking
 to a Go Direct spectrometer over Bluetooth LE, with an optional headless
 VNC kiosk mode.
 
+## Astronaut video/audio streamer
+
+[`astronaut-streamer`](https://github.com/LucaLanzi/astronaut-streamer) (git
+submodule) streams live video and audio from a USB camera on a Raspberry Pi 4B
+to the Jetson over the Jetson's Wi-Fi hotspot. The Jetson forwards it to a
+browser at the ground station over the Ubiquiti Prism link, at
+`https://10.110.0.230:8443`, and the ground station can talk back to the
+astronaut's headphones. Everything installs from this repo's root:
+
+```bash
+make astronaut jetson   # on the Jetson: packages, media server, dashboard, services, hotspot
+make astronaut pi       # on the Pi: packages, Wi-Fi, SSH, sender service
+make astronaut probe    # on the Pi: bench check (camera, mic, speaker, encoders, Wi-Fi)
+make astronaut status   # on either: what's running
+make astronaut jetson ip rover 192.168.4.97/22   # other addresses (defaults: the rover's)
+make astronaut          # every command (logs, restart, test-pattern, view, test, e2e, ...)
+```
+
+Step by step: [`astronaut-streamer/docs/RUN_GUIDE.md`](astronaut-streamer/docs/RUN_GUIDE.md).
+Full reference: [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
+Hardware test plan:
+[`astronaut-streamer/docs/TEST_CHECKLIST.md`](astronaut-streamer/docs/TEST_CHECKLIST.md).
+Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).
+
 ## Getting started
 
 1. Clone with submodules — the F´ component library is a separate repo:
@@ -260,6 +286,7 @@ VNC kiosk mode.
 4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule.
 5. To calibrate a drivetrain motor's ODESC, see [`BILLEE_ODESC_CONFIGURATION/README.md`](BILLEE_ODESC_CONFIGURATION/README.md).
 6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
+7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 
 ## Design status
 

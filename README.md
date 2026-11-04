@@ -19,6 +19,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
   - [SCM Firmware](#scm-firmware)
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
+- [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
@@ -31,6 +32,7 @@ billee-hardware-2027/
 ├── BILLEE_Science_Control_Module_V1/     # TODO — placeholder, KiCad project not yet started
 ├── BILLEE_ODESC_CONFIGURATION/           # Python tool: USB ODESC motor calibration
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
+├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
 ├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
 └── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
 ```
@@ -245,6 +247,16 @@ from runtime motor control.
 offline-capable copy of Vernier's Spectral Analysis PWA on the Jetson, talking
 to a Go Direct spectrometer over Bluetooth LE, with an optional headless
 VNC kiosk mode.
+
+## Astronaut video/audio streamer
+
+[`astronaut-streamer`](https://github.com/LucaLanzi/astronaut-streamer) (git
+submodule) streams live video and audio from a USB camera on a Raspberry Pi 4B
+to the Jetson over the Jetson's Wi-Fi hotspot. The Jetson forwards it to a
+browser at the ground station over the Ubiquiti Prism link, at
+`http://10.110.0.230:8080`. The bench-check tools are in; streaming comes
+next. See its [README](astronaut-streamer/README.md) and
+[PLAN.md](astronaut-streamer/PLAN.md).
 
 ## Getting started
 

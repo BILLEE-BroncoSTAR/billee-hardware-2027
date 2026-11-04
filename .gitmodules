@@ -5,3 +5,7 @@
 	path = fprime-arduino-billee-scm
 	url = https://github.com/LucaLanzi/fprime-arduino-billee-scm.git
 	branch = lucadev
+[submodule "astronaut-streamer"]
+	path = astronaut-streamer
+	url = https://github.com/LucaLanzi/astronaut-streamer.git
+	branch = main

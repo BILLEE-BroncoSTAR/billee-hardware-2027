@@ -1015,7 +1015,7 @@
 	)
 	(rectangle
 		(start 92.71 60.96)
-		(end 118.11 87.63)
+		(end 120.65 87.63)
 		(stroke
 			(width 0)
 			(type default)
@@ -1027,40 +1027,48 @@
 	)
 	(text "Magnetic Stirrers"
 		(exclude_from_sim no)
-		(at 103.124 62.992 0)
+		(at 106.68 63.5 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
 			)
 		)
 		(uuid "073f430e-9f99-4fb3-92d2-e3aeba035575")
 	)
 	(text "Chemical Pumps"
 		(exclude_from_sim no)
-		(at 38.608 27.686 0)
+		(at 48.514 28.194 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
 			)
 		)
 		(uuid "16665c5a-5ac1-434d-88e1-22f5efcfd42c")
 	)
 	(text "Chemical Management System"
 		(exclude_from_sim no)
-		(at 42.164 15.748 0)
+		(at 47.244 15.494 0)
 		(effects
 			(font
-				(size 2.54 2.54)
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
 			)
 		)
 		(uuid "19b439e4-514a-45f3-be64-ad5dd043bf25")
 	)
 	(text "GX20 Connector"
 		(exclude_from_sim no)
-		(at 38.608 63.246 0)
+		(at 48.26 64.008 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
 			)
 		)
 		(uuid "8e11088b-80b0-4005-832b-2151bceef176")

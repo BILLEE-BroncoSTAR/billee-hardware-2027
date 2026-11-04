@@ -1814,41 +1814,47 @@
 	)
 	(text "Cooling Fan"
 		(exclude_from_sim no)
-		(at 76.962 60.452 0)
+		(at 79.248 61.214 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
 			)
 		)
 		(uuid "69f6a54f-d6e3-49c5-b6bf-4dc6b43fe05c")
 	)
 	(text "Drape Lowering Servo"
 		(exclude_from_sim no)
-		(at 33.02 24.13 0)
+		(at 37.084 24.638 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2 2)
+				(thickness 0.6)
+				(bold yes)
 			)
 		)
 		(uuid "72f91fba-514a-43c1-a5ae-5a706d91ff4b")
 	)
 	(text "CAMERA USB'S"
 		(exclude_from_sim no)
-		(at 77.47 23.622 0)
+		(at 81.534 24.13 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
 			)
 		)
 		(uuid "74acd3b9-596f-4228-9947-41a6ccfe78fd")
 	)
 	(text "GX20 Connector"
 		(exclude_from_sim no)
-		(at 29.464 60.706 0)
+		(at 33.274 60.96 0)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
+				(size 2 2)
+				(thickness 0.4)
 				(bold yes)
 			)
 		)
@@ -1856,11 +1862,11 @@
 	)
 	(text "UV Spectroscopy Module"
 		(exclude_from_sim no)
-		(at 37.338 15.748 0)
+		(at 39.878 15.494 0)
 		(effects
 			(font
-				(size 2.54 2.54)
-				(thickness 0.254)
+				(size 3 3)
+				(thickness 0.6)
 				(bold yes)
 			)
 		)
@@ -1868,10 +1874,12 @@
 	)
 	(text "UV Light"
 		(exclude_from_sim no)
-		(at 74.93 96.266 0)
+		(at 77.216 96.52 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
 			)
 		)
 		(uuid "fe967d50-b812-4680-bb9a-e245a16906ff")

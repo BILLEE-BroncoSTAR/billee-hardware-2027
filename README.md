@@ -254,18 +254,20 @@ VNC kiosk mode.
 submodule) streams live video and audio from a USB camera on a Raspberry Pi 4B
 to the Jetson over the Jetson's Wi-Fi hotspot. The Jetson forwards it to a
 browser at the ground station over the Ubiquiti Prism link, at
-`http://10.110.0.230:8080`. Everything installs from this repo's root:
+`https://10.110.0.230:8443`, and the ground station can talk back to the
+astronaut's headphones. Everything installs from this repo's root:
 
 ```bash
 make astronaut jetson   # on the Jetson: packages, media server, dashboard, services, hotspot
 make astronaut pi       # on the Pi: packages, Wi-Fi, SSH, sender service
 make astronaut probe    # on the Pi: bench check (camera, mic, speaker, encoders, Wi-Fi)
 make astronaut status   # on either: what's running
+make astronaut jetson ip rover 192.168.4.97/22   # other addresses (defaults: the rover's)
 make astronaut          # every command (logs, restart, test-pattern, view, test, e2e, ...)
 ```
 
-Full guide, from flashing the Pi to troubleshooting:
-[`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
+Step by step: [`astronaut-streamer/docs/RUN_GUIDE.md`](astronaut-streamer/docs/RUN_GUIDE.md).
+Full reference: [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 Hardware test plan:
 [`astronaut-streamer/docs/TEST_CHECKLIST.md`](astronaut-streamer/docs/TEST_CHECKLIST.md).
 Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).

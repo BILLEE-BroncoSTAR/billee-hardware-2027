@@ -1003,7 +1003,7 @@
 	)
 	(rectangle
 		(start 29.21 25.4)
-		(end 118.11 59.69)
+		(end 133.096 59.69)
 		(stroke
 			(width 0)
 			(type default)
@@ -1202,6 +1202,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "P5_+12V"
+		(shape input)
+		(at 119.38 38.1 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.762 0.762)
+			)
+			(justify left)
+		)
+		(uuid "1ac76fb6-1915-41dd-91f9-a691b7523ca9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.38 31.1924 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -1423,7 +1447,7 @@
 	)
 	(global_label "P4_+12V"
 		(shape input)
-		(at 104.14 38.1 90)
+		(at 100.33 38.1 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1433,7 +1457,7 @@
 		)
 		(uuid "ba1f3070-8926-46d7-a1f8-42b35834701b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.14 31.1924 90)
+			(at 100.33 31.1924 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1735,7 +1759,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_DC")
-		(at 104.14 43.18 0)
+		(at 100.33 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1746,7 +1770,7 @@
 		(fields_autoplaced yes)
 		(uuid "15943195-1b7b-4963-a257-74e58fc9ef27")
 		(property "Reference" "M11"
-			(at 109.22 44.4499 0)
+			(at 105.41 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1757,7 +1781,7 @@
 			)
 		)
 		(property "Value" "Pump_4"
-			(at 109.22 46.9899 0)
+			(at 105.41 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1768,7 +1792,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 45.466 0)
+			(at 100.33 45.466 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1779,7 +1803,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 45.466 0)
+			(at 100.33 45.466 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1790,7 +1814,7 @@
 			)
 		)
 		(property "Description" "DC Motor"
-			(at 104.14 43.18 0)
+			(at 100.33 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1801,7 +1825,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.amazon.com/dp/B01IUVHB8E?lv=shuf&channelId=500&plpRedirect=mhFallback"
-			(at 104.14 43.18 0)
+			(at 100.33 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2188,6 +2212,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 119.38 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60619f79-de8a-4b1b-867c-2d2eaf9c2c48")
+		(property "Reference" "#PWR095"
+			(at 119.38 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 119.38 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "137434dc-bc77-46f3-9aab-bf4f8e7cb509")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/f648039a-a10d-477c-8899-da113d97dc9e"
+					(reference "#PWR095")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 106.68 68.58 0)
 		(unit 1)
@@ -2368,6 +2470,99 @@
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/f648039a-a10d-477c-8899-da113d97dc9e"
 					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Motor_DC")
+		(at 119.38 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1977ab9-4f87-4ac4-a1aa-82c6ce4f8c49")
+		(property "Reference" "M17"
+			(at 124.46 44.4499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pump_5"
+			(at 124.46 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 45.466 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 45.466 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC Motor"
+			(at 119.38 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase URL" "https://www.amazon.com/dp/B01IUVHB8E?lv=shuf&channelId=500&plpRedirect=mhFallback"
+			(at 119.38 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07695b86-cb80-4683-b46c-a541a1ca55bf")
+		)
+		(pin "2"
+			(uuid "85dcf66a-7ccd-49b5-99be-55702868999b")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/f648039a-a10d-477c-8899-da113d97dc9e"
+					(reference "M17")
 					(unit 1)
 				)
 			)
@@ -2624,7 +2819,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 104.14 50.8 0)
+		(at 100.33 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2635,7 +2830,7 @@
 		(fields_autoplaced yes)
 		(uuid "e557b942-5e11-4727-9796-a3b159d896ad")
 		(property "Reference" "#PWR084"
-			(at 104.14 57.15 0)
+			(at 100.33 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2646,7 +2841,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 55.88 0)
+			(at 100.33 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2656,7 +2851,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 50.8 0)
+			(at 100.33 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2667,7 +2862,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 50.8 0)
+			(at 100.33 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2678,7 +2873,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 50.8 0)
+			(at 100.33 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

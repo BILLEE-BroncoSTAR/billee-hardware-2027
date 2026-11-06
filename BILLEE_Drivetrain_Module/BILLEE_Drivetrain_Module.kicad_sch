@@ -1,0 +1,7836 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "7f27bff6-e06b-4b30-8358-f8743640bcf4")
+	(paper "A3")
+	(title_block
+		(title "BILLEE Drivetrain Module")
+		(date "2026-11-06")
+		(rev "V1")
+		(company "Bronco STAR")
+		(comment 1 "Implemented '24 URC Season but never fully documented.")
+	)
+	(lib_symbols
+		(symbol "ODESC_V4.2_1"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_1_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_1_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ODESC_V4.2_2"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_2_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_2_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ODESC_V4.2_3"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_3_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_3_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ODESC_V4.2_4"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_4_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_4_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ODESC_V4.2_5"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_5_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_5_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "drv_syms:NEO_Brushless_Motor"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "M"
+				(at 0 19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NEO_Brushless_Motor"
+				(at 0.254 16.764 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+				(at -0.508 0.254 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "REV Robotics"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor brushless BLDC NEO 3-phase hall encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NEO_Brushless_Motor_0_1"
+				(rectangle
+					(start -12.7 15.24)
+					(end 12.7 -16.51)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 5.08 -0.508)
+					(radius 4.5791)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "BLDC"
+					(at 5.08 -2.54 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "NEO_Brushless_Motor_1_1"
+				(text "NEO"
+					(at 5.08 0.254 0)
+					(effects
+						(font
+							(size 2.286 2.286)
+							(bold yes)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 -1.27 0)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -3.81 0)
+					(length 2.54)
+					(name "TEMP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -6.35 0)
+					(length 2.54)
+					(name "ENC_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -8.89 0)
+					(length 2.54)
+					(name "ENC_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -11.43 0)
+					(length 2.54)
+					(name "ENC_C/Index"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -13.97 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -15.24 11.43 0)
+					(length 2.54)
+					(name "PHASE_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -15.24 8.89 0)
+					(length 2.54)
+					(name "PHASE_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -15.24 6.35 0)
+					(length 2.54)
+					(name "PHASE_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "drv_syms:ODESC_V4.2"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ODESC_V4.2"
+				(at 0 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "motor controller ESC BLDC encoder"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_0_1"
+				(rectangle
+					(start -15.24 24.13)
+					(end 15.24 -30.48)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 1.27 -5.08)
+					(end 15.24 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ODESC"
+					(at 0 4.572 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+							(bold yes)
+						)
+					)
+				)
+				(text "V4.2"
+					(at 0.254 1.27 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "ODESC_V4.2_1_1"
+				(text "HALL"
+					(at 6.858 -12.446 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 19.05 0)
+					(length 2.54)
+					(name "VBAT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -17.78 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -17.78 16.51 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 17.78 -15.24 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 17.78 180)
+					(length 2.54)
+					(name "MOTOR_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -12.7 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 15.24 180)
+					(length 2.54)
+					(name "MOTOR_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -10.16 180)
+					(length 2.54)
+					(name "Z"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 12.7 180)
+					(length 2.54)
+					(name "MOTOR_C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 -7.62 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 1.27 0)
+					(length 2.54)
+					(name "RES+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.78 -1.27 0)
+					(length 2.54)
+					(name "RES-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -16.51 0)
+					(length 2.54)
+					(name "CAN_H"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -19.05 0)
+					(length 2.54)
+					(name "CAN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "drv_syms:USB_CANable"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at -10.16 11.176 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "USB_CANable"
+				(at 6.858 11.176 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" ""
+				(at 3.81 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.amazon.com/dp/B0G387Y3J9?plpRedirect=mhFallback&ref=clp_hp_h_pc"
+				(at 3.81 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "USB 2.0 A connector to CAN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "usb universal serial bus"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "USB3*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "USB_CANable_0_0"
+				(rectangle
+					(start -6.604 6.096)
+					(end -2.54 -6.35)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -5.334 4.826)
+					(end -4.064 -4.826)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -3.81 2.794)
+					(end -3.556 2.032)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.016)
+					(end -3.556 0.254)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 -0.762)
+					(end -3.556 -1.524)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 -2.54)
+					(end -3.556 -3.302)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 1.524)
+					(end 9.144 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -1.016)
+					(end 9.144 -1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB_CANable_0_1"
+				(rectangle
+					(start -10.16 8.89)
+					(end 10.16 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 0) (xy -25.4 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB_CANable_1_1"
+				(text "To Jetson USB"
+					(at -17.78 1.524 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 1.27 180)
+					(length 2.54)
+					(name "CANH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -1.27 180)
+					(length 2.54)
+					(name "CANL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+3.3V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 129.54 107.442)
+		(end 265.938 176.276)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "288f1452-3ebd-4682-b595-889e41c1e127")
+	)
+	(rectangle
+		(start 267.97 178.562)
+		(end 404.368 247.396)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "2bd82753-59a8-4cb9-ae7c-f548e9adaf41")
+	)
+	(rectangle
+		(start 129.54 37.592)
+		(end 265.938 106.426)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "30835aba-6edd-464a-ba81-00467ab79aa5")
+	)
+	(rectangle
+		(start 267.97 37.592)
+		(end 404.368 106.426)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "4cc19dcb-ec0a-4af0-979d-d1ed1fc344cf")
+	)
+	(rectangle
+		(start 13.97 37.592)
+		(end 127.762 106.426)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "61385672-ec3f-45d3-b3a7-70a6f8b617bc")
+	)
+	(rectangle
+		(start 267.97 107.442)
+		(end 404.368 176.276)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "918e5401-ad3d-4cbc-a263-4a3d76458ce2")
+	)
+	(rectangle
+		(start 129.54 178.562)
+		(end 265.938 247.396)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "e5d6205e-9d0f-4ee6-9abb-79fde14e2391")
+	)
+	(text "Drive 4\n"
+		(exclude_from_sim no)
+		(at 276.606 110.49 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "2456e906-b664-4e7a-80b7-d6d8923064aa")
+	)
+	(text "Drive 3"
+		(exclude_from_sim no)
+		(at 137.922 110.49 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "69ca7b9e-25ee-4750-bda2-559314e24359")
+	)
+	(text "Drive 5\n"
+		(exclude_from_sim no)
+		(at 138.43 181.864 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "cafad37f-5330-475f-aba1-a2f33476083a")
+	)
+	(text "BILLEE Drivetrain Module"
+		(exclude_from_sim no)
+		(at 50.546 17.526 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+			)
+		)
+		(uuid "ddd849aa-571a-4375-b152-30737c2fbcfe")
+	)
+	(text "Drive 2\n"
+		(exclude_from_sim no)
+		(at 276.606 40.894 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "dfe3dcfb-cfda-4867-8f59-289d52070ead")
+	)
+	(text "USB CANable"
+		(exclude_from_sim no)
+		(at 28.702 41.402 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "e0c39ddd-b078-4cc3-b295-a206dbb922a7")
+	)
+	(text "Drive 6\n"
+		(exclude_from_sim no)
+		(at 277.114 181.864 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "e83f866e-7be8-40ee-9a96-a85777c18fcf")
+	)
+	(text "Drive 1\n"
+		(exclude_from_sim no)
+		(at 137.922 40.894 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "ee932617-3cd8-4aef-a0a0-07dde2e45699")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 363.728 152.4 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "26ff1a84-bb2f-47d9-9d5c-eb7b0134b96a")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 225.298 82.55 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2b33d95f-df63-42a3-93bb-08ab7f805ec7")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 363.728 82.55 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2e050a3c-4da9-4647-a70f-6d762a9d6999")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 225.298 223.52 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "53229e1e-7344-4019-b7ff-942a533f86d6")
+	)
+	(text_box "120 Ohm Resistor Set Internally by CANable. Worth checking if one is necessary at the other end of the CAN bus."
+		(exclude_from_sim no)
+		(at 83.82 62.7906 0)
+		(size 25.4 14.1714)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "75ade9fa-e036-448d-befb-da5b3630b195")
+	)
+	(text_box "All Power is supplied by the BILLEE Rover Control Module."
+		(exclude_from_sim no)
+		(at 40.386 86.9837 0)
+		(size 62.738 3.9483)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "9b50be3a-e100-43d9-bd5c-3495f5f56766")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 225.298 152.4 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "bd67af57-5652-4562-a0c1-fce4ab531239")
+	)
+	(text_box "NOTE: The colors from the ODESC Hall input wiring to the NEO Encoder Output do not match."
+		(exclude_from_sim no)
+		(at 363.728 223.52 0)
+		(size 34.29 10.0822)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "dd5b4c5d-9b75-4bed-8d7b-2a40bb195f85")
+	)
+	(no_connect
+		(at 370.84 209.55)
+		(uuid "05a6546d-996d-4bed-9228-3da9d4606afb")
+	)
+	(no_connect
+		(at 302.26 142.24)
+		(uuid "1125efb2-ccc2-44af-a0eb-32cb9719a14a")
+	)
+	(no_connect
+		(at 163.83 72.39)
+		(uuid "2c506b1b-b510-472a-8d5f-72834538201f")
+	)
+	(no_connect
+		(at 163.83 210.82)
+		(uuid "45fe582c-f0de-45e1-8906-a2e27ffcec6d")
+	)
+	(no_connect
+		(at 370.84 68.58)
+		(uuid "466dd05a-c5f6-4b57-aabd-4f3e0afd4e3a")
+	)
+	(no_connect
+		(at 370.84 138.43)
+		(uuid "473ff77f-0c14-4499-ad45-9d64b1d1d025")
+	)
+	(no_connect
+		(at 302.26 213.36)
+		(uuid "4e4375e4-d7c2-4060-8ce3-df71a9501098")
+	)
+	(no_connect
+		(at 302.26 72.39)
+		(uuid "5d36c4c1-aa02-48c9-a93e-743baaef33c4")
+	)
+	(no_connect
+		(at 232.41 209.55)
+		(uuid "6f9b0cbd-e176-4f34-8d06-b7da5672939c")
+	)
+	(no_connect
+		(at 302.26 69.85)
+		(uuid "814ac8e8-cb97-4bdd-b18e-c13f49b76678")
+	)
+	(no_connect
+		(at 163.83 213.36)
+		(uuid "a7bf9700-5cd7-4774-9b4f-1568176e285d")
+	)
+	(no_connect
+		(at 163.83 139.7)
+		(uuid "afff6128-8e8a-4139-8174-cc2d626d37a1")
+	)
+	(no_connect
+		(at 232.41 68.58)
+		(uuid "bcebe8f4-553a-43dc-ac03-570c7f656770")
+	)
+	(no_connect
+		(at 163.83 142.24)
+		(uuid "cb56e30e-999f-4f21-b01a-bc5eaa584193")
+	)
+	(no_connect
+		(at 163.83 69.85)
+		(uuid "cc21d66a-fb3a-4b8f-907f-ca30fdfbd8dc")
+	)
+	(no_connect
+		(at 302.26 210.82)
+		(uuid "ce4a7864-cbc8-4e74-bcb0-758d24cbe190")
+	)
+	(no_connect
+		(at 232.41 138.43)
+		(uuid "d638d583-fe2f-4594-9cef-389c9b6330c7")
+	)
+	(no_connect
+		(at 302.26 139.7)
+		(uuid "fe012985-8e49-4d35-998e-53f7bdb88be2")
+	)
+	(wire
+		(pts
+			(xy 370.84 123.19) (xy 337.82 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0462ab3f-da87-4200-a5fe-5653fe1894a0")
+	)
+	(wire
+		(pts
+			(xy 287.02 195.58) (xy 302.26 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09a9f803-24f2-4156-9ecf-4ee2a3bd83c4")
+	)
+	(wire
+		(pts
+			(xy 148.59 121.92) (xy 163.83 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e08081-747c-4d9a-8fef-8b742693c218")
+	)
+	(wire
+		(pts
+			(xy 370.84 55.88) (xy 337.82 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d8c205d-d5d3-427a-afce-7668a62f45a2")
+	)
+	(wire
+		(pts
+			(xy 232.41 53.34) (xy 199.39 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e0c9970-4f2f-4143-92f3-b61ac61361dc")
+	)
+	(wire
+		(pts
+			(xy 287.02 124.46) (xy 302.26 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2394ac71-b613-45f6-862c-8f505c1e333b")
+	)
+	(wire
+		(pts
+			(xy 232.41 58.42) (xy 199.39 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26fc57de-a0f1-4d8e-a1c8-44af749889e5")
+	)
+	(wire
+		(pts
+			(xy 370.84 58.42) (xy 337.82 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d135aee-5a21-4273-82d8-df87c2393d40")
+	)
+	(wire
+		(pts
+			(xy 287.02 54.61) (xy 302.26 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34c0af9f-ac32-4cb2-a8a9-233190b08386")
+	)
+	(wire
+		(pts
+			(xy 232.41 55.88) (xy 199.39 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "355f38e1-6847-4579-9617-7fa1e343bdcf")
+	)
+	(wire
+		(pts
+			(xy 204.47 148.59) (xy 199.39 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "381e9fa8-05d4-496e-a2cf-9a6682fe284b")
+	)
+	(wire
+		(pts
+			(xy 232.41 125.73) (xy 199.39 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42f5b984-50c1-4d54-9d5e-b6664d7797c4")
+	)
+	(wire
+		(pts
+			(xy 365.76 207.01) (xy 370.84 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b66089-4374-4a5f-aeb5-edd6dde3ed4f")
+	)
+	(wire
+		(pts
+			(xy 287.02 193.04) (xy 302.26 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "464febf1-9025-43f2-9771-bb8f2945bd1a")
+	)
+	(wire
+		(pts
+			(xy 287.02 52.07) (xy 302.26 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "519c8a54-2b46-4a9b-a20a-be99a538c7d6")
+	)
+	(wire
+		(pts
+			(xy 232.41 123.19) (xy 199.39 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ef09810-14c5-45d5-a67d-3dd2b16684de")
+	)
+	(wire
+		(pts
+			(xy 232.41 199.39) (xy 199.39 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f33eb9d-032a-4979-a40b-5de2a0efaf1b")
+	)
+	(wire
+		(pts
+			(xy 370.84 125.73) (xy 337.82 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "636a216c-8105-4f96-9a96-dee03cd1f166")
+	)
+	(wire
+		(pts
+			(xy 370.84 194.31) (xy 337.82 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "647f4a8d-e9b2-4cf6-8727-cb5bbf26b94c")
+	)
+	(wire
+		(pts
+			(xy 365.76 135.89) (xy 370.84 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7f1fcf-8ba1-42e1-865f-dfb25f201786")
+	)
+	(wire
+		(pts
+			(xy 370.84 196.85) (xy 337.82 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70116c4c-be2e-4ac7-b1bd-3802c904f8b1")
+	)
+	(wire
+		(pts
+			(xy 342.9 219.71) (xy 337.82 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "746323ed-5ca6-41e0-a567-19c15aed2143")
+	)
+	(wire
+		(pts
+			(xy 232.41 196.85) (xy 199.39 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78043f65-f8fc-4090-9589-cc73d43f26b8")
+	)
+	(wire
+		(pts
+			(xy 287.02 121.92) (xy 302.26 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83f53e0e-6404-4641-9759-96dd0dbb0fbc")
+	)
+	(wire
+		(pts
+			(xy 148.59 193.04) (xy 163.83 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "873ce732-056a-4c1f-8876-b37a26208fad")
+	)
+	(wire
+		(pts
+			(xy 370.84 128.27) (xy 337.82 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89c0162c-cc42-42fd-a82c-1e72b5059c61")
+	)
+	(wire
+		(pts
+			(xy 232.41 194.31) (xy 199.39 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6e121b-24aa-4811-85b7-18b78ca3eaa5")
+	)
+	(wire
+		(pts
+			(xy 370.84 199.39) (xy 337.82 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a016d16b-186e-4c26-9de2-dcb7b6590fa7")
+	)
+	(wire
+		(pts
+			(xy 148.59 195.58) (xy 163.83 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2a90a33-c868-4bff-9eb7-b3ac72f0019e")
+	)
+	(wire
+		(pts
+			(xy 227.33 135.89) (xy 232.41 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8ee5ac7-286e-4a27-9d9d-05c6cf03e752")
+	)
+	(wire
+		(pts
+			(xy 227.33 66.04) (xy 232.41 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af91cefd-0d1a-46c9-b0c3-b65131dbc44f")
+	)
+	(wire
+		(pts
+			(xy 370.84 53.34) (xy 337.82 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b11278ef-301b-45a7-a339-9df31560b20d")
+	)
+	(wire
+		(pts
+			(xy 227.33 207.01) (xy 232.41 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b622bcc1-7223-4b6d-9554-2314fe1fe5e8")
+	)
+	(wire
+		(pts
+			(xy 342.9 148.59) (xy 337.82 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c20fe3a0-c600-41d8-930a-025477eb7fad")
+	)
+	(wire
+		(pts
+			(xy 232.41 128.27) (xy 199.39 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2efa2dd-ba8d-4e0a-9d0d-16fa67f34947")
+	)
+	(wire
+		(pts
+			(xy 148.59 124.46) (xy 163.83 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4e548a3-3de9-4d16-9e1f-b56746fb61cd")
+	)
+	(wire
+		(pts
+			(xy 204.47 78.74) (xy 199.39 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb674605-e886-4ad2-81e9-f7b6f35789ce")
+	)
+	(wire
+		(pts
+			(xy 204.47 219.71) (xy 199.39 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f096c0cb-ade5-4986-bc3e-20feda433a17")
+	)
+	(wire
+		(pts
+			(xy 148.59 52.07) (xy 163.83 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6aba2b2-6933-4008-b3d0-f4c4f896543e")
+	)
+	(wire
+		(pts
+			(xy 365.76 66.04) (xy 370.84 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f95c0429-5314-4862-b293-77aed2710354")
+	)
+	(wire
+		(pts
+			(xy 342.9 78.74) (xy 337.82 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc85b368-66d5-4704-a6ef-3e7c6b836f5a")
+	)
+	(wire
+		(pts
+			(xy 148.59 54.61) (xy 163.83 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdcbfd50-29c9-4a8c-a229-88fe531ff04f")
+	)
+	(label "ENC1_B"
+		(at 337.82 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "01dc9990-8ab0-4e12-94d2-51fb2221df5f")
+	)
+	(label "CANH"
+		(at 163.83 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "091246ad-be56-46a6-8dde-0e43b139cabf")
+	)
+	(label "CANH"
+		(at 163.83 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "095a099a-7d90-43c0-bf5d-bd38ee1e511b")
+	)
+	(label "ENC1_A"
+		(at 232.41 140.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0c44246b-4c3d-4ce2-80ae-3bb488ff2e70")
+	)
+	(label "ENC1_B"
+		(at 199.39 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e27a034-277a-4f19-908b-5c87afc268fc")
+	)
+	(label "ENC1_B"
+		(at 370.84 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0f4fca14-3315-482f-8c31-27087ae50174")
+	)
+	(label "ENC1_GND"
+		(at 199.39 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13be21b0-6303-4567-ab9b-cf4c0e0f8d01")
+	)
+	(label "ENC1_C"
+		(at 370.84 146.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "15908fd3-a629-4923-88eb-1cfe0cb83c58")
+	)
+	(label "CANH"
+		(at 163.83 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "19a9ee34-2589-4f7d-ab40-652ed50871e9")
+	)
+	(label "ENC1_B"
+		(at 370.84 214.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "21698e6d-b209-483d-999a-e211f597d56a")
+	)
+	(label "ENC1_B"
+		(at 337.82 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24f944b9-f28c-4b52-a4aa-44b26f825507")
+	)
+	(label "CANH"
+		(at 302.26 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "25d16e81-05dc-4955-94be-2b3797aae403")
+	)
+	(label "ENC1_A"
+		(at 337.82 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "26d5ce5a-ca9e-4a19-904e-08f5ec58181e")
+	)
+	(label "ENC1_C"
+		(at 232.41 217.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2a2dd94a-a954-49a3-9a1c-89124f11e987")
+	)
+	(label "ENC1_GND"
+		(at 370.84 219.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2a2e59c2-16b0-45bc-b404-3028d1411ebe")
+	)
+	(label "ENC1_GND"
+		(at 337.82 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3dc2e978-5191-4d0e-881c-a3d8e6735d69")
+	)
+	(label "CANL"
+		(at 163.83 160.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3fdc1ecb-52e2-44ca-ac02-e23c53b0a9fe")
+	)
+	(label "CANL"
+		(at 163.83 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4264a7c9-b51a-4864-a99a-d929d1f24bc5")
+	)
+	(label "ENC1_A"
+		(at 199.39 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4be964dc-53f4-421e-bd4d-3a374d932b71")
+	)
+	(label "ENC1_C"
+		(at 337.82 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e810065-c99b-4424-b919-40ceb18554b6")
+	)
+	(label "ENC1_GND"
+		(at 232.41 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "50429e21-80f8-4a6e-a4ce-41f7d488c504")
+	)
+	(label "ENC1_A"
+		(at 232.41 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "51209e8b-6901-4879-91eb-e2babb1c5cb3")
+	)
+	(label "ENC1_C"
+		(at 370.84 217.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "52dd4849-648f-4b5a-9722-bcdba5a34b4c")
+	)
+	(label "ENC1_B"
+		(at 337.82 224.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "561916eb-289e-42f3-beaa-bedd23de6607")
+	)
+	(label "ENC1_GND"
+		(at 199.39 229.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "66b7f132-b774-46cb-a015-99992fa45ccb")
+	)
+	(label "ENC1_A"
+		(at 199.39 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68b100d2-fa52-468d-a637-3232bf0f8797")
+	)
+	(label "ENC1_C"
+		(at 199.39 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "708a6414-8a3a-40f9-8b55-6d6aba6c9d1a")
+	)
+	(label "ENC1_GND"
+		(at 370.84 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "76c4f862-cafb-4d6d-a791-8f372849bda6")
+	)
+	(label "CANH"
+		(at 302.26 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7b724255-b3d0-4a06-97a9-cbcba55c17bf")
+	)
+	(label "ENC1_C"
+		(at 232.41 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7d8cea70-cc03-4c5b-9b99-613ee22165c6")
+	)
+	(label "ENC1_C"
+		(at 337.82 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "867c1178-ddcd-41fa-a7c0-c12ead2df227")
+	)
+	(label "ENC1_C"
+		(at 370.84 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8930b618-e1d8-48a3-a688-1da6624ee07a")
+	)
+	(label "CANL"
+		(at 302.26 160.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "89873f15-ec8b-4ce3-84f0-be5b32841682")
+	)
+	(label "ENC1_B"
+		(at 232.41 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8b0d9ec6-c2ba-4095-95c7-11f5d71d306e")
+	)
+	(label "ENC1_GND"
+		(at 337.82 229.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c7fec72-f014-4170-a9ef-b8533ef3cb85")
+	)
+	(label "ENC1_A"
+		(at 337.82 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "905cd2a4-4965-41d0-a341-1740d196923e")
+	)
+	(label "CANL"
+		(at 73.66 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93399e13-1a59-4cca-af2b-a0daa0f5b31e")
+	)
+	(label "ENC1_GND"
+		(at 232.41 219.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9a3053f4-3c1e-4602-bab9-555a3939c3ae")
+	)
+	(label "ENC1_GND"
+		(at 232.41 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae6cfb81-8910-4566-8870-ef86f58f9171")
+	)
+	(label "CANH"
+		(at 302.26 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b133d946-6043-48ce-a31a-3cd64d962974")
+	)
+	(label "ENC1_A"
+		(at 370.84 212.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b64cd499-1f85-4ad5-97f1-563a6e995628")
+	)
+	(label "ENC1_GND"
+		(at 199.39 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b98af36f-9419-4579-b230-ccad9d732fe6")
+	)
+	(label "ENC1_B"
+		(at 232.41 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bd3476e7-f9fb-4943-86c5-937245ca1ace")
+	)
+	(label "ENC1_A"
+		(at 370.84 140.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bf133c80-9b88-4b23-a32a-73a4eedd9f57")
+	)
+	(label "ENC1_B"
+		(at 199.39 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ccaafb12-a416-482d-8386-8a98c82a044e")
+	)
+	(label "ENC1_GND"
+		(at 370.84 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cd30983b-605c-408f-a3cc-2ed0835f9046")
+	)
+	(label "CANH"
+		(at 73.66 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ceec4717-b82d-4f47-bb21-77bfa3b7cc03")
+	)
+	(label "ENC1_C"
+		(at 232.41 146.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d29782b5-c142-4455-91e2-1514c7fc37a5")
+	)
+	(label "ENC1_B"
+		(at 199.39 224.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5f31a68-1108-4ea2-a49d-b5339820f157")
+	)
+	(label "ENC1_B"
+		(at 370.84 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d8d233bf-2c93-417c-8706-117161b2ed84")
+	)
+	(label "ENC1_A"
+		(at 370.84 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e172cdb9-77a6-4cb7-b3c7-2d3683168d5f")
+	)
+	(label "ENC1_B"
+		(at 232.41 214.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e219fbaf-0d1d-4986-b066-ef23b6532aab")
+	)
+	(label "ENC1_C"
+		(at 199.39 222.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec1425d5-79c7-483f-a954-4f72e26492a9")
+	)
+	(label "ENC1_A"
+		(at 337.82 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec54114c-7df6-407a-9bfa-0e4d7ae6517f")
+	)
+	(label "ENC1_A"
+		(at 232.41 212.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ee5b496f-5ff5-4f07-af7c-e318e72f1405")
+	)
+	(label "CANL"
+		(at 163.83 231.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f1dc7d0b-2fa4-4cb2-8377-c41ddf92a0e1")
+	)
+	(label "CANL"
+		(at 302.26 231.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f3b52912-3df7-4e08-9e49-72e085d81750")
+	)
+	(label "ENC1_GND"
+		(at 337.82 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3ba8917-b3e8-43e7-a0f0-68cdb4baaf32")
+	)
+	(label "CANL"
+		(at 302.26 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f4e4ebd9-547e-4111-8d6f-2a11fd468d56")
+	)
+	(label "ENC1_C"
+		(at 199.39 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f562ea38-ef5c-45f2-ad39-c4f42f4e1dc7")
+	)
+	(label "ENC1_C"
+		(at 337.82 222.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa863d08-c46a-4b9f-b5cf-3b01a4eca2d3")
+	)
+	(label "ENC1_A"
+		(at 199.39 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fb655045-e24d-464a-8938-a166dcbdede3")
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 365.76 207.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "09455077-05ed-470b-b49c-d9271ce74822")
+		(property "Reference" "#PWR018"
+			(at 365.76 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 365.76 202.946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 365.76 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b2912fe1-e3a2-4b52-849d-38a6d76538ee")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 204.47 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0afe35cb-e5ce-4016-b9aa-ba6d00804fb6")
+		(property "Reference" "#PWR05"
+			(at 204.47 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 204.47 144.526 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 204.47 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 204.47 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "12c73b9d-eedf-4ede-94a2-275b750910ff")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 247.65 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1fe0cbea-4f2f-41a8-b651-baf4f0a9d9f8")
+		(property "Reference" "M1"
+			(at 248.412 44.958 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 248.412 47.498 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 247.65 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 247.65 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 247.65 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "78ea626e-d489-4d35-bb59-1fe84380b10d")
+		)
+		(pin "4"
+			(uuid "429af745-362d-496d-b198-54ca576b19f8")
+		)
+		(pin "2"
+			(uuid "a91e304a-f6fc-401c-9b15-6128e82e0b3d")
+		)
+		(pin "1"
+			(uuid "72d159db-aef5-4e50-8fe3-217062129c0a")
+		)
+		(pin "3"
+			(uuid "a9b64ce7-9393-44f1-b209-f59722326601")
+		)
+		(pin "6"
+			(uuid "a35b0e79-78a8-44d4-b221-fc5a4e3d2212")
+		)
+		(pin "8"
+			(uuid "ffd1831e-6541-42ca-8a4e-41c19896472b")
+		)
+		(pin "9"
+			(uuid "25da526e-2326-41fa-b60d-4a2eebbe5c62")
+		)
+		(pin "7"
+			(uuid "38cd6523-a7af-40e7-86cb-ae7a9d15b54b")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 342.9 219.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2dac46fa-2f85-4afa-8cfe-994b82bc70cf")
+		(property "Reference" "#PWR017"
+			(at 342.9 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 342.9 215.646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 342.9 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 342.9 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79bc45a1-b080-43fb-bfaf-5fa230940e08")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 247.65 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3552f7b2-279c-40b6-a116-c740fc278aa9")
+		(property "Reference" "M2"
+			(at 248.412 114.808 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 248.412 117.348 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 247.65 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 247.65 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 247.65 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "999bab6c-29d8-454f-93e1-37aaaa351288")
+		)
+		(pin "4"
+			(uuid "2b5f5d7a-da82-420d-af08-4f079424fbf4")
+		)
+		(pin "2"
+			(uuid "c6540e9d-af44-4b9f-a76f-4711befc8be5")
+		)
+		(pin "1"
+			(uuid "b0df7e71-499c-4ea8-b98a-8619cbe04372")
+		)
+		(pin "3"
+			(uuid "fdeb6eea-7472-417e-85e1-5392db8f8c0a")
+		)
+		(pin "6"
+			(uuid "8bb255e4-41a2-483f-9192-f57117fa6cc6")
+		)
+		(pin "8"
+			(uuid "7e2f6aed-b991-4fc5-a5ab-e2f199b620c0")
+		)
+		(pin "9"
+			(uuid "85d13071-e4fb-437e-8ef3-795df55785e3")
+		)
+		(pin "7"
+			(uuid "29b6bb46-1bc1-4e6f-a2c3-05277b32aaea")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 287.02 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "359220f2-c7f0-45ff-90d7-e567cfe6d63c")
+		(property "Reference" "#PWR0166"
+			(at 287.02 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE4_SENSOR_OUT"
+			(at 283.972 117.348 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 287.02 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72e48e7f-050c-4280-9493-3f6ef5b30bf8")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0166")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 204.47 219.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "409563b5-6a66-4381-9a6e-df65458fb3c5")
+		(property "Reference" "#PWR014"
+			(at 204.47 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 204.47 215.646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 204.47 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 204.47 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "08322b3e-8755-4d0b-9fd2-edc24c87ea36")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 204.47 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "48ed29cd-4606-4b6e-b63c-aa1f1f3e1fbe")
+		(property "Reference" "#PWR02"
+			(at 204.47 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 204.47 74.676 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 204.47 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 204.47 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f78a123-a77a-4415-bd26-2dbf31a44a54")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 365.76 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "53bb84b9-98aa-4edb-bc40-63443a3aebda")
+		(property "Reference" "#PWR012"
+			(at 365.76 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 365.76 131.826 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 365.76 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "436d50ff-ab7f-4da7-9d4d-624ebdbd9cd7")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "ODESC_V4.2_3")
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 320.04 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75867672-df7e-4e44-a029-22078410ba1c")
+		(property "Reference" "U4"
+			(at 320.04 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 320.04 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 320.04 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 320.04 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "77d9d723-9857-426f-97dd-7268902e503a")
+		)
+		(pin "2"
+			(uuid "db1414ee-f3ef-47f8-aefe-1779418c2d18")
+		)
+		(pin "1"
+			(uuid "22af2c50-9e6d-4da7-9017-05c1b726407e")
+		)
+		(pin "4"
+			(uuid "da8eb790-a6a7-4e2a-8d0f-b05ebd33630d")
+		)
+		(pin "5"
+			(uuid "ed2173ed-e7f3-49db-95db-5a55cb7e967a")
+		)
+		(pin "6"
+			(uuid "75a38dc3-53eb-4a4e-bd2c-b96db27b8a4c")
+		)
+		(pin "7"
+			(uuid "e6c54b0f-13f7-448b-8449-9e9f16a02583")
+		)
+		(pin "1"
+			(uuid "728fc3ca-cd17-41ad-bc6e-efc38f5a8bda")
+		)
+		(pin "5"
+			(uuid "baa54c43-2f3b-4828-93c5-0a06ed6aabcc")
+		)
+		(pin "4"
+			(uuid "7a6c4f2c-4f8d-40b1-9726-f6c9c8105577")
+		)
+		(pin "3"
+			(uuid "39375485-ca66-4426-bcbf-24f3733b881d")
+		)
+		(pin "2"
+			(uuid "5bd83670-6f4a-4044-ab43-ca5a7de236c7")
+		)
+		(pin "28"
+			(uuid "6ff816cb-0362-4bbd-a2fd-9167fc8270c8")
+		)
+		(pin "29"
+			(uuid "9421bd80-52df-41eb-81ac-4c0f5f1acc10")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 247.65 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7db34bc2-a360-4a6c-bbf0-abf43f410fb1")
+		(property "Reference" "M5"
+			(at 248.412 185.928 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 248.412 188.468 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 247.65 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 247.65 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 247.65 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "cd68e65c-d3f5-46a9-9885-314e0d666339")
+		)
+		(pin "4"
+			(uuid "4f048c64-da80-4a34-8c7b-cc71221cfcbb")
+		)
+		(pin "2"
+			(uuid "1ac9105b-18d7-4fe7-928e-130bea70cc24")
+		)
+		(pin "1"
+			(uuid "ec5aeb61-a507-401b-9dac-8f6a17624c68")
+		)
+		(pin "3"
+			(uuid "10867562-0ddc-4927-802d-69e81f8c832f")
+		)
+		(pin "6"
+			(uuid "9b967110-eecf-4184-b021-653c75d20bf2")
+		)
+		(pin "8"
+			(uuid "c5475736-338d-479a-bfd5-e716029bd66d")
+		)
+		(pin "9"
+			(uuid "99cd677e-1bb0-425c-8b4c-2c4f47021037")
+		)
+		(pin "7"
+			(uuid "7789e66a-caf3-4179-876f-05a7644ac220")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 181.61 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8030670c-4109-46cc-b8aa-ae38eaf589e0")
+		(property "Reference" "U1"
+			(at 181.61 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 181.61 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 181.61 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 181.61 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "fd730e35-18c6-4140-bc89-cd2993614236")
+		)
+		(pin "2"
+			(uuid "ad8c0191-c198-4c2d-b943-e6b3c18f0df6")
+		)
+		(pin "1"
+			(uuid "434f3abb-0b20-434c-88a2-3a913a514f20")
+		)
+		(pin "4"
+			(uuid "ca3d9b0e-d6da-4809-acc4-78e860e35b15")
+		)
+		(pin "5"
+			(uuid "27a704c4-0447-41f7-b28c-ccda0288aea8")
+		)
+		(pin "6"
+			(uuid "7f7c3157-cced-4acc-8d23-0803c5bde32f")
+		)
+		(pin "7"
+			(uuid "62d9e828-8074-4615-a157-aedc5d399c96")
+		)
+		(pin "1"
+			(uuid "768cad76-73d0-4424-84be-4c4028dc0adf")
+		)
+		(pin "5"
+			(uuid "be672279-b98d-4d5f-bf57-f28d2cbffe57")
+		)
+		(pin "4"
+			(uuid "40f3ac04-015f-4ad7-a24f-4bda63661aba")
+		)
+		(pin "3"
+			(uuid "3eb0faf6-20e5-41f8-865c-a51813e56e4f")
+		)
+		(pin "2"
+			(uuid "6c7e2f32-8547-425f-8f3f-a7bd4283078e")
+		)
+		(pin "28"
+			(uuid "817242af-801e-482a-964b-300c592231b4")
+		)
+		(pin "29"
+			(uuid "6482b53e-2122-473c-8cf5-3eafd4848c34")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 287.02 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "80556cbd-afce-43b2-8da5-bfbdbb463e4d")
+		(property "Reference" "#PWR0165"
+			(at 287.02 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE2_SENSOR_OUT"
+			(at 283.972 47.498 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 287.02 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9348a26-d949-4166-9ac8-591a9b0537ff")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 148.59 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8539dbc7-7626-4383-919f-8db5a004e3f6")
+		(property "Reference" "#PWR01"
+			(at 148.59 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 148.59 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b01a4c1-6d78-4aab-9fba-47d8bfbbd799")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 386.08 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "882da5dc-063f-44ff-bc49-163fd1ab6b71")
+		(property "Reference" "M6"
+			(at 386.842 185.928 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 386.842 188.468 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 386.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 386.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 386.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 386.08 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "94a171d2-c046-4300-8d06-3f97fe21682c")
+		)
+		(pin "4"
+			(uuid "aa604bb6-c1cc-4a5f-9d74-f5b0135405d5")
+		)
+		(pin "2"
+			(uuid "07de1010-706a-46ac-ade7-79f1100bb5a3")
+		)
+		(pin "1"
+			(uuid "b22acdc3-eb87-4abc-af28-d3bd114807f0")
+		)
+		(pin "3"
+			(uuid "8dbbf6cc-5ac2-4ecb-b922-1bde3513673a")
+		)
+		(pin "6"
+			(uuid "bc60198b-d44b-49a1-8845-a33707983e04")
+		)
+		(pin "8"
+			(uuid "6880dfe5-dc5e-41a6-b50f-d7e9736b8007")
+		)
+		(pin "9"
+			(uuid "f5c5bd68-4297-488d-a719-fb4724be4c6c")
+		)
+		(pin "7"
+			(uuid "265d964d-72f1-4f5b-8f70-ab1e9200ae05")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 386.08 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "885fbee1-0678-46c4-b89d-aeefe038e42b")
+		(property "Reference" "M4"
+			(at 386.842 114.808 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 386.842 117.348 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 386.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 386.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 386.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 386.08 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "53ceb540-b5ae-4bfc-91c1-fb65133b23f3")
+		)
+		(pin "4"
+			(uuid "0ce64493-da79-417a-afa0-4e768735d7f1")
+		)
+		(pin "2"
+			(uuid "577ed0d8-ea0a-4288-824c-d800ab6855c1")
+		)
+		(pin "1"
+			(uuid "6a36fea7-20fa-47e1-8414-c1183f81f366")
+		)
+		(pin "3"
+			(uuid "321f29d7-4051-492c-b6ea-31d84e6a0531")
+		)
+		(pin "6"
+			(uuid "71aa340f-2b40-4e40-83e9-009b24a36266")
+		)
+		(pin "8"
+			(uuid "8e1907e3-61b6-4980-9697-1b720eb05b70")
+		)
+		(pin "9"
+			(uuid "d391f8de-fd07-4009-baab-f31334bd1a91")
+		)
+		(pin "7"
+			(uuid "0b74c927-e3b6-4fc0-9c26-981f64f2865f")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 342.9 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8c20659c-01fd-4024-8593-416931406775")
+		(property "Reference" "#PWR09"
+			(at 342.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 342.9 74.676 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 342.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 342.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3d514f8b-9c1b-455a-8fc3-ca7320672a09")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 287.02 193.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8df34162-1931-400f-ab56-92f437ff49c8")
+		(property "Reference" "#PWR0168"
+			(at 287.02 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE6_SENSOR_OUT"
+			(at 283.972 188.468 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 287.02 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9f4c618a-166f-40f8-8414-94148634803b")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0168")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 227.33 207.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98e6b199-bfc3-4b63-9a9b-0f76216c3e7b")
+		(property "Reference" "#PWR015"
+			(at 227.33 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 227.33 202.946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 227.33 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50e7bf5e-eb50-44a0-88f0-96ed769a91e0")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 148.59 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a14509d4-c95a-42f6-9687-7453f4e90216")
+		(property "Reference" "#PWR013"
+			(at 148.59 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 148.59 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "78945858-ecb4-4d90-abd7-c69127499b38")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 148.59 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5c52694-ff89-49d6-b39a-8e5790ca355b")
+		(property "Reference" "#PWR04"
+			(at 148.59 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 148.59 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52de08a7-3abd-4bc1-b18c-8cf6793cd251")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 148.59 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ab424b96-e50a-48f4-9d05-f74bb0a1b48a")
+		(property "Reference" "#PWR0163"
+			(at 148.59 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE1_SENSOR_OUT"
+			(at 145.542 47.498 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 148.59 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2e1f287-2efb-4b06-803c-f73d1b131ced")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0163")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 287.02 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "afcce4dd-f5aa-413d-b222-98b5863f10c9")
+		(property "Reference" "#PWR07"
+			(at 287.02 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 287.02 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 287.02 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "930e5326-5ae6-4f6e-b041-068e7ee7a5c8")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:NEO_Brushless_Motor")
+		(at 386.08 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b2f05b7d-ea95-44cb-bb29-ee24a39af6d3")
+		(property "Reference" "M3"
+			(at 386.842 44.958 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NEO_Brushless_Motor"
+			(at 386.842 47.498 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 386.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.revrobotics.com/brushless/neo"
+			(at 386.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "REV Robotics NEO Brushless Motor, 3-phase BLDC, 6-pin JST-PH encoder, 12V nominal, Hall-effect encoder 42 CPR"
+			(at 386.08 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "REV Robotics"
+			(at 386.08 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "26f5bc5f-9bf3-46b0-95ff-03ae61c472ad")
+		)
+		(pin "4"
+			(uuid "a7c9c2c8-af54-4361-bdd3-2f5a8aa956f7")
+		)
+		(pin "2"
+			(uuid "2b45ecfa-022b-4f81-8429-f3826d20c4c6")
+		)
+		(pin "1"
+			(uuid "702c91b6-b9ca-4ece-9387-e1707a35ef6d")
+		)
+		(pin "3"
+			(uuid "aececc50-4097-46f5-bd55-ee1446bd4a08")
+		)
+		(pin "6"
+			(uuid "1dee9aff-c683-4e1e-92d8-5b16cac83c3a")
+		)
+		(pin "8"
+			(uuid "03e3dbe2-bf67-43b4-917c-02b7f81e6441")
+		)
+		(pin "9"
+			(uuid "521fcb03-afda-4ef1-8e3f-b2a134a659ff")
+		)
+		(pin "7"
+			(uuid "ba1aaf7c-bd1d-4061-8deb-099ba5646928")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "M3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 342.9 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b6e5d314-bdc7-4215-8cf9-7f31bda40e14")
+		(property "Reference" "#PWR010"
+			(at 342.9 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 342.9 144.526 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 342.9 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 342.9 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34dfa2e6-eef7-42f8-83a4-840d8a11ace8")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 287.02 195.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd033333-ba33-40f7-a044-77aefbee1b98")
+		(property "Reference" "#PWR016"
+			(at 287.02 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 287.02 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 287.02 195.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "386a0cc9-4abe-4602-87dd-ca959f7a1648")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "ODESC_V4.2_4")
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 181.61 212.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5ebc3b2-19a8-49ac-a8de-53d1f02995b3")
+		(property "Reference" "U5"
+			(at 181.61 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 181.61 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 181.61 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 181.61 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "283159eb-fad1-4716-8c3b-8458c1e8ea8c")
+		)
+		(pin "2"
+			(uuid "af4283b8-1873-4e02-9cbf-60e4b14bfd53")
+		)
+		(pin "1"
+			(uuid "bd0616fd-edee-4de5-9532-d870db71d632")
+		)
+		(pin "4"
+			(uuid "80db9006-23ad-4bbe-af6d-2e7078f5f8ce")
+		)
+		(pin "5"
+			(uuid "350f5dc7-4844-4353-b8a8-4f2a5bfcc521")
+		)
+		(pin "6"
+			(uuid "99e3fce0-7a67-492c-b12c-f138cfc3d459")
+		)
+		(pin "7"
+			(uuid "89898b8b-8aba-4369-b343-a9f93751ed81")
+		)
+		(pin "1"
+			(uuid "8c0eb2bc-e78a-44c7-abe7-044f9a98cf4b")
+		)
+		(pin "5"
+			(uuid "6ff4d613-40e5-4388-aa23-5a5257b21831")
+		)
+		(pin "4"
+			(uuid "126bcec2-6a9d-495b-ad47-f97f900025bf")
+		)
+		(pin "3"
+			(uuid "f9192a5d-42d5-41ef-98c6-240aee02a66d")
+		)
+		(pin "2"
+			(uuid "c3ec9c76-9e9e-4aa7-8fe7-e2157510ecb3")
+		)
+		(pin "28"
+			(uuid "14658729-913a-4a57-8cc5-9828dabfb051")
+		)
+		(pin "29"
+			(uuid "83695c18-6848-4ed5-ac22-21a08a5e4243")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 148.59 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca5dc80d-6d96-4345-88fe-8bbab8ea144c")
+		(property "Reference" "#PWR0164"
+			(at 148.59 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE3_SENSOR_OUT"
+			(at 145.542 117.348 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 148.59 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "36145795-20bb-4717-832c-ed0a747387a6")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0164")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "ODESC_V4.2_5")
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 320.04 212.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbe14c41-8d56-4448-b5ac-5dd06fe706b8")
+		(property "Reference" "U6"
+			(at 320.04 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 320.04 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 320.04 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 320.04 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "f9b11e20-f36c-47fe-874e-3449b2298dcf")
+		)
+		(pin "2"
+			(uuid "8408aa51-f17e-42d2-8568-ac75275c3fac")
+		)
+		(pin "1"
+			(uuid "fc185fd0-d1de-456e-8b7e-a24262641ffc")
+		)
+		(pin "4"
+			(uuid "c5f814ea-649e-40b0-b7fe-f7879674d0bc")
+		)
+		(pin "5"
+			(uuid "ca0970e6-ca26-41e0-8c88-ec10a6dc7d48")
+		)
+		(pin "6"
+			(uuid "0cd54e9e-99ba-4406-a28e-0fe90995a151")
+		)
+		(pin "7"
+			(uuid "926ced8c-28c5-44de-b4da-bce6dd20477d")
+		)
+		(pin "1"
+			(uuid "597a71ef-fd1f-4189-9f67-0130cebc887e")
+		)
+		(pin "5"
+			(uuid "fa9d9bd5-d3c1-4954-b71a-87ab39a65c2b")
+		)
+		(pin "4"
+			(uuid "38cb8b07-b4c7-4928-902e-8c3c2a308dd5")
+		)
+		(pin "3"
+			(uuid "76eef7f3-37f6-4542-8a9e-f4c4d6d9b963")
+		)
+		(pin "2"
+			(uuid "627ce48c-499c-4dae-a0b8-83bd85c2ff5a")
+		)
+		(pin "28"
+			(uuid "7b19426e-4a3b-496c-aa4c-f83b52ad05c0")
+		)
+		(pin "29"
+			(uuid "3f49a6a1-282e-4823-8408-b9550efe4bf9")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "ODESC_V4.2_1")
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 181.61 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d060e153-b696-479f-b8af-ee70c5e986fd")
+		(property "Reference" "U2"
+			(at 181.61 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 181.61 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 181.61 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 181.61 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "7d898cfe-5828-48ff-bb1b-ddd47436a895")
+		)
+		(pin "2"
+			(uuid "66c87891-85d0-4a0c-89f4-71cfdce3e863")
+		)
+		(pin "1"
+			(uuid "be9cc1fa-afe4-4400-b7fb-d6b5363e941f")
+		)
+		(pin "4"
+			(uuid "e8ce44bd-4028-4382-ba21-1d7111cd23f2")
+		)
+		(pin "5"
+			(uuid "28151110-ce76-4434-8838-4b356e1f3047")
+		)
+		(pin "6"
+			(uuid "b02c6325-dfef-4423-83a8-c9a207bcf653")
+		)
+		(pin "7"
+			(uuid "db1ea263-776e-41f1-b610-5b5cff8f1af2")
+		)
+		(pin "1"
+			(uuid "c4d5555d-00f8-42f5-8900-31eb6f7bc22a")
+		)
+		(pin "5"
+			(uuid "c4c790d9-4605-4fd6-827c-9aed723e7a31")
+		)
+		(pin "4"
+			(uuid "e3b964b5-a096-4701-b41b-0c472c4303f0")
+		)
+		(pin "3"
+			(uuid "301292ad-9a47-4ea9-a77a-fd8468ea6653")
+		)
+		(pin "2"
+			(uuid "ce5c3293-1466-46c0-9216-a00d0c60a27f")
+		)
+		(pin "28"
+			(uuid "64bf66fd-bbb3-4226-b387-0d1bbf8acca5")
+		)
+		(pin "29"
+			(uuid "dde3f320-8c9d-4221-8ce7-e987921f25bc")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "ODESC_V4.2_2")
+		(lib_id "drv_syms:ODESC_V4.2")
+		(at 320.04 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d53d8fa8-1f41-415e-b357-a632f6dd5a08")
+		(property "Reference" "U3"
+			(at 320.04 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODESC_V4.2"
+			(at 320.04 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://sequremall.com/products/odesc-v4-2-single-drive-high-current-high-precision-brushless-servo-motor-controller-based-on-odrive3-6-upgrade-software-configuration-compatible-with-odrivetool-foc-bldc?srsltid=AfmBOooIXxTpZnBfYvN5h48qeUPIDU5nBwnV6R5BPknBGUdj-cTMCuM7"
+			(at 320.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ODESC V4.2 Brushless DC Motor Controller, 4 Encoder Inputs, Brake Resistor Support"
+			(at 320.04 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "0c58b32c-3dab-4e4e-b29b-b22cc7487c9a")
+		)
+		(pin "2"
+			(uuid "b13a455b-0273-4c0a-b88c-183d37ea3112")
+		)
+		(pin "1"
+			(uuid "065c7481-7faf-4f7f-9e09-aed563b6eef4")
+		)
+		(pin "4"
+			(uuid "43f0dfbc-9414-46eb-804b-24e62ccefcbb")
+		)
+		(pin "5"
+			(uuid "c402cfc8-f8d2-402b-94df-bb848cd22ee0")
+		)
+		(pin "6"
+			(uuid "b3c9dd77-9f21-49e2-ad9d-7f472050bfdd")
+		)
+		(pin "7"
+			(uuid "863dc53e-0f74-43fe-a18e-5fccd2f78573")
+		)
+		(pin "1"
+			(uuid "295c267c-3ac3-4dad-b68d-58b348b04bfd")
+		)
+		(pin "5"
+			(uuid "c71926d3-8e14-4828-acf3-af09fae10584")
+		)
+		(pin "4"
+			(uuid "3a5a6201-36ee-4b09-8f39-ec6417d58234")
+		)
+		(pin "3"
+			(uuid "736f3164-c732-463b-aab6-53f3685ac5e3")
+		)
+		(pin "2"
+			(uuid "60f8e4ea-85c8-46f0-90b7-17a44667424c")
+		)
+		(pin "28"
+			(uuid "6a1a260c-b4d4-4990-9964-29099dc696fc")
+		)
+		(pin "29"
+			(uuid "549e939b-5c9e-4ca0-9c88-65d09bcd148e")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 227.33 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d5b1f776-12d3-447f-bc9d-8cc342d3d058")
+		(property "Reference" "#PWR03"
+			(at 227.33 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 227.33 61.976 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 227.33 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b0137cdc-0a12-4351-bee0-2b38c260c5a8")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 227.33 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ddffee67-73fb-4fc5-af64-06c0ccc44651")
+		(property "Reference" "#PWR06"
+			(at 227.33 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 227.33 131.826 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 227.33 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8a68ff88-9efc-41a0-99b9-0b9f0d28ca9e")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 287.02 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e160ba4b-0686-4b9c-957e-0608e6bc3816")
+		(property "Reference" "#PWR08"
+			(at 287.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 287.02 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 287.02 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5ad5c329-e54e-4a81-a6c0-cd97b74beb0c")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 148.59 193.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ead0a350-85e7-406d-abe0-14857096fe8e")
+		(property "Reference" "#PWR0167"
+			(at 148.59 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+14.4V_DRIVE5_SENSOR_OUT"
+			(at 145.542 188.468 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 148.59 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d4c06b27-117f-4e8b-894e-0af188b33609")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR0167")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "drv_syms:USB_CANable")
+		(at 60.96 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fb3197a8-6e75-4488-9f37-1e7afd5a81be")
+		(property "Reference" "J1"
+			(at 60.706 55.372 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_CANable"
+			(at 60.706 57.912 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.amazon.com/dp/B0G387Y3J9?plpRedirect=mhFallback&ref=clp_hp_h_pc"
+			(at 64.77 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "USB 2.0 A connector to CAN"
+			(at 60.96 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "c7ce6735-2615-49b6-a0c3-b0c93dcff17f")
+		)
+		(pin "2"
+			(uuid "77f26031-fa3a-4958-94be-a11c1f32de4a")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 365.76 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff460405-b970-4742-ba6d-05e50d3de917")
+		(property "Reference" "#PWR011"
+			(at 365.76 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 365.76 61.976 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 365.76 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1af2b7f-374a-4457-bac4-8c2e50f1e254")
+		)
+		(instances
+			(project "BILLEE_Drivetrain_Module"
+				(path "/7f27bff6-e06b-4b30-8358-f8743640bcf4"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -40913,7 +40913,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 284.48 21.59 180)
+		(at 284.48 21.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -40924,7 +40924,7 @@
 		(fields_autoplaced yes)
 		(uuid "630dfe15-eb8a-4610-ad41-64b697b8b3c7")
 		(property "Reference" "#PWR022"
-			(at 284.48 17.78 0)
+			(at 284.48 25.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40935,7 +40935,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 284.48 26.67 0)
+			(at 284.48 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -43598,7 +43598,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 284.48 21.59 0)
+		(at 284.48 21.59 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -43609,7 +43609,7 @@
 		(fields_autoplaced yes)
 		(uuid "ab9d19bf-46d5-442c-92c5-930ae595dd57")
 		(property "Reference" "#FLG01"
-			(at 284.48 19.685 0)
+			(at 284.48 23.495 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43620,7 +43620,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 284.48 16.51 0)
+			(at 284.48 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

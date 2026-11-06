@@ -1012,321 +1012,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Motor:Fan_3pin"
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "M"
-				(at 2.54 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Fan_3pin"
-				(at 2.54 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -2.286 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "http://www.hardwarecanucks.com/forum/attachments/new-builds/16287d1330775095-help-chassis-power-fan-connectors-motherboard-asus_p8z68.jpg"
-				(at 0 -2.286 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Fan, tacho output, 3-pin connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Fan Motor tacho"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "FanPinHeader*P2.54mm*Vertical* PinHeader*P2.54mm*Vertical* TerminalBlock*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Fan_3pin_0_0"
-				(polyline
-					(pts
-						(xy -5.08 -0.508) (xy -5.334 -0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -0.508) (xy -5.207 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -4.572 -1.016)
-					(mid -5.08 -1.5218)
-					(end -5.588 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -5.588 -1.016)
-					(mid -5.4392 -0.6568)
-					(end -5.08 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.064 0) (xy -4.064 -1.524) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fan_3pin_0_1"
-				(polyline
-					(pts
-						(xy -4.064 0) (xy -5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid -0.0015 -1.6352)
-					(end -2.54 -3.048)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.032) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.7272) (xy 0 2.0828)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -1.524)
-					(radius 3.2512)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 -3.048)
-					(mid 0 -1.4782)
-					(end 2.54 -3.048)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -4.7752) (xy 0 -5.1816)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -7.62) (xy 0 -7.112)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -3.048)
-					(mid 0.047 -1.6085)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fan_3pin_1_1"
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "Tacho"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Motor:Motor_Servo"
 			(pin_names
 				(offset 0.0254)
@@ -1765,8 +1450,8 @@
 		(uuid "623bc643-c16b-40cb-98c1-6691a8bd2ebe")
 	)
 	(rectangle
-		(start 69.85 93.98)
-		(end 127 111.76)
+		(start 69.85 58.42)
+		(end 127 76.2)
 		(stroke
 			(width 0)
 			(type default)
@@ -1789,18 +1474,6 @@
 		(uuid "a6686676-242c-4dd5-a1a1-58a8593c44a6")
 	)
 	(rectangle
-		(start 69.85 58.42)
-		(end 127 92.71)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "b5372f7a-6f26-481d-ae31-9075f39771c2")
-	)
-	(rectangle
 		(start 20.32 21.59)
 		(end 68.58 57.15)
 		(stroke
@@ -1811,18 +1484,6 @@
 			(type none)
 		)
 		(uuid "f5930a12-09fe-4ab9-b49f-c476d6ea549b")
-	)
-	(text "Cooling Fan"
-		(exclude_from_sim no)
-		(at 79.248 61.214 0)
-		(effects
-			(font
-				(size 2 2)
-				(thickness 0.4)
-				(bold yes)
-			)
-		)
-		(uuid "69f6a54f-d6e3-49c5-b6bf-4dc6b43fe05c")
 	)
 	(text "Drape Lowering Servo"
 		(exclude_from_sim no)
@@ -1874,7 +1535,7 @@
 	)
 	(text "UV Light"
 		(exclude_from_sim no)
-		(at 77.216 96.52 0)
+		(at 77.216 60.96 0)
 		(effects
 			(font
 				(size 2 2)
@@ -1939,10 +1600,6 @@
 		(uuid "c3a38b42-3b6f-4eeb-a6de-be97e0c4abe6")
 	)
 	(no_connect
-		(at 90.17 73.66)
-		(uuid "d7d595e7-8460-4a45-9927-ac86e69cbe5b")
-	)
-	(no_connect
 		(at 81.28 50.8)
 		(uuid "db3a5ae2-ad99-431c-8715-e20ffa25606f")
 	)
@@ -1988,7 +1645,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 102.87) (xy 93.98 102.87)
+			(xy 91.44 67.31) (xy 93.98 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2234,7 +1891,7 @@
 	)
 	(global_label "R_+22.2V"
 		(shape input)
-		(at 93.98 100.33 180)
+		(at 93.98 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2244,7 +1901,7 @@
 		)
 		(uuid "d280c495-492b-44c9-9bb1-65ead9f366e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.7095 100.33 0)
+			(at 86.7095 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2269,30 +1926,6 @@
 		(uuid "d77221fa-c132-4c67-a1e7-17b72c043910")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 51.8293 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "+12V"
-		(shape input)
-		(at 97.79 68.58 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify left)
-		)
-		(uuid "d84c356e-d962-4eb0-b6d2-b0a4abe5a593")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.79 63.7407 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2652,7 +2285,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 91.44 102.87 0)
+		(at 91.44 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2663,7 +2296,7 @@
 		(fields_autoplaced yes)
 		(uuid "4eeda9a6-0667-41fb-b872-2497aa686fb9")
 		(property "Reference" "#PWR076"
-			(at 91.44 109.22 0)
+			(at 91.44 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2674,7 +2307,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 107.95 0)
+			(at 91.44 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2684,7 +2317,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 102.87 0)
+			(at 91.44 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2695,7 +2328,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 102.87 0)
+			(at 91.44 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2706,7 +2339,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 102.87 0)
+			(at 91.44 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2807,102 +2440,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Motor:Fan_3pin")
-		(at 97.79 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8e00130f-e439-4ce2-8906-4c5e7b891ed1")
-		(property "Reference" "M7"
-			(at 102.87 74.9299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "80mm_Cooling_Fan"
-			(at 102.87 77.4699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.79 75.946 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.79 75.946 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Fan, tacho output, 3-pin connector"
-			(at 97.79 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.bestbuy.com/product/arctic-p8-silent--black/J3TV4L6QZV/sku/12834594?ref=212&loc=marketplace"
-			(at 97.79 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5fdefbd2-1243-42ea-9202-b394ed4ceb9a")
-		)
-		(pin "3"
-			(uuid "d068e1c5-2201-46e7-8ef9-a70b3390c734")
-		)
-		(pin "1"
-			(uuid "ec2f8b33-c6fb-4bf7-8575-11c2e06226b0")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/71fd1384-bb2a-4bd8-90d1-b8d99655a51e"
-					(reference "M7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:USB_A")
 		(at 81.28 40.64 0)
 		(unit 1)
@@ -2997,84 +2534,6 @@
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/71fd1384-bb2a-4bd8-90d1-b8d99655a51e"
 					(reference "J11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 97.79 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9debf4f9-76bd-46a4-a822-2a3a91fb1662")
-		(property "Reference" "#PWR077"
-			(at 97.79 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 97.79 86.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.79 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.79 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 97.79 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "68c0ac91-0097-4d51-ab72-9cd0ecc23a9b")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/71fd1384-bb2a-4bd8-90d1-b8d99655a51e"
-					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -3209,7 +2668,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 99.06 100.33 0)
+		(at 99.06 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3220,7 +2679,7 @@
 		(fields_autoplaced yes)
 		(uuid "f3ea43c0-6a96-41c1-be78-dfba8a9a3183")
 		(property "Reference" "J12"
-			(at 101.6 100.3299 0)
+			(at 101.6 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3231,7 +2690,7 @@
 			)
 		)
 		(property "Value" "UV_Light"
-			(at 101.6 102.8699 0)
+			(at 101.6 67.3099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3242,7 +2701,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 100.33 0)
+			(at 99.06 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3253,7 +2712,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 100.33 0)
+			(at 99.06 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3264,7 +2723,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 99.06 100.33 0)
+			(at 99.06 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3275,7 +2734,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.ledsupply.com/led-strips/uv-c-led-strip-light"
-			(at 99.06 100.33 0)
+			(at 99.06 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

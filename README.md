@@ -17,6 +17,8 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
   - [RCM Firmware](#rcm-firmware)
 - [BILLEE Science Control Module Schematic](#billee-science-control-module-schematic)
   - [SCM Firmware](#scm-firmware)
+- [BILLEE Drivetrain Module Schematic](#billee-drivetrain-module-schematic)
+- [BILLEE Arm Module Schematic](#billee-arm-module-schematic)
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
 - [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
@@ -28,7 +30,8 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 
 ```
 billee-hardware-2027/
-├── BILLEE_Arm_Module                     # KiCad project for the Arm Schematic
+├── BILLEE_Arm_Module/                    # KiCad project for the Arm Schematic
+├── BILLEE_Drivetrain_Module/             # KiCad schematic documenting the drivetrain wiring (ODESC + NEO + CAN)
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
 ├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module
 ├── BILLEE-odesc-config-tool/           # Python tool: USB ODESC motor calibration
@@ -65,8 +68,18 @@ flowchart TB
     Jetson -- "USB CDC / F´ GDS :5001" --> SCM_FW
     Jetson -- "Bluetooth LE" --> SPEC["Vernier Go Direct spectrometer<br/>(RunScienceSpectrometer)"]
 
-    RCM_FW -- "6x switched DRIVE outputs" --> ODESC["ODESC motor controllers<br/>(drivetrain)"]
-    RCM_FW -- "switched ARM output" --> ARM["Arm actuators"]
+    subgraph DRV["Drivetrain Module — BILLEE_Drivetrain_Module (KiCad)"]
+        ODESC["6x ODESC V4.2 + NEO motors"]
+    end
+
+    RCM_FW -- "6x switched DRIVE outputs" --> ODESC
+    Jetson -- "USB CANable / CAN bus" --> ODESC
+    subgraph ARMM["Arm Module — BILLEE_Arm_Module (KiCad)"]
+        ARM["3-axis arm actuators<br/>+ end-effector solenoid"]
+    end
+
+    RCM_FW -- "switched ARM output" --> ARM
+    Jetson -- "GPIO27 → solenoid relay" --> ARM
     RCM_FW -- "switched SCIENCE output" --> SCM_FW
 
     ODESC -. "USB, one-time calibration" .-> TOOL["BILLEE-odesc-config-tool<br/>(odrive Python tool)"]
@@ -84,7 +97,8 @@ this repo's scope — the RCM only switches and protects their power.
 |---|---|---|---|
 | [`BILLEE_Rover_Control_Module_V1/`](BILLEE_Rover_Control_Module_V1/) | [`fprime-billee-rcm`](fprime-billee-rcm/README.md) | RP2350 (F´ / Zephyr) | Power distribution/gating for DRIVE, ARM, and SCIENCE; powers the Jetson; reports subsystem/E-Stop/thermal telemetry over USB |
 | [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/) — | [`fprime-arduino-billee-scm`](fprime-arduino-billee-scm/README.md) | Teensy 4.1 (F´) | Science instrument control, USB CDC to Jetson |
-| *(ODESC motor controllers — third-party hardware, not a KiCad project here)* | [`BILLEE-odesc-config-tool`](BILLEE-odesc-config-tool/README.md) | ODrive-based ODESC | One-time/occasional USB calibration tool (encoder/motor cal, CAN node ID) — not runtime firmware |
+| [`BILLEE_Arm_Module/`](BILLEE_Arm_Module/) — arm wiring (off-the-shelf actuators, documented here) | — | — | Arm axis actuators and end-effector solenoid, powered from the RCM's switched ARM output |
+| [`BILLEE_Drivetrain_Module/`](BILLEE_Drivetrain_Module/) — ODESC motor controllers (third-party hardware, wiring documented here) | [`BILLEE-odesc-config-tool`](BILLEE-odesc-config-tool/README.md) | ODrive-based ODESC | One-time/occasional USB calibration tool (encoder/motor cal, CAN node ID) — not runtime firmware |
 
 BILLEE is a Mars-rover-style rover platform built as a university project. This repository holds the hardware for the **Rover Control Module (RCM)** — the rover's central power distribution and control board. It takes in power from up to four independent battery packs, gates and protects eight switched high-current outputs (six drivetrain channels plus dedicated ARM and SCIENCE subsystem outputs), and hosts the RP2350 microcontroller that supervises the whole board, running [NASA JPL's F´ (F Prime)](https://fprime.jpl.nasa.gov/) flight software framework on Zephyr RTOS.
 
@@ -234,6 +248,26 @@ make setup      # creates fprime-venv, inits submodules, installs Python deps
 See [`fprime-arduino-billee-scm/README.md`](fprime-arduino-billee-scm/README.md)
 for the rest (`make setup-arduino`, `make generate`, `make build`, flashing).
 
+## BILLEE Drivetrain Module Schematic
+
+[`BILLEE_Drivetrain_Module/`](BILLEE_Drivetrain_Module/) is a KiCad
+schematic documenting the drivetrain wiring as built for the '24 URC season:
+six ODESC V4.2 controllers, each driving a NEO brushless motor with Hall
+feedback, fed from the RCM's six switched `DRIVE` outputs and sharing a CAN
+bus that reaches the Jetson through a USB CANable. It's wiring documentation
+for the third-party hardware, not a custom PCB.
+
+## BILLEE Arm Module Schematic
+
+[`BILLEE_Arm_Module/`](BILLEE_Arm_Module/) is a KiCad schematic documenting
+the 2027 robotic arm's wiring: P17/P20 harmonic-reducer actuators on the 1st,
+2nd and 3rd axes, Yellow Jacket motors, and a GX20 14-pin bulkhead connector
+between the rover body and the arm. The end effector carries a typing
+solenoid, switched by a logic-level relay driven from Jetson GPIO27
+(header pin 15). Power comes from the RCM's `+22.2V_ARM` output through a
+front-panel Anderson Powerpole. Electronics by Luca Lanzillotta and Jason
+Lau; mechanical design by Justin Chang.
+
 ## Drivetrain motor calibration — ODESC Configuration
 
 [`BILLEE-odesc-config-tool`](BILLEE-odesc-config-tool/README.md) is a
@@ -291,7 +325,7 @@ Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).
 
 ## Design status
 
-This board has been through multiple engineering review passes covering bare-fabrication geometry (clearances, hole spacing, via annular ring, zone integrity, board outline), full-board net connectivity, BOM/CPL/Gerber consistency against the actual sourced parts, and datasheet-checked voltage/current margin on every switched-power component. As of the current `main`, it's been reviewed and cleared to order.
+This board has been ordered and works almost perfectly. There are two open issues in this git repo that highlight two outstanding issues. Fortunately the two design flaws are minimal and do not affect the functionality of the board.
 
 ## Contributors
 

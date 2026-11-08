@@ -12,3 +12,6 @@
 [submodule "RunScienceSpectrometer"]
 	path = RunScienceSpectrometer
 	url = https://github.com/LucaLanzi/RunScienceSpectrometer.git
+[submodule "uv_scienceCam"]
+	path = uv_scienceCam
+	url = https://github.com/LucaLanzi/uv_scienceCam.git

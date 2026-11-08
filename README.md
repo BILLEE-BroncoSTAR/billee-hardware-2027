@@ -22,6 +22,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
 - [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
+- [UV science camera](#uv-science-camera)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
@@ -38,7 +39,8 @@ billee-hardware-2027/
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
 ├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
 ├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
-└── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
+├── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
+└── uv_scienceCam/                        # USB Arducam → browser stream with live image tuning + snapshots (git submodule)
 ```
 
 ## System architecture
@@ -307,6 +309,27 @@ Hardware test plan:
 [`astronaut-streamer/docs/TEST_CHECKLIST.md`](astronaut-streamer/docs/TEST_CHECKLIST.md).
 Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).
 
+## UV science camera
+
+[`uv_scienceCam`](https://github.com/LucaLanzi/uv_scienceCam) (git
+submodule) streams a USB (UVC) Arducam to a browser over the network. From
+the browser you can tune the camera's image controls live (exposure, gain,
+white balance, etc.), save/load tuning profiles as JSON, and take a
+full-resolution picture that downloads to the viewing computer. It serves on
+port 8090 to stay clear of the ports already in use on the Jetson. On the
+machine the camera is plugged into:
+
+```bash
+cd uv_scienceCam
+make setup      # apt packages, .venv, video group, firewall port
+make list       # find the camera
+make run        # camera 0, largest MJPG size, port 8090
+```
+
+Then open `http://<camera-host-ip>:8090/`. See
+[`uv_scienceCam/README.md`](uv_scienceCam/README.md) for options and the HTTP
+API.
+
 ## Getting started
 
 1. Clone with submodules — the F´ component library is a separate repo:
@@ -322,6 +345,7 @@ Design: [`astronaut-streamer/PLAN.md`](astronaut-streamer/PLAN.md).
 5. To calibrate a drivetrain motor's ODESC, see [`BILLEE-odesc-config-tool/README.md`](BILLEE-odesc-config-tool/README.md).
 6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
 7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
+8. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
 
 ## Design status
 

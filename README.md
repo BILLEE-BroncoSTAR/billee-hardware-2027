@@ -32,6 +32,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 ```
 billee-hardware-2027/
 ├── BILLEE_Arm_Module/                    # KiCad project for the Arm Schematic
+├── BILLEE_Astronaut_Module/              # KiCad project for the Astronaut Module Schematic
 ├── BILLEE_Drivetrain_Module/             # KiCad schematic documenting the drivetrain wiring (ODESC + NEO + CAN)
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
 ├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module

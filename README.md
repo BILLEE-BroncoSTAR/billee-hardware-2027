@@ -19,6 +19,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
   - [SCM Firmware](#scm-firmware)
 - [BILLEE Drivetrain Module Schematic](#billee-drivetrain-module-schematic)
 - [BILLEE Arm Module Schematic](#billee-arm-module-schematic)
+- [BILLEE Astronaut Module Schematic](#billee-astronaut-module-schematic)
 - [Drivetrain motor calibration — ODESC Configuration](#drivetrain-motor-calibration--odesc-configuration)
 - [Science spectrometer tooling](#science-spectrometer-tooling)
 - [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
@@ -33,15 +34,17 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 billee-hardware-2027/
 ├── BILLEE_Arm_Module/                    # KiCad project for the Arm Schematic
 ├── BILLEE_Astronaut_Module/              # KiCad project for the Astronaut Module Schematic
+│   └── AstronautModuleAssembly/          # SolidWorks assembly: Raspberry Pi 4 mount + lid, Pi 4 datasheet
 ├── BILLEE_Drivetrain_Module/             # KiCad schematic documenting the drivetrain wiring (ODESC + NEO + CAN)
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
 ├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module
-├── BILLEE-odesc-config-tool/           # Python tool: USB ODESC motor calibration
+├── BILLEE-odesc-config-tool/             # Python tool: USB ODESC motor calibration
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
 ├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
 ├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
 ├── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
-└── uv_scienceCam/                        # USB Arducam → browser stream with live image tuning + snapshots (git submodule)
+├── uv_scienceCam/                        # USB Arducam → browser stream with live image tuning + snapshots (git submodule)
+└── Makefile                              # Workspace bootstrap (`make setup`/`make rover`) + science/astronaut installers
 ```
 
 ## System architecture
@@ -270,6 +273,21 @@ solenoid, switched by a logic-level relay driven from Jetson GPIO27
 (header pin 15). Power comes from the RCM's `+22.2V_ARM` output through a
 front-panel Anderson Powerpole. Electronics by Luca Lanzillotta and Jason
 Lau; mechanical design by Justin Chang.
+
+## BILLEE Astronaut Module Schematic
+
+[`BILLEE_Astronaut_Module/`](BILLEE_Astronaut_Module/) is a KiCad
+block-diagram schematic of the astronaut module's hardware: a Raspberry Pi 4B
+powered over USB-C to USB-C from an Anker Prime 27,650 mAh power bank, with
+wired headphones on a 3.5 mm jack (no mic). This is the Pi that runs the
+sender side of the [astronaut video/audio streamer](#astronaut-videoaudio-streamer).
+Like the drivetrain schematic, it documents off-the-shelf hardware and is not
+a custom PCB.
+
+[`AstronautModuleAssembly/`](BILLEE_Astronaut_Module/AstronautModuleAssembly/)
+holds the SolidWorks models for the module's enclosure:
+`AstronautModuleAssembly.SLDASM`, the `PiMount` and `PiMountLid` parts, and
+the Raspberry Pi 4 datasheet for reference.
 
 ## Drivetrain motor calibration — ODESC Configuration
 

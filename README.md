@@ -36,162 +36,65 @@ each subsystem on the rover. Every link from the ground station to the rover
 goes over the Ubiquiti Prism point-to-point link to the Jetson. The Jetson
 then reaches the RCM and SCM over F´, the drivetrain over CAN, the arm over
 GPIO, and the science instruments and astronaut module over USB, Bluetooth LE
-and Wi-Fi. Solid arrows are runtime power/data paths. Dashed arrows are the
-ROS2 control path from the ground station and the occasional ODESC
-calibration tool.
+and Wi-Fi. Thick arrows are power from the RCM, normal arrows are data, and the
+dashed arrow is ROS2 control from the ground station.
 
 ```mermaid
 flowchart TB
     %% ================= GROUND STATION =================
-    subgraph GS["Ground Station"]
-        direction TB
-        OP(["Operator"])
-        GS_ROS["ROS2 Control / Teleop<br/>(billee-software-2027)"]
-        GS_GDS["F´ GDS dashboards<br/>RCM :5000 · SCM :5001"]
-        GS_VNC["Spectrometer VNC viewer :5900<br/>(make science host)"]
-        GS_ASTRO["Astronaut stream page<br/>https://10.110.0.230:8443<br/>(video + audio, talk-back)"]
-        GS_UV["UV camera page :8090<br/>(live tuning + snapshots)"]
-        OP --> GS_ROS
-        OP --> GS_GDS
-        OP --> GS_VNC
-        OP --> GS_ASTRO
-        OP --> GS_UV
-    end
+    OP(["Ground Station: Operator<br/>ROS2 control · F´ GDS · science + video dashboards"])
 
-    %% ================= COMMS LINK =================
-    subgraph COMMS["Rover ↔ Ground Comms"]
-        direction TB
-        UBG["Ground Station Comms Link<br/>Ubiquiti Prism (ground end)<br/>horn antenna"]
-        UBR["Rover Comms Link<br/>Ubiquiti Prism (rover end)<br/>horn antenna"]
-        UBG <-->|"point-to-point airMAX link<br/>bridge mode, no NAT"| UBR
-    end
+    %% ================= COMMS =================
+    UBG["Ground Station Comms Link<br/>Ubiquiti Prism"]
+    UBR["Rover Comms Link<br/>Ubiquiti Prism"]
 
-    GS_ROS -- "ROS2 DDS" --> UBG
-    GS_GDS -- "HTTP" --> UBG
-    GS_VNC -- "VNC" --> UBG
-    GS_ASTRO -- "WebRTC" --> UBG
-    GS_UV -- "HTTP" --> UBG
+    OP --> UBG
+    UBG <-->|"point-to-point wireless link"| UBR
 
     %% ================= ROVER =================
     subgraph ROVER["BILLEE Rover"]
         direction TB
 
-        subgraph JETSON["Jetson Orin AGX — Main Compute (10.110.0.230, eth0)"]
+        JETSON["Jetson Orin AGX<br/>Main Compute · ROS2"]
+        ZED["ZED 2 Camera"]
+        RCM["Rover Control Module<br/>RP2350 · power distribution"]
+        DRV["Drivetrain<br/>6× ODESC + NEO motors"]
+        ARM["Arm Module<br/>3-axis arm + end effector"]
+
+        subgraph SCI["Science"]
             direction TB
-            J_ROS["ROS2 Humble stack<br/>(billee-software-2027)"]
-            J_GDS["fprime-gds ×2<br/>:5000 RCM · :5001 SCM"]
-            J_SPEC["RunScienceSpectrometer<br/>Vernier Spectral Analysis PWA<br/>+ VNC kiosk :5900"]
-            J_MTX["astronaut-streamer<br/>MediaMTX + Flask dashboard<br/>Wi-Fi hotspot 10.42.0.1"]
-            J_UV["uv_scienceCam<br/>MJPG stream :8090"]
+            SCM["Science Control Module<br/>Teensy 4.1"]
+            SPEC["Spectroscopy<br/>Vernier spectrometer"]
+            UV["UV Spectroscopy<br/>+ UV camera"]
+            DRILL["Drill<br/>Regolith Extraction"]
+            CHEM["Chemical Management<br/>pumps"]
+            CACHE["Sample Cache<br/>+ Rotation"]
+            SCM --> DRILL
+            SCM --> CHEM
+            SCM --> CACHE
+            SCM --> UV
         end
 
-        UBR -- "Ethernet (eth0)" --> JETSON
+        UBR -- "Ethernet" --> JETSON
+        ZED -- "USB" --> JETSON
+        JETSON <-->|"F´"| RCM
+        JETSON <-->|"F´"| SCM
+        JETSON -- "Bluetooth" --> SPEC
+        JETSON -- "USB" --> UV
+        JETSON -- "CAN" --> DRV
+        JETSON -- "commands" --> ARM
 
-        ZED["ZED 2 Stereo Camera<br/>depth + visual odometry"]
-        ZED -- "USB 3" --> J_ROS
-
-        %% ---------- RCM ----------
-        subgraph RCM["Rover Control Module — BILLEE_Rover_Control_Module_V1"]
-            direction TB
-            BATT["Up to 4 battery packs"]
-            RCM_MCU["RP2350<br/>fprime-billee-rcm (F´ / Zephyr)"]
-            RCM_PWR["8 gated + protected outputs<br/>6× DRIVE · ARM · SCIENCE<br/>E-Stop · thermal telemetry"]
-            BATT --> RCM_PWR
-            RCM_MCU -- "gate control" --> RCM_PWR
-        end
-
-        J_GDS <-->|"F´ over USB CDC :5000"| RCM_MCU
-        RCM_PWR -- "+20V (CN2)" --> JETSON
-
-        %% ---------- DRIVETRAIN ----------
-        subgraph DRV["Drivetrain Module — BILLEE_Drivetrain_Module"]
-            direction TB
-            ODESC["6× ODESC V4.2"]
-            NEO["6× NEO brushless motors<br/>(Hall feedback)"]
-            ODESC --> NEO
-        end
-
-        RCM_PWR -- "6× switched DRIVE" --> ODESC
-        J_ROS -- "USB CANable → CAN bus" --> ODESC
-        TOOL["BILLEE-odesc-config-tool<br/>(one-time USB calibration)"]
-        TOOL -. "USB" .-> ODESC
-
-        %% ---------- ARM ----------
-        subgraph ARMM["Arm Module — BILLEE_Arm_Module"]
-            direction TB
-            ARM_ACT["P17/P20 harmonic actuators<br/>axes 1–3 + Yellow Jacket motors"]
-            ARM_EE["End effector<br/>typing solenoid + relay"]
-            GX20["GX20 14-pin bulkhead"]
-            GX20 --> ARM_ACT
-            GX20 --> ARM_EE
-        end
-
-        RCM_PWR -- "+22.2V_ARM via Anderson Powerpole" --> GX20
-        J_ROS -- "arm commands" --> ARM_ACT
-        J_ROS -- "GPIO27 (pin 15)" --> ARM_EE
-
-        %% ---------- SCIENCE ----------
-        subgraph SCI["Science Section"]
-            direction TB
-
-            subgraph SCM["Science Control Module — BILLEE_Science_Control_Module_V1"]
-                SCM_MCU["Teensy 4.1<br/>fprime-arduino-billee-scm (F´)"]
-            end
-
-            subgraph SPECTRO["Spectroscopy"]
-                direction TB
-                VERNIER["Vernier Go Direct<br/>spectrometer"]
-                UVS["UV Spectroscopy Module<br/>UV relay (uvManager)"]
-                UVCAM["UV science camera<br/>USB Arducam (UVC)"]
-            end
-
-            subgraph DRILL["Regolith Extraction Module — Drill"]
-                direction TB
-                RC1["Roboclaw 1 (0x80)<br/>Serial1"]
-                RC2["Roboclaw 2 (0x81)<br/>Serial2"]
-                RC3["Roboclaw 3 (0x82)<br/>linear actuator · Serial4"]
-                LIMITS["Limit switches<br/>soil transport · drill assembly · drill tube"]
-            end
-
-            subgraph CMS["Chemical Management System"]
-                PUMPS["4× pumps (pumpManager)"]
-            end
-
-            subgraph SCRS["Sample Cache & Rotation System"]
-                SERVO["PCA9685 servo board<br/>I²C 0x40 @ 100 kHz"]
-            end
-
-            SCM_MCU -- "GPIO" --> UVS
-            SCM_MCU -- "UART 38400" --> RC1
-            SCM_MCU -- "UART 38400" --> RC2
-            SCM_MCU -- "UART 38400" --> RC3
-            LIMITS -- "GPIO (active-low)" --> SCM_MCU
-            SCM_MCU -- "GPIO" --> PUMPS
-            SCM_MCU -- "I²C (Wire)" --> SERVO
-        end
-
-        J_GDS <-->|"F´ over USB CDC :5001"| SCM_MCU
-        RCM_PWR -- "switched SCIENCE" --> SCM_MCU
-        J_SPEC <-->|"Bluetooth LE"| VERNIER
-        UVCAM -- "USB" --> J_UV
+        RCM == "power" ==> JETSON
+        RCM == "power" ==> DRV
+        RCM == "power" ==> ARM
+        RCM == "power" ==> SCM
     end
 
-    %% ================= ASTRONAUT =================
-    subgraph ASTRO["Astronaut Module — BILLEE_Astronaut_Module"]
-        direction TB
-        PI["Raspberry Pi 4B<br/>ffmpeg H.264 + Opus sender"]
-        PI_CAM["USB camera + mic"]
-        PI_HP["Wired headphones (3.5 mm)<br/>+ USB speaker"]
-        PI_BATT["Anker Prime 27,650 mAh"]
-        PI_CAM --> PI
-        PI --> PI_HP
-        PI_BATT -- "USB-C" --> PI
-    end
+    ASTRO["Astronaut Module<br/>Raspberry Pi 4B · camera + headset"]
+    ASTRO -- "Wi-Fi video + audio" --> JETSON
 
-    PI -- "RTSP push over Wi-Fi<br/>2.4 GHz ch 6" --> J_MTX
-
-    %% ================= ROS2 CONTROL REFERENCE =================
-    GS_ROS -. "teleop / drive + arm commands<br/>(ROS2 over Prism link)" .-> J_ROS
+    %% ================= ROS2 CONTROL =================
+    OP -. "ROS2 control" .-> JETSON
 
     %% ================= STYLES =================
     classDef ground fill:#1f4e79,stroke:#0d2a45,color:#fff
@@ -201,16 +104,14 @@ flowchart TB
     classDef science fill:#ef6c00,stroke:#8a3e00,color:#fff
     classDef motion fill:#455a64,stroke:#263238,color:#fff
     classDef astro fill:#00838f,stroke:#004f56,color:#fff
-    classDef tool fill:#9e9e9e,stroke:#616161,color:#000,stroke-dasharray: 4 3
 
-    class OP,GS_ROS,GS_GDS,GS_VNC,GS_ASTRO,GS_UV ground
+    class OP ground
     class UBG,UBR comms
-    class J_ROS,J_GDS,J_SPEC,J_MTX,J_UV,ZED compute
-    class BATT,RCM_MCU,RCM_PWR rcm
-    class SCM_MCU,VERNIER,UVS,UVCAM,RC1,RC2,RC3,LIMITS,PUMPS,SERVO science
-    class ODESC,NEO,ARM_ACT,ARM_EE,GX20 motion
-    class PI,PI_CAM,PI_HP,PI_BATT astro
-    class TOOL tool
+    class JETSON,ZED compute
+    class RCM rcm
+    class SCM,SPEC,UV,DRILL,CHEM,CACHE science
+    class DRV,ARM motion
+    class ASTRO astro
 ```
 
 The [System architecture](#system-architecture) section below zooms in on

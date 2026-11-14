@@ -1989,8 +1989,8 @@
 		)
 	)
 	(rectangle
-		(start 116.84 81.28)
-		(end 157.48 101.6)
+		(start 77.47 78.74)
+		(end 118.11 99.06)
 		(stroke
 			(width 0)
 			(type default)
@@ -2001,8 +2001,8 @@
 		(uuid "469e4409-8f14-47e8-9b52-95ba515af332")
 	)
 	(rectangle
-		(start 104.14 21.59)
-		(end 142.24 69.85)
+		(start 102.87 21.59)
+		(end 140.97 69.85)
 		(stroke
 			(width 0)
 			(type default)
@@ -2013,8 +2013,8 @@
 		(uuid "8abcb986-f087-4355-9054-df2225d221a9")
 	)
 	(rectangle
-		(start 54.61 21.59)
-		(end 95.25 87.63)
+		(start 151.13 21.59)
+		(end 191.77 87.63)
 		(stroke
 			(width 0)
 			(type default)
@@ -2025,8 +2025,8 @@
 		(uuid "9e96da4f-9c0a-473c-a36c-990958893d03")
 	)
 	(rectangle
-		(start 151.13 21.59)
-		(end 189.23 69.85)
+		(start 54.61 21.59)
+		(end 92.71 69.85)
 		(stroke
 			(width 0)
 			(type default)
@@ -2036,9 +2036,9 @@
 		)
 		(uuid "b72cb523-31e6-4a97-bf42-7cbb3247db81")
 	)
-	(text "DRILL TUBE MODULE"
+	(text "SOIL DRILL ACTUATOR"
 		(exclude_from_sim no)
-		(at 171.45 20.32 0)
+		(at 74.93 20.32 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2050,7 +2050,7 @@
 	)
 	(text "DRILL"
 		(exclude_from_sim no)
-		(at 137.16 79.502 0)
+		(at 97.79 76.962 0)
 		(effects
 			(font
 				(size 3 3)
@@ -2060,9 +2060,9 @@
 		)
 		(uuid "28941cca-ccea-4fa0-8393-f877217b09f6")
 	)
-	(text "SOIL TRANSPORT SYSTEM"
+	(text "TRANSFER TUBE MODULE"
 		(exclude_from_sim no)
-		(at 74.93 20.32 0)
+		(at 171.45 20.32 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2072,9 +2072,9 @@
 		)
 		(uuid "594b6849-6100-4ccf-ade1-7a59dd4339e8")
 	)
-	(text "DRILL ASSEMBLY MODULE"
+	(text "TRANSFER TUBE ACTUATOR"
 		(exclude_from_sim no)
-		(at 123.19 20.32 0)
+		(at 121.92 20.32 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2097,27 +2097,27 @@
 		(uuid "2f5366b6-57d4-459f-8f61-abc0e7bea6e5")
 	)
 	(no_connect
-		(at 128.27 62.23)
+		(at 127 62.23)
 		(uuid "200ed4a0-35e1-447c-894b-657aafe85ce2")
 	)
 	(no_connect
-		(at 78.74 62.23)
+		(at 175.26 62.23)
 		(uuid "29ed3377-91ec-4f81-9b6a-40f5f6340d06")
 	)
 	(no_connect
-		(at 175.26 62.23)
+		(at 78.74 62.23)
 		(uuid "47e5b269-3bb6-4185-b7a2-8293987ee2ff")
 	)
 	(no_connect
-		(at 128.27 45.72)
+		(at 127 45.72)
 		(uuid "628e918a-adb5-41c8-a4bc-63f93b27c306")
 	)
 	(no_connect
-		(at 78.74 45.72)
+		(at 175.26 45.72)
 		(uuid "a79748ed-7cb1-407e-9239-f466b9e389a3")
 	)
 	(no_connect
-		(at 175.26 45.72)
+		(at 78.74 45.72)
 		(uuid "b67d5a4e-a5cb-4092-b676-0a8ce251a852")
 	)
 	(wire
@@ -2132,7 +2132,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 77.47) (xy 66.04 77.47)
+			(xy 161.29 77.47) (xy 162.56 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2180,9 +2180,9 @@
 		)
 		(uuid "f31b24a5-a089-4ff6-b48a-cef54a657833")
 	)
-	(global_label "R2_M1-"
+	(global_label "R1_M1-"
 		(shape input)
-		(at 160.02 27.94 180)
+		(at 63.5 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2192,7 +2192,7 @@
 		)
 		(uuid "09acc410-cfb2-4bc8-8c95-1d8962c50a91")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.6203 27.94 0)
+			(at 57.1003 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2204,9 +2204,9 @@
 			)
 		)
 	)
-	(global_label "R1_EN1_5V"
+	(global_label "R2_EN2_5V"
 		(shape input)
-		(at 63.5 35.56 180)
+		(at 160.02 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2216,7 +2216,7 @@
 		)
 		(uuid "09f65576-f991-4d67-98f5-38b5eba6fa0d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4675 35.56 0)
+			(at 151.9875 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2228,9 +2228,9 @@
 			)
 		)
 	)
-	(global_label "R1_M1+"
+	(global_label "R2_M2+"
 		(shape input)
-		(at 63.5 31.75 180)
+		(at 160.02 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2240,7 +2240,7 @@
 		)
 		(uuid "0cb2c27f-ec74-4c18-bda9-d04c6a97d420")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 57.1003 31.75 0)
+			(at 153.6203 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2254,7 +2254,7 @@
 	)
 	(global_label "T_GPIO_14"
 		(shape input)
-		(at 165.1 48.26 180)
+		(at 68.58 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2264,7 +2264,7 @@
 		)
 		(uuid "0f10f6be-3757-4c1a-bcb5-52ce95a9221e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.3177 48.26 0)
+			(at 55.7977 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2374,7 +2374,7 @@
 	)
 	(global_label "T_GPIO_15"
 		(shape input)
-		(at 118.11 64.77 180)
+		(at 116.84 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2384,7 +2384,7 @@
 		)
 		(uuid "2aa02d5f-9501-4483-a2cd-35e0083c5e84")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.4402 64.77 0)
+			(at 109.1702 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2396,9 +2396,9 @@
 			)
 		)
 	)
-	(global_label "R1_EN1_GND"
+	(global_label "R2_EN2_GND"
 		(shape input)
-		(at 82.55 27.94 0)
+		(at 179.07 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2408,7 +2408,7 @@
 		)
 		(uuid "2b28b32d-30a3-4a40-b4b3-366005528fb5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.526 27.94 0)
+			(at 188.046 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2420,9 +2420,9 @@
 			)
 		)
 	)
-	(global_label "R1_EN1-"
+	(global_label "R2_EN2-"
 		(shape input)
-		(at 82.55 35.56 0)
+		(at 179.07 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2432,7 +2432,7 @@
 		)
 		(uuid "2d11731d-5782-408c-9e6c-18f1bad156f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.5665 35.56 0)
+			(at 186.0865 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2566,7 +2566,7 @@
 	)
 	(global_label "R1_EN2_5V"
 		(shape input)
-		(at 113.03 35.56 180)
+		(at 111.76 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2576,7 +2576,7 @@
 		)
 		(uuid "41a07cbf-7b3b-4cb5-b91d-8312b9b63d75")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.9975 35.56 0)
+			(at 103.7275 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2614,7 +2614,7 @@
 	)
 	(global_label "PCA_S1"
 		(shape input)
-		(at 66.04 72.39 180)
+		(at 162.56 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2624,7 +2624,7 @@
 		)
 		(uuid "477db433-2f25-464a-bdd0-40776e9f3264")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.0395 72.39 0)
+			(at 156.5595 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2638,7 +2638,7 @@
 	)
 	(global_label "R1_M2-"
 		(shape input)
-		(at 113.03 27.94 180)
+		(at 111.76 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2648,7 +2648,7 @@
 		)
 		(uuid "4979eed6-a895-4806-9089-2bd20e61c305")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.6303 27.94 0)
+			(at 105.3603 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2662,7 +2662,7 @@
 	)
 	(global_label "R1_EN2-"
 		(shape input)
-		(at 132.08 35.56 0)
+		(at 130.81 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2672,7 +2672,7 @@
 		)
 		(uuid "4c57b16d-a641-45d6-b135-6e80dba9dbe5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.0965 35.56 0)
+			(at 137.8265 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2686,7 +2686,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 66.04 74.93 180)
+		(at 162.56 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2696,7 +2696,7 @@
 		)
 		(uuid "4d8c8c0a-3cf3-4c09-9905-5ffa0e5f85d7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.9264 74.93 0)
+			(at 158.4464 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2734,7 +2734,7 @@
 	)
 	(global_label "R2_M2+"
 		(shape input)
-		(at 127 93.98 180)
+		(at 87.63 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2744,7 +2744,7 @@
 		)
 		(uuid "63ac7422-5680-44e2-9843-d898e04b021a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.6003 93.98 0)
+			(at 81.2303 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2806,7 +2806,7 @@
 	)
 	(global_label "T_GPIO_21"
 		(shape input)
-		(at 118.11 48.26 180)
+		(at 116.84 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2816,7 +2816,7 @@
 		)
 		(uuid "6944d7ac-33f9-4166-866b-e58c7ffedf04")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.4402 48.26 0)
+			(at 109.1702 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2828,9 +2828,9 @@
 			)
 		)
 	)
-	(global_label "R2_EN1+"
+	(global_label "R1_EN1+"
 		(shape input)
-		(at 179.07 31.75 0)
+		(at 82.55 31.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2840,7 +2840,7 @@
 		)
 		(uuid "6cc093a6-5efb-41b0-933b-be6e408d8951")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 186.0865 31.75 0)
+			(at 89.5665 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2902,7 +2902,7 @@
 	)
 	(global_label "R2_EN2_GND"
 		(shape input)
-		(at 146.05 90.17 0)
+		(at 106.68 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2912,7 +2912,7 @@
 		)
 		(uuid "73140b76-e254-457e-8653-934f909d1689")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 155.026 90.17 0)
+			(at 115.656 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2926,7 +2926,7 @@
 	)
 	(global_label "R2_M2-"
 		(shape input)
-		(at 127 90.17 180)
+		(at 87.63 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2936,7 +2936,7 @@
 		)
 		(uuid "7674ecd0-a58a-418c-8d16-fde58236fb41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.6003 90.17 0)
+			(at 81.2303 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2972,9 +2972,9 @@
 			)
 		)
 	)
-	(global_label "R2_M1+"
+	(global_label "R1_M1+"
 		(shape input)
-		(at 160.02 31.75 180)
+		(at 63.5 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2984,7 +2984,7 @@
 		)
 		(uuid "7d41bd4b-8343-4a86-90ec-9b4dcf92b1f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.6203 31.75 0)
+			(at 57.1003 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3022,7 +3022,7 @@
 	)
 	(global_label "R2_EN2-"
 		(shape input)
-		(at 146.05 97.79 0)
+		(at 106.68 95.25 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3032,7 +3032,7 @@
 		)
 		(uuid "83906406-1aa2-48f6-901a-f4d37ed2ef32")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.0665 97.79 0)
+			(at 113.6965 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3092,9 +3092,9 @@
 			)
 		)
 	)
-	(global_label "R1_M1-"
+	(global_label "R2_M2-"
 		(shape input)
-		(at 63.5 27.94 180)
+		(at 160.02 27.94 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3104,7 +3104,7 @@
 		)
 		(uuid "8e5a7719-c4f7-4b80-b0c1-f1c30aacf568")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 57.1003 27.94 0)
+			(at 153.6203 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3142,7 +3142,7 @@
 	)
 	(global_label "T_GPIO_22"
 		(shape input)
-		(at 68.58 64.77 180)
+		(at 165.1 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3152,7 +3152,7 @@
 		)
 		(uuid "95e2d1dd-5c75-4f58-8210-f31a460aa487")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.9102 64.77 0)
+			(at 157.4302 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3188,9 +3188,9 @@
 			)
 		)
 	)
-	(global_label "R1_EN1+"
+	(global_label "R2_EN2+"
 		(shape input)
-		(at 82.55 31.75 0)
+		(at 179.07 31.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3200,7 +3200,7 @@
 		)
 		(uuid "9c285265-7f02-40c2-aecc-1e072eebd1f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.5665 31.75 0)
+			(at 186.0865 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3262,7 +3262,7 @@
 	)
 	(global_label "R2_EN2+"
 		(shape input)
-		(at 146.05 93.98 0)
+		(at 106.68 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3272,7 +3272,7 @@
 		)
 		(uuid "b6868117-75e1-4102-8ae5-efd132f84b37")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.0665 93.98 0)
+			(at 113.6965 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3356,9 +3356,9 @@
 			)
 		)
 	)
-	(global_label "R2_EN1_GND"
+	(global_label "R1_EN1_GND"
 		(shape input)
-		(at 179.07 27.94 0)
+		(at 82.55 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3368,7 +3368,7 @@
 		)
 		(uuid "c897c20b-f5dd-42dc-9580-06172648be03")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 188.046 27.94 0)
+			(at 91.526 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3380,9 +3380,9 @@
 			)
 		)
 	)
-	(global_label "R2_EN1_5V"
+	(global_label "R1_EN1_5V"
 		(shape input)
-		(at 160.02 35.56 180)
+		(at 63.5 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3392,7 +3392,7 @@
 		)
 		(uuid "cc615f22-7e0d-4fee-83a9-6d1e790b9df6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.9875 35.56 0)
+			(at 55.4675 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3430,7 +3430,7 @@
 	)
 	(global_label "R1_EN2+"
 		(shape input)
-		(at 132.08 31.75 0)
+		(at 130.81 31.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3440,7 +3440,7 @@
 		)
 		(uuid "d7912c3f-fc41-4f86-a612-34aab5282b15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.0965 31.75 0)
+			(at 137.8265 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3478,7 +3478,7 @@
 	)
 	(global_label "R2_EN2_5V"
 		(shape input)
-		(at 127 97.79 180)
+		(at 87.63 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3488,7 +3488,7 @@
 		)
 		(uuid "dbc8a17a-4d5d-4cc7-a5e7-f4340b728319")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.9675 97.79 0)
+			(at 79.5975 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3526,7 +3526,7 @@
 	)
 	(global_label "R1_M2+"
 		(shape input)
-		(at 113.03 31.75 180)
+		(at 111.76 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3536,7 +3536,7 @@
 		)
 		(uuid "dc1626d7-92f5-42e9-8aec-e8bd960b867b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.6303 31.75 0)
+			(at 105.3603 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3572,9 +3572,9 @@
 			)
 		)
 	)
-	(global_label "R2_EN1-"
+	(global_label "R1_EN1-"
 		(shape input)
-		(at 179.07 35.56 0)
+		(at 82.55 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3584,7 +3584,7 @@
 		)
 		(uuid "e4aac3e1-2b90-4976-945e-fb00c3b08817")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 186.0865 35.56 0)
+			(at 89.5665 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3622,7 +3622,7 @@
 	)
 	(global_label "R1_EN2_GND"
 		(shape input)
-		(at 132.08 27.94 0)
+		(at 130.81 27.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3632,7 +3632,7 @@
 		)
 		(uuid "ef70ae81-3740-4bfc-a10e-dcd486154343")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 141.056 27.94 0)
+			(at 139.786 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3670,7 +3670,7 @@
 	)
 	(global_label "T_GPIO_41"
 		(shape input)
-		(at 165.1 64.77 180)
+		(at 68.58 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3680,7 +3680,7 @@
 		)
 		(uuid "f16577e0-5657-479f-8913-584aefabc1e5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.4302 64.77 0)
+			(at 60.9102 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3694,7 +3694,7 @@
 	)
 	(global_label "T_GPIO_23"
 		(shape input)
-		(at 68.58 48.26 180)
+		(at 165.1 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3704,7 +3704,7 @@
 		)
 		(uuid "fd3f1369-bf60-4702-b348-c5a80af06a35")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.7977 48.26 0)
+			(at 152.3177 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3718,7 +3718,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 73.66 48.26 0)
+		(at 170.18 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3728,288 +3728,6 @@
 		(dnp no)
 		(uuid "0bf16754-bfe4-4795-95c9-812193358c2e")
 		(property "Reference" "SW1"
-			(at 73.66 39.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Lower_Limit_Switch_1"
-			(at 73.66 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 73.66 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Switch, single pole double throw"
-			(at 73.66 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
-			(at 73.66 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "287569ea-631d-44db-907e-ec25ae54f433")
-		)
-		(pin "2"
-			(uuid "57ac897d-80fa-49fd-b965-a7a7072daa92")
-		)
-		(pin "3"
-			(uuid "2177f827-e532-47c8-a16d-2fd759e90a55")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 73.66 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1a365d38-d8a9-4b4e-b1a9-209be21b1fd8")
-		(property "Reference" "SW2"
-			(at 73.66 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Upper_Limit_Switch_1"
-			(at 73.66 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 73.66 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Switch, single pole double throw"
-			(at 73.66 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
-			(at 73.66 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dc033fd0-8da7-4975-912b-0811712e3cf4")
-		)
-		(pin "2"
-			(uuid "b986f724-7a08-4169-8fc5-7a91399bc934")
-		)
-		(pin "3"
-			(uuid "aef4cfa5-9b71-4de6-8cf5-70c69dd543cf")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 170.18 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2628cee0-476b-4cbd-ada9-cb1b293414ec")
-		(property "Reference" "SW6"
-			(at 170.18 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Upper_Limit_Switch_3"
-			(at 170.18 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 170.18 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Switch, single pole double throw"
-			(at 170.18 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
-			(at 170.18 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4ea2dcd4-fc39-4edb-b71f-bfafe3059407")
-		)
-		(pin "2"
-			(uuid "a74b9eac-5c0f-4e4f-9f12-58e489db73c9")
-		)
-		(pin "3"
-			(uuid "4ff60483-173b-4db4-9ea7-bc916776b6b9")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 170.18 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "462540ae-7adc-4377-9b50-5c647573d464")
-		(property "Reference" "SW5"
 			(at 170.18 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4074,6 +3792,288 @@
 			)
 		)
 		(pin "1"
+			(uuid "287569ea-631d-44db-907e-ec25ae54f433")
+		)
+		(pin "2"
+			(uuid "57ac897d-80fa-49fd-b965-a7a7072daa92")
+		)
+		(pin "3"
+			(uuid "2177f827-e532-47c8-a16d-2fd759e90a55")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Nidec_CAS-120A1")
+		(at 170.18 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a365d38-d8a9-4b4e-b1a9-209be21b1fd8")
+		(property "Reference" "SW2"
+			(at 170.18 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Upper_Limit_Switch_3"
+			(at 170.18 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
+			(at 170.18 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 170.18 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
+			(at 170.18 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc033fd0-8da7-4975-912b-0811712e3cf4")
+		)
+		(pin "2"
+			(uuid "b986f724-7a08-4169-8fc5-7a91399bc934")
+		)
+		(pin "3"
+			(uuid "aef4cfa5-9b71-4de6-8cf5-70c69dd543cf")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Nidec_CAS-120A1")
+		(at 73.66 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2628cee0-476b-4cbd-ada9-cb1b293414ec")
+		(property "Reference" "SW6"
+			(at 73.66 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Upper_Limit_Switch_1"
+			(at 73.66 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
+			(at 73.66 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 73.66 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
+			(at 73.66 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4ea2dcd4-fc39-4edb-b71f-bfafe3059407")
+		)
+		(pin "2"
+			(uuid "a74b9eac-5c0f-4e4f-9f12-58e489db73c9")
+		)
+		(pin "3"
+			(uuid "4ff60483-173b-4db4-9ea7-bc916776b6b9")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
+					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Nidec_CAS-120A1")
+		(at 73.66 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "462540ae-7adc-4377-9b50-5c647573d464")
+		(property "Reference" "SW5"
+			(at 73.66 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Lower_Limit_Switch_1"
+			(at 73.66 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
+			(at 73.66 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 73.66 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
+			(at 73.66 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
 			(uuid "54d3b68e-8850-44c6-a4ae-01ab30b56883")
 		)
 		(pin "2"
@@ -4093,7 +4093,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 67.31 0)
+		(at 175.26 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4103,7 +4103,7 @@
 		(dnp no)
 		(uuid "473c6af3-742f-411f-888a-efd93a1fdc4c")
 		(property "Reference" "#PWR069"
-			(at 78.74 73.66 0)
+			(at 175.26 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4114,7 +4114,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 81.788 67.056 0)
+			(at 178.308 67.056 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4124,7 +4124,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 67.31 0)
+			(at 175.26 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4135,7 +4135,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 67.31 0)
+			(at 175.26 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4146,7 +4146,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 67.31 0)
+			(at 175.26 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4170,7 +4170,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 67.31 0)
+		(at 127 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4180,7 +4180,7 @@
 		(dnp no)
 		(uuid "531cf0d6-ac02-4739-8da6-1a9a7f1106e2")
 		(property "Reference" "#PWR071"
-			(at 128.27 73.66 0)
+			(at 127 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4191,7 +4191,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 131.572 67.564 0)
+			(at 130.302 67.564 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4201,7 +4201,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 67.31 0)
+			(at 127 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4212,7 +4212,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 67.31 0)
+			(at 127 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4223,7 +4223,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 128.27 67.31 0)
+			(at 127 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4247,7 +4247,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 123.19 64.77 0)
+		(at 121.92 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4258,7 +4258,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d257de6-2d67-4fa7-8bcb-19ef59b5c04a")
 		(property "Reference" "SW4"
-			(at 123.19 55.88 0)
+			(at 121.92 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4268,7 +4268,7 @@
 			)
 		)
 		(property "Value" "Upper_Limit_Switch_2"
-			(at 123.19 58.42 0)
+			(at 121.92 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4278,7 +4278,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 123.19 74.93 0)
+			(at 121.92 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4289,7 +4289,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 72.39 0)
+			(at 121.92 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4300,7 +4300,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 123.19 64.77 0)
+			(at 121.92 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4311,7 +4311,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
-			(at 123.19 64.77 0)
+			(at 121.92 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4341,7 +4341,7 @@
 	)
 	(symbol
 		(lib_id "scm_lib:YellowJacket_5203")
-		(at 134.62 96.52 0)
+		(at 95.25 93.98 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4351,7 +4351,7 @@
 		(dnp no)
 		(uuid "691682ec-1dec-47fc-8510-3277db3c89b2")
 		(property "Reference" "M4"
-			(at 137.16 83.82 0)
+			(at 97.79 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4361,7 +4361,7 @@
 			)
 		)
 		(property "Value" "YellowJacket_Drill"
-			(at 136.652 86.36 0)
+			(at 97.282 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4371,7 +4371,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 134.62 96.52 0)
+			(at 95.25 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4382,7 +4382,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 96.52 0)
+			(at 95.25 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4393,7 +4393,7 @@
 			)
 		)
 		(property "Description" "Drill rotation"
-			(at 134.62 96.52 0)
+			(at 95.25 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4404,7 +4404,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-19-2-1-ratio-24mm-length-8mm-rex-shaft-312-rpm-3-3-5v-encoder/"
-			(at 134.62 96.52 0)
+			(at 95.25 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4639,7 +4639,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 73.66 74.93 0)
+		(at 170.18 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4650,7 +4650,7 @@
 		(fields_autoplaced yes)
 		(uuid "7838f7df-aef1-495d-97d1-b58e9789bc06")
 		(property "Reference" "M2"
-			(at 82.55 73.2268 0)
+			(at 179.07 73.2268 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4661,7 +4661,7 @@
 			)
 		)
 		(property "Value" "Motor_Servo"
-			(at 82.55 75.7668 0)
+			(at 179.07 75.7668 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4672,7 +4672,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 79.756 0)
+			(at 170.18 79.756 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4683,7 +4683,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 79.756 0)
+			(at 170.18 79.756 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4694,7 +4694,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 73.66 74.93 0)
+			(at 170.18 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4705,7 +4705,7 @@
 			)
 		)
 		(property "Purchase URL" "GoBuilda Servo 300 Deg 2000-0025-0002: https://www.gobilda.com/2000-series-dual-mode-servo-25-2-torque/"
-			(at 73.66 74.93 0)
+			(at 170.18 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4735,7 +4735,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Nidec_CAS-120A1")
-		(at 123.19 48.26 0)
+		(at 121.92 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4746,7 +4746,7 @@
 		(fields_autoplaced yes)
 		(uuid "848de2a2-767f-4f5c-8a21-f69fc056621a")
 		(property "Reference" "SW3"
-			(at 123.19 39.37 0)
+			(at 121.92 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4756,7 +4756,7 @@
 			)
 		)
 		(property "Value" "Lower_Limit_Switch_2"
-			(at 123.19 41.91 0)
+			(at 121.92 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4766,7 +4766,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
-			(at 123.19 58.42 0)
+			(at 121.92 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4777,7 +4777,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 55.88 0)
+			(at 121.92 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4788,7 +4788,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 123.19 48.26 0)
+			(at 121.92 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4799,7 +4799,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/micro-limit-switch-roller-lever-2-pack/?setCurrencyId=1&sku=3103-0001-0001"
-			(at 123.19 48.26 0)
+			(at 121.92 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4829,7 +4829,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 175.26 50.8 0)
+		(at 78.74 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4839,7 +4839,7 @@
 		(dnp no)
 		(uuid "870f30da-884b-4a25-ad6e-10ea25035a34")
 		(property "Reference" "#PWR072"
-			(at 175.26 57.15 0)
+			(at 78.74 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4850,7 +4850,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 50.8 0)
+			(at 81.28 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4860,7 +4860,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 175.26 50.8 0)
+			(at 78.74 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4871,7 +4871,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 50.8 0)
+			(at 78.74 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4882,7 +4882,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 175.26 50.8 0)
+			(at 78.74 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4984,7 +4984,7 @@
 	)
 	(symbol
 		(lib_id "scm_lib:YellowJacket_5203")
-		(at 120.65 34.29 0)
+		(at 119.38 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4994,7 +4994,7 @@
 		(dnp no)
 		(uuid "a120654b-a821-4b72-aacd-648cae572415")
 		(property "Reference" "M3"
-			(at 122.682 22.606 0)
+			(at 121.412 22.606 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5003,8 +5003,8 @@
 				)
 			)
 		)
-		(property "Value" "YellowJacket_Up_Down1"
-			(at 122.936 24.638 0)
+		(property "Value" "YellowJacket_Up_Down"
+			(at 121.666 24.638 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5014,7 +5014,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 34.29 0)
+			(at 119.38 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5025,7 +5025,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 34.29 0)
+			(at 119.38 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5036,7 +5036,7 @@
 			)
 		)
 		(property "Description" "Drill assembly up/down"
-			(at 120.65 34.29 0)
+			(at 119.38 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5047,7 +5047,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-19-2-1-ratio-24mm-length-8mm-rex-shaft-312-rpm-3-3-5v-encoder/"
-			(at 120.65 34.29 0)
+			(at 119.38 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5086,7 +5086,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 50.8 0)
+		(at 175.26 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5096,7 +5096,7 @@
 		(dnp no)
 		(uuid "a5ad4085-a441-43c0-a03f-b8409cdbdaf4")
 		(property "Reference" "#PWR068"
-			(at 78.74 57.15 0)
+			(at 175.26 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5107,7 +5107,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.312 50.8 0)
+			(at 179.832 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5117,7 +5117,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 50.8 0)
+			(at 175.26 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5128,7 +5128,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 50.8 0)
+			(at 175.26 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5139,7 +5139,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 50.8 0)
+			(at 175.26 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5163,7 +5163,7 @@
 	)
 	(symbol
 		(lib_id "scm_lib:YellowJacket_5203")
-		(at 167.64 34.29 0)
+		(at 71.12 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5173,7 +5173,7 @@
 		(dnp no)
 		(uuid "c6f531ce-33d1-4545-8282-ee3e574ead33")
 		(property "Reference" "M5"
-			(at 170.18 22.86 0)
+			(at 73.66 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5182,8 +5182,8 @@
 				)
 			)
 		)
-		(property "Value" "YellowJacket_Up_Down2"
-			(at 169.672 24.638 0)
+		(property "Value" "YellowJacket_Drill_Actuator"
+			(at 73.152 24.638 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5193,7 +5193,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 34.29 0)
+			(at 71.12 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5204,7 +5204,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 34.29 0)
+			(at 71.12 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5215,7 +5215,7 @@
 			)
 		)
 		(property "Description" "Drill tube up/down"
-			(at 167.64 34.29 0)
+			(at 71.12 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5226,7 +5226,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-19-2-1-ratio-24mm-length-8mm-rex-shaft-312-rpm-3-3-5v-encoder/"
-			(at 167.64 34.29 0)
+			(at 71.12 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5265,7 +5265,7 @@
 	)
 	(symbol
 		(lib_id "scm_lib:YellowJacket_5203")
-		(at 71.12 34.29 0)
+		(at 167.64 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5275,7 +5275,7 @@
 		(dnp no)
 		(uuid "caac0352-4e74-416f-b242-d14208deae7b")
 		(property "Reference" "M1"
-			(at 72.898 22.606 0)
+			(at 169.418 22.606 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5284,8 +5284,8 @@
 				)
 			)
 		)
-		(property "Value" "YellowJacket_Soil"
-			(at 73.66 24.638 0)
+		(property "Value" "YellowJacket_Tube_Lead_Screw"
+			(at 170.18 24.638 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5295,7 +5295,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 34.29 0)
+			(at 167.64 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5306,7 +5306,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 34.29 0)
+			(at 167.64 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5317,7 +5317,7 @@
 			)
 		)
 		(property "Description" "Soil transport"
-			(at 71.12 34.29 0)
+			(at 167.64 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5328,7 +5328,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.gobilda.com/5203-series-yellow-jacket-planetary-gear-motor-19-2-1-ratio-24mm-length-8mm-rex-shaft-312-rpm-3-3-5v-encoder/"
-			(at 71.12 34.29 0)
+			(at 167.64 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5445,7 +5445,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 128.27 50.8 0)
+		(at 127 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5455,7 +5455,7 @@
 		(dnp no)
 		(uuid "d8b90085-5e44-4812-8975-1530c4e32a71")
 		(property "Reference" "#PWR070"
-			(at 128.27 57.15 0)
+			(at 127 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5466,7 +5466,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 130.81 50.8 0)
+			(at 129.54 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5476,7 +5476,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 50.8 0)
+			(at 127 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5487,7 +5487,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 50.8 0)
+			(at 127 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5498,7 +5498,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 128.27 50.8 0)
+			(at 127 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5522,7 +5522,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 175.26 67.31 0)
+		(at 78.74 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5532,7 +5532,7 @@
 		(dnp no)
 		(uuid "e4e06b5f-87d9-40eb-ab85-c93dd7ab4631")
 		(property "Reference" "#PWR073"
-			(at 175.26 73.66 0)
+			(at 78.74 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5543,7 +5543,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 67.31 0)
+			(at 81.28 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5553,7 +5553,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 175.26 67.31 0)
+			(at 78.74 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5564,7 +5564,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 175.26 67.31 0)
+			(at 78.74 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5575,7 +5575,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 175.26 67.31 0)
+			(at 78.74 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5599,7 +5599,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 64.77 77.47 0)
+		(at 161.29 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5609,7 +5609,7 @@
 		(dnp no)
 		(uuid "f7f49469-363f-4f18-8f4d-f5975657ec56")
 		(property "Reference" "#PWR067"
-			(at 64.77 83.82 0)
+			(at 161.29 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5620,7 +5620,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 64.77 81.534 0)
+			(at 161.29 81.534 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5630,7 +5630,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 77.47 0)
+			(at 161.29 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5641,7 +5641,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 77.47 0)
+			(at 161.29 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5652,7 +5652,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 64.77 77.47 0)
+			(at 161.29 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -287,8 +287,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": {},
-    "netclass_assignments": {},
+    "net_colors": null,
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -432,7 +432,7 @@
         "uuid": "a88a98f3-70a9-4eb8-8d8e-27d9c7424c01"
       }
     ],
-    "used_designators": "#PWR1-5,GX20_14_pins1-2,J1-2,L1,P17_Harmonic_Reducer1-3,U1,Yellow_Jacket1-4",
+    "used_designators": "#PWR6,J1",
     "variants": []
   },
   "sheets": [

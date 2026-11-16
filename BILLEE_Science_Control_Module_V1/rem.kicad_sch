@@ -3727,7 +3727,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0bf16754-bfe4-4795-95c9-812193358c2e")
-		(property "Reference" "SW1"
+		(property "Reference" "SW5"
 			(at 170.18 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3803,7 +3803,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW1")
+					(reference "SW5")
 					(unit 1)
 				)
 			)
@@ -3821,7 +3821,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a365d38-d8a9-4b4e-b1a9-209be21b1fd8")
-		(property "Reference" "SW2"
+		(property "Reference" "SW6"
 			(at 170.18 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3897,7 +3897,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW2")
+					(reference "SW6")
 					(unit 1)
 				)
 			)
@@ -3915,7 +3915,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2628cee0-476b-4cbd-ada9-cb1b293414ec")
-		(property "Reference" "SW6"
+		(property "Reference" "SW2"
 			(at 73.66 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3991,7 +3991,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW6")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -4009,7 +4009,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "462540ae-7adc-4377-9b50-5c647573d464")
-		(property "Reference" "SW5"
+		(property "Reference" "SW1"
 			(at 73.66 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4085,7 +4085,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "SW5")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -4102,7 +4102,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "473c6af3-742f-411f-888a-efd93a1fdc4c")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR074"
 			(at 175.26 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4162,7 +4162,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR069")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -4350,7 +4350,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "691682ec-1dec-47fc-8510-3277db3c89b2")
-		(property "Reference" "M4"
+		(property "Reference" "M2"
 			(at 97.79 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4435,7 +4435,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "M4")
+					(reference "M2")
 					(unit 1)
 				)
 			)
@@ -4649,7 +4649,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7838f7df-aef1-495d-97d1-b58e9789bc06")
-		(property "Reference" "M2"
+		(property "Reference" "M5"
 			(at 179.07 73.2268 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4727,7 +4727,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "M2")
+					(reference "M5")
 					(unit 1)
 				)
 			)
@@ -4838,7 +4838,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "870f30da-884b-4a25-ad6e-10ea25035a34")
-		(property "Reference" "#PWR072"
+		(property "Reference" "#PWR068"
 			(at 78.74 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -4898,7 +4898,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR072")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -4916,7 +4916,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "875e3f96-f147-4bb8-9c67-50af6c597c0f")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR066"
 			(at 31.75 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -4976,7 +4976,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR065")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -5095,7 +5095,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a5ad4085-a441-43c0-a03f-b8409cdbdaf4")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR073"
 			(at 175.26 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -5155,7 +5155,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR068")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -5172,7 +5172,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6f531ce-33d1-4545-8282-ee3e574ead33")
-		(property "Reference" "M5"
+		(property "Reference" "M1"
 			(at 73.66 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5257,7 +5257,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "M5")
+					(reference "M1")
 					(unit 1)
 				)
 			)
@@ -5274,7 +5274,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "caac0352-4e74-416f-b242-d14208deae7b")
-		(property "Reference" "M1"
+		(property "Reference" "M4"
 			(at 169.418 22.606 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5359,7 +5359,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "M1")
+					(reference "M4")
 					(unit 1)
 				)
 			)
@@ -5377,7 +5377,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cbbacfc6-a185-4db3-bc3d-9e4b13f583bf")
-		(property "Reference" "#PWR066"
+		(property "Reference" "#PWR067"
 			(at 40.64 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5437,7 +5437,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR066")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -5531,7 +5531,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e4e06b5f-87d9-40eb-ab85-c93dd7ab4631")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR069"
 			(at 78.74 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5591,7 +5591,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR073")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -5608,7 +5608,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f7f49469-363f-4f18-8f4d-f5975657ec56")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR072"
 			(at 161.29 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -5668,7 +5668,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/de3d3e42-5061-4ff0-a289-ee8fdb592457"
-					(reference "#PWR067")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)

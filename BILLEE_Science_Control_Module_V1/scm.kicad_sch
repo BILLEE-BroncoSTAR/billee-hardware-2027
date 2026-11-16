@@ -4705,6 +4705,261 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "scm_lib:ADC(weight)"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U4"
+				(at 0.762 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ADC(weight)_1_1"
+				(rectangle
+					(start -6.35 2.032)
+					(end 7.62 -15.24)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type color)
+						(color 255 255 194 1)
+					)
+				)
+				(pin input line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "E-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -2.54 0)
+					(length 2.54)
+					(name "E+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -5.08 0)
+					(length 2.54)
+					(name "A-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -7.62 0)
+					(length 2.54)
+					(name "A+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -10.16 0)
+					(length 2.54)
+					(name "B-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -12.7 0)
+					(length 2.54)
+					(name "B+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "DATA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -10.16 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "scm_lib:Anderson_Powerpole_Bulkhead"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8666,6 +8921,16 @@
 		)
 		(uuid "32e9594d-f4b0-4b8e-9d4e-e1453cd5a2ec")
 	)
+	(text "By the looks of the board I belive it \nalready has a pull up resistor between the \nSCL, SDA and power \n"
+		(exclude_from_sim no)
+		(at 195.326 229.616 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4bfd3ea9-a2b5-4f0c-9100-4dc46d50234b")
+	)
 	(text "Chemical Management System"
 		(exclude_from_sim no)
 		(at 295.91 149.86 0)
@@ -8788,7 +9053,7 @@
 	)
 	(text_box "Replacing with https://www.amazon.com/HiLetgo-Weighing-Dual-Channel-Precision-Pressure/dp/B00XRRNCOO/ref=sr_1_1_sspa?channelId=500&clpRedir=Y&dib=eyJ2IjoiMSJ9.ZUiy_TZashVggrOA5VOOeNmJUo8AkR7rXb5EJ5d93HX3U_fiuZJfvw1_BWt_jrjo94wTLkgc2Od5R9Yg3PYULAv-lKjzek9CoqL0xAAwH1C9HMJfTGNNOdlX5j-Lqqe3PoPtWgowp8ZuJ8YcQefvSoYj7MTsCxU5LxcTixaF-EXj8SW093COzaeX45CUAFeVEArFcc2SWlJfHAvgueYPOKcQR_KipouNyhSsK9FLu2U.MsC-9htk82J1YarpQNXxg10AZrwXgQY-bEEJbhPiHZs&dib_tag=se&keywords=hx711&plpRedirect=mhFallback&qid=1793950894&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
 		(exclude_from_sim no)
-		(at 127.508 229.108 0)
+		(at 91.44 266.7 0)
 		(size 61.214 11.176)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -9840,6 +10105,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 232.41) (xy 147.32 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f45bd32-a4a1-4bf7-840a-ed722c0b36fb")
+	)
+	(wire
+		(pts
 			(xy 194.31 196.85) (xy 180.34 196.85)
 		)
 		(stroke
@@ -9867,6 +10142,16 @@
 			(type default)
 		)
 		(uuid "762d0d67-b89a-4f85-98cd-d5983943bfb3")
+	)
+	(wire
+		(pts
+			(xy 147.32 224.79) (xy 160.02 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7641718e-996c-4a75-94e5-ff5143e44da9")
 	)
 	(wire
 		(pts
@@ -10027,6 +10312,26 @@
 			(type default)
 		)
 		(uuid "a2b5c140-fa7b-4d3a-94fc-e2505da7e20b")
+	)
+	(wire
+		(pts
+			(xy 160.02 227.33) (xy 147.32 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2d9a9d8-95a2-4613-9c6a-b3d0d499ebb4")
+	)
+	(wire
+		(pts
+			(xy 160.02 229.87) (xy 147.32 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4a36853-fb17-480c-a9a4-af96cdfbdc64")
 	)
 	(wire
 		(pts
@@ -36424,6 +36729,30 @@
 			)
 		)
 	)
+	(global_label "SDA ADC"
+		(shape input)
+		(at 160.02 227.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b46fdb22-8929-433b-a306-9403636a5703")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.1695 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "WS1_A+"
 		(shape input)
 		(at 290.83 288.29 180)
@@ -37312,6 +37641,30 @@
 			)
 		)
 	)
+	(global_label "SCL ADC"
+		(shape input)
+		(at 160.02 229.87 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "df8b99c0-e791-4cb2-bfcd-7a88bcf8df8f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.109 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "PCA_S1"
 		(shape input)
 		(at 69.85 193.04 0)
@@ -37948,7 +38301,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "004cb620-8aab-412d-89ea-58a761be8fe4")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR034"
 			(at 325.12 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -38008,7 +38361,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR033")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -38026,7 +38379,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0237bc41-500d-4b2f-923b-6eab44b32eaf")
-		(property "Reference" "U4"
+		(property "Reference" "U5"
 			(at 167.64 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38143,7 +38496,85 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U4")
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 157.48 232.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "059d27f5-e694-4392-adc7-7fc820646629")
+		(property "Reference" "#PWR014"
+			(at 157.48 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 157.48 237.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 157.48 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "774d5824-0786-49f6-bcb3-43ed1bc40f76")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -38238,7 +38669,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0921e5c0-510b-4feb-b4f6-4f0aba1231c3")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR024"
 			(at 297.18 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -38298,7 +38729,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -38502,7 +38933,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e65258f-38e0-45f1-9c50-8bf03c4ed24b")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR025"
 			(at 302.26 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -38562,7 +38993,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR024")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -38579,7 +39010,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0f28eb19-aaa1-42f0-9fd9-b4db5717bf1f")
-		(property "Reference" "U13"
+		(property "Reference" "U14"
 			(at 381.762 155.702 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38664,7 +39095,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U13")
+					(reference "U14")
 					(unit 1)
 				)
 			)
@@ -38682,7 +39113,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0fb0d5e8-fd27-4719-9028-8f9204ddfa96")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR039"
 			(at 353.06 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -38742,7 +39173,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR040")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -38760,7 +39191,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15af4f4d-a322-4721-b302-b99d00286c45")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR036"
 			(at 325.12 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -38820,7 +39251,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR035")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -38904,6 +39335,110 @@
 		)
 	)
 	(symbol
+		(lib_id "scm_lib:ADC(weight)")
+		(at 137.16 222.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18d113e5-8ef7-4dc4-a46b-5d2c0fd799a1")
+		(property "Reference" "U4"
+			(at 137.922 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 137.16 222.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "e95fed6a-5f6a-41f2-a1c3-55bed9306b60")
+		)
+		(pin ""
+			(uuid "442eef46-c989-4b11-b0e5-76219f82d5f2")
+		)
+		(pin ""
+			(uuid "df87ae86-5a8f-4e01-ae9b-99d9046fd92b")
+		)
+		(pin ""
+			(uuid "05436045-82be-427b-a96f-9241432ba038")
+		)
+		(pin ""
+			(uuid "262b552f-202e-46d3-a42d-88d5f345b740")
+		)
+		(pin ""
+			(uuid "83534a2d-471f-477b-a0c9-19a22f57608e")
+		)
+		(pin ""
+			(uuid "dcf42ee9-e69e-48e4-8701-36e117eaf9e5")
+		)
+		(pin ""
+			(uuid "351202ae-49fc-4f97-b0cd-f18b8a950734")
+		)
+		(pin ""
+			(uuid "6b3aa9dc-3c60-4d3d-b293-c13762bc3a8a")
+		)
+		(pin ""
+			(uuid "6621ca0f-18f6-4e51-b1e2-8ce961d6180f")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 369.57 26.67 0)
 		(unit 1)
@@ -38914,7 +39449,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1d8359f8-e20f-4f92-8b22-c0a0f9df2e6f")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR045"
 			(at 369.57 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -38974,7 +39509,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -38991,7 +39526,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1e85f431-8256-40e1-a9bb-f158b35b9ff6")
-		(property "Reference" "U9"
+		(property "Reference" "U10"
 			(at 342.9 49.276 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39059,7 +39594,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U9")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -39077,7 +39612,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20490840-28b6-4abb-a425-70ff53a2b26a")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR043"
 			(at 361.95 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -39137,7 +39672,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR039")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -39397,7 +39932,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "279edb98-093e-4ee0-a999-f2c9c98db9c8")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR021"
 			(at 243.84 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -39457,7 +39992,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR020")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -39711,7 +40246,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2bb250a4-d518-4b96-8a45-249f73debad8")
-		(property "Reference" "U5"
+		(property "Reference" "U6"
 			(at 192.786 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39871,7 +40406,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U5")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -40154,7 +40689,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "31dcfac4-beb7-4821-8a5b-30abe47d638b")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR029"
 			(at 308.61 309.88 0)
 			(hide yes)
 			(show_name no)
@@ -40214,7 +40749,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR028")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -40491,7 +41026,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f3b7e14-4515-41ba-a796-bc5cbf192bcf")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR022"
 			(at 250.19 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -40551,7 +41086,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR021")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -40569,7 +41104,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f620ba7-6d9c-49ba-b519-08e38af10332")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR054"
 			(at 372.11 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -40629,7 +41164,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR055")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -40774,7 +41309,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5136f70e-04d7-44db-b033-ee479fca9030")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR062"
 			(at 383.54 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -40834,7 +41369,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR052")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -40852,7 +41387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a40f32e-4b99-4733-9c41-170e1d47cb86")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR061"
 			(at 381 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -40912,7 +41447,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR045")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -41034,7 +41569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "630dfe15-eb8a-4610-ad41-64b697b8b3c7")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR023"
 			(at 284.48 25.4 0)
 			(hide yes)
 			(show_name no)
@@ -41094,7 +41629,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR022")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -41111,7 +41646,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "63662961-ab2f-47ba-ae5a-a125487e91e6")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR05"
 			(at 73.66 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -41171,7 +41706,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR04")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -41189,7 +41724,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "66dcbbb4-4608-4b2e-bd4b-dc5729e25dd1")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR055"
 			(at 375.92 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -41249,7 +41784,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR056")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -41344,7 +41879,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6d04c9b8-6aa7-4bda-8a9a-13605aa47b5b")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR032"
 			(at 323.85 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -41404,7 +41939,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR031")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -41421,7 +41956,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f21cb4c-225b-4fac-a5e7-23b0310df784")
-		(property "Reference" "U6"
+		(property "Reference" "U7"
 			(at 334.518 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41506,7 +42041,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U6")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -41523,7 +42058,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7047c542-e747-4b0f-8c58-6ccba60806d1")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR044"
 			(at 367.03 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -41583,7 +42118,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -41601,7 +42136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73d3f3b2-11f0-4cb5-a784-8c0bf3289f19")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR018"
 			(at 199.39 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -41661,7 +42196,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR017")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -41755,7 +42290,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7b805825-de8c-4a27-bfb8-3437fd3567e2")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR028"
 			(at 304.8 345.44 0)
 			(hide yes)
 			(show_name no)
@@ -41815,7 +42350,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR027")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -41832,7 +42367,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "80222247-83a8-4d94-a2f7-1553a299fd4d")
-		(property "Reference" "U12"
+		(property "Reference" "U13"
 			(at 381 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41900,7 +42435,85 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U12")
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 160.02 224.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8088e77d-cbd6-4ee7-a0f1-43a6d8422cc7")
+		(property "Reference" "#PWR099"
+			(at 160.02 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 160.02 219.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 160.02 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "087ebce3-b6f2-4559-a8ae-69b58a677df1")
+		)
+		(instances
+			(project "BILLEE_Science_Control_Module_V1"
+				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -41917,7 +42530,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "80c7cfc8-673b-4acb-a258-228ebdd32e81")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR020"
 			(at 226.06 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -41977,7 +42590,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR019")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -41994,7 +42607,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "80d5f426-8b6c-4674-9484-c605f3bcd69a")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR015"
 			(at 165.1 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -42054,7 +42667,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR014")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -42149,7 +42762,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8550eed2-062a-4f50-b739-bf1d7fcfba75")
-		(property "Reference" "U16"
+		(property "Reference" "U17"
 			(at 383.794 20.828 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42212,7 +42825,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U16")
+					(reference "U17")
 					(unit 1)
 				)
 			)
@@ -42229,7 +42842,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "86fdcfaa-1ad9-4ec0-b6f5-fe3cdf3a09d1")
-		(property "Reference" "U8"
+		(property "Reference" "U9"
 			(at 334.01 214.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42314,7 +42927,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U8")
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -42331,7 +42944,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "87855b1e-3fe0-43bb-8432-21b56daff866")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR033"
 			(at 323.85 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -42391,7 +43004,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR032")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -42408,7 +43021,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8b2718d5-7318-4950-a458-3a82d6cf75c3")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR027"
 			(at 304.8 299.72 0)
 			(hide yes)
 			(show_name no)
@@ -42468,7 +43081,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR026")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -42486,7 +43099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ddaa9bb-f908-49ec-abb3-b367026c35a6")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR042"
 			(at 360.68 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -42546,7 +43159,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR038")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -42563,7 +43176,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90003bda-f1be-4702-92e6-5dab549027b9")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR059"
 			(at 378.46 320.04 0)
 			(hide yes)
 			(show_name no)
@@ -42623,7 +43236,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR060")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -42640,7 +43253,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "94b6b0ed-3bb0-498c-b35e-7083016e04bf")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR035"
 			(at 325.12 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -42700,7 +43313,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR034")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -42718,7 +43331,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9509b1c9-8be4-4a35-bec7-cb4b6df12a8c")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR026"
 			(at 303.53 322.58 0)
 			(hide yes)
 			(show_name no)
@@ -42778,7 +43391,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR025")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -42795,7 +43408,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9a16004a-aa9f-4463-aedd-31354a6479b4")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR065"
 			(at 397.51 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -42855,7 +43468,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR062")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -42950,7 +43563,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e7b4a62-2fe8-4530-a41a-96bcb8992046")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 371.348 80.518 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43035,7 +43648,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U11")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -43054,7 +43667,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9eaa9fb4-9cec-4835-af3a-4871d0a0bdbb")
-		(property "Reference" "U10"
+		(property "Reference" "U11"
 			(at 349.25 266.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -43214,7 +43827,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U10")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -43231,7 +43844,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a881dc35-2fb7-409d-b47a-64d0389d72bd")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR060"
 			(at 378.46 327.66 0)
 			(hide yes)
 			(show_name no)
@@ -43291,7 +43904,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR061")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -43796,7 +44409,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "adfe748b-555a-4758-b528-fd21e98ed606")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR019"
 			(at 210.82 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -43856,7 +44469,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR018")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -43951,7 +44564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b337718e-33f9-4a0d-b6bb-297085e7e88f")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 165.1 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -44011,7 +44624,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -44425,7 +45038,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be509203-fdea-4917-ac97-849f310fefd6")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR038"
 			(at 335.28 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -44485,7 +45098,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -44503,7 +45116,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c00915c6-4d22-4165-a108-9323b3dc1196")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR056"
 			(at 378.46 297.18 0)
 			(hide yes)
 			(show_name no)
@@ -44563,7 +45176,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR057")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -44758,7 +45371,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c8567060-ba7b-4a03-9fe5-3207997700ab")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR057"
 			(at 378.46 304.8 0)
 			(hide yes)
 			(show_name no)
@@ -44818,7 +45431,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR058")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -45166,7 +45779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0258d93-cece-4a0f-8f3d-30589153b233")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR058"
 			(at 378.46 312.42 0)
 			(hide yes)
 			(show_name no)
@@ -45226,7 +45839,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR059")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -45361,7 +45974,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d41ac78f-64a5-4c15-bcb7-24fb582066df")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR041"
 			(at 358.14 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -45421,7 +46034,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR042")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -45438,7 +46051,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d67b6277-66af-47b2-9fb0-8a0a6a275599")
-		(property "Reference" "U7"
+		(property "Reference" "U8"
 			(at 334.518 194.056 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45523,7 +46136,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U7")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -45540,7 +46153,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d762ec38-f332-4a80-b1f4-f48e6d5c7b81")
-		(property "Reference" "U15"
+		(property "Reference" "U16"
 			(at 381 214.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45625,7 +46238,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U15")
+					(reference "U16")
 					(unit 1)
 				)
 			)
@@ -45721,7 +46334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "df5bbb40-e555-46bd-acc0-2467aca8ef91")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR017"
 			(at 184.15 212.09 0)
 			(hide yes)
 			(show_name no)
@@ -45781,7 +46394,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR016")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -45954,7 +46567,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e83c1c38-7494-4488-bdb3-b5412635b7bf")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR04"
 			(at 72.39 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -46014,7 +46627,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR05")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -46031,7 +46644,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ebc335cb-1cfd-4a9d-b8f5-22f659647d8b")
-		(property "Reference" "U14"
+		(property "Reference" "U15"
 			(at 381 194.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46116,7 +46729,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "U14")
+					(reference "U15")
 					(unit 1)
 				)
 			)
@@ -46134,7 +46747,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed87ce4d-3286-4793-ba4a-38f84820fc7f")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR030"
 			(at 311.15 335.28 0)
 			(hide yes)
 			(show_name no)
@@ -46194,7 +46807,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR029")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -46212,7 +46825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eec768a7-7cbe-452c-8379-21853ac196ba")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR052"
 			(at 372.11 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -46272,7 +46885,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR053")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -46289,7 +46902,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eec98293-007c-4b41-8304-3038fb6b09ea")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR037"
 			(at 327.66 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -46349,7 +46962,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR036")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -46366,7 +46979,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f2847ee3-b707-4df5-b44d-3433f7602b26")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR040"
 			(at 356.87 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -46426,7 +47039,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR041")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -46706,7 +47319,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fea9a467-36b5-45f1-9631-e236f21814ab")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR053"
 			(at 372.11 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -46766,7 +47379,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR054")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -46783,7 +47396,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ff94669d-40d4-4c9c-92c4-6b96ccc36db3")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR031"
 			(at 323.85 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -46843,7 +47456,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/431a2b87-8d6b-4f12-9148-b0247a47a425"
-					(reference "#PWR030")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)

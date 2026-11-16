@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "bd3250d9-005d-4cce-badf-e4da87f0c0fb")
-	(paper "A5")
+	(paper "A3")
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
@@ -2345,6 +2345,18 @@
 		)
 	)
 	(rectangle
+		(start 271.78 15.24)
+		(end 351.79 20.32)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "393f1ecf-7606-41ec-b5c7-1ce2e8923d37")
+	)
+	(rectangle
 		(start 155.575 32.385)
 		(end 190.5 57.15)
 		(stroke
@@ -2367,6 +2379,19 @@
 			(type none)
 		)
 		(uuid "84c5bf27-61be-4a5d-8b70-22feb8e9b8f7")
+	)
+	(arc
+		(start 256.0139 19.5761)
+		(mid 255.2699 17.78)
+		(end 256.0139 15.9839)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "8ddefd2c-bafc-4091-bee8-26583ff108c5")
 	)
 	(rectangle
 		(start 160.02 68.58)
@@ -2406,7 +2431,7 @@
 	)
 	(text "CENTER: RED\n\nEND B: WHITE"
 		(exclude_from_sim no)
-		(at 152.654 82.804 0)
+		(at 148.59 80.518 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2425,6 +2450,19 @@
 			)
 		)
 		(uuid "17f9416c-7264-4944-8c6d-de8015f171f9")
+	)
+	(text "I dont think that we have anything connected to PCA_s5 BUT COULD BE WRONG\n"
+		(exclude_from_sim no)
+		(at 311.658 18.034 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+				(italic yes)
+			)
+		)
+		(uuid "3467c9ce-2caf-4d72-ad47-075367655349")
 	)
 	(text "SERVOS"
 		(exclude_from_sim no)
@@ -2452,7 +2490,7 @@
 	)
 	(text "END A: Black "
 		(exclude_from_sim no)
-		(at 153.162 75.946 0)
+		(at 149.098 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2563,6 +2601,16 @@
 			(type default)
 		)
 		(uuid "02a6c5ea-1f04-4a87-aef1-a71e76f047d6")
+	)
+	(polyline
+		(pts
+			(xy 255.27 17.78) (xy 270.51 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17337e71-2556-471e-9b0d-15ce886476ed")
 	)
 	(wire
 		(pts
@@ -3513,7 +3561,7 @@
 	)
 	(global_label "PCA_S6"
 		(shape input)
-		(at 219.71 11.43 180)
+		(at 219.71 15.24 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3523,7 +3571,7 @@
 		)
 		(uuid "01cd8d61-3649-47c3-8385-97687a94712b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 11.43 0)
+			(at 213.7095 15.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3633,7 +3681,7 @@
 	)
 	(global_label "PCA_S7"
 		(shape input)
-		(at 219.71 36.83 180)
+		(at 219.71 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3643,7 +3691,7 @@
 		)
 		(uuid "255a2884-ac79-4cff-b0f9-cd05c682b421")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 36.83 0)
+			(at 213.7095 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3657,7 +3705,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 219.71 39.37 180)
+		(at 219.71 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3667,7 +3715,7 @@
 		)
 		(uuid "25c7d22f-ff06-4b74-96f5-bcdb3ca886cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 39.37 0)
+			(at 215.5964 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3849,7 +3897,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 219.71 13.97 180)
+		(at 219.71 17.78 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3859,7 +3907,7 @@
 		)
 		(uuid "729bd0d3-75be-4567-8c79-cee882cbf2eb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 13.97 0)
+			(at 215.5964 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3993,7 +4041,7 @@
 	)
 	(global_label "PCA_S5"
 		(shape input)
-		(at 219.71 25.4 180)
+		(at 219.71 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4003,7 +4051,7 @@
 		)
 		(uuid "9725eebb-20e7-41bd-bc03-a75a6cc76ccc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 25.4 0)
+			(at 213.7095 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4209,7 +4257,7 @@
 	)
 	(global_label "+6V"
 		(shape input)
-		(at 219.71 27.94 180)
+		(at 219.71 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4219,7 +4267,7 @@
 		)
 		(uuid "c5380ff1-ec75-4a3c-8ffa-71ad80b202e4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 27.94 0)
+			(at 215.5964 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4531,7 +4579,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a63cffc-6515-411a-a956-6e7187999547")
-		(property "Reference" "M13"
+		(property "Reference" "M12"
 			(at 87.63 42.7468 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4609,7 +4657,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M13")
+					(reference "M12")
 					(unit 1)
 				)
 			)
@@ -4626,7 +4674,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0e2d9e70-38aa-48df-88b4-2ae03bfec42c")
-		(property "Reference" "#PWR0104"
+		(property "Reference" "#PWR090"
 			(at 46.99 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4686,7 +4734,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR0104")
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
@@ -4889,7 +4937,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15be1b3a-0547-4634-b589-e92f81a5e80b")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR093"
 			(at 134.62 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -4949,7 +4997,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR096")
+					(reference "#PWR093")
 					(unit 1)
 				)
 			)
@@ -5051,7 +5099,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 227.33 27.94 0)
+		(at 227.33 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5061,8 +5109,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cb00ba9-716f-4de3-9161-10dc26f14a5f")
-		(property "Reference" "M15"
-			(at 236.22 26.2368 0)
+		(property "Reference" "M14"
+			(at 236.22 30.0468 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5073,7 +5121,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_2"
-			(at 236.22 28.7768 0)
+			(at 236.22 32.5868 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5084,7 +5132,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 32.766 0)
+			(at 227.33 36.576 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5095,7 +5143,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 32.766 0)
+			(at 227.33 36.576 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5106,7 +5154,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 27.94 0)
+			(at 227.33 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5117,7 +5165,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 27.94 0)
+			(at 227.33 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5139,7 +5187,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M15")
+					(reference "M14")
 					(unit 1)
 				)
 			)
@@ -5157,7 +5205,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "344190f6-ec26-47fa-a0c2-2f415f84935d")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR095"
 			(at 184.15 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -5217,7 +5265,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR077")
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -5235,7 +5283,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45903042-e16d-4f51-a70d-65104c4a501f")
-		(property "Reference" "J18"
+		(property "Reference" "J19"
 			(at 177.8 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5313,7 +5361,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "J18")
+					(reference "J19")
 					(unit 1)
 				)
 			)
@@ -5331,7 +5379,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47753b1f-2a9a-46f0-9c83-6e534edbad38")
-		(property "Reference" "#PWR090"
+		(property "Reference" "#PWR091"
 			(at 69.85 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -5391,7 +5439,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR090")
+					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -5409,7 +5457,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "528e5912-7d99-4480-9482-41d011d0431f")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR085"
 			(at 39.37 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -5469,7 +5517,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR098")
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
@@ -5486,7 +5534,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "61b5a826-6851-40c9-ab90-40f848cce0fd")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR092"
 			(at 71.12 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -5546,7 +5594,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR091")
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -5554,7 +5602,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 219.71 30.48 0)
+		(at 219.71 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5563,8 +5611,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "65833d62-a0d7-4063-bcf3-2d5fdfe0f7db")
-		(property "Reference" "#PWR093"
-			(at 219.71 36.83 0)
+		(property "Reference" "#PWR097"
+			(at 219.71 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5575,7 +5623,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 216.662 30.48 0)
+			(at 216.662 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5585,7 +5633,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 219.71 30.48 0)
+			(at 219.71 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5596,7 +5644,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 219.71 30.48 0)
+			(at 219.71 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5607,7 +5655,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 30.48 0)
+			(at 219.71 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5623,7 +5671,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR093")
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -5641,7 +5689,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e97d429-9afe-40f3-9175-e3e9dd2dbe5c")
-		(property "Reference" "#PWR0100"
+		(property "Reference" "#PWR086"
 			(at 46.99 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -5701,7 +5749,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR0100")
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -5719,7 +5767,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f14e50c-6e3f-4bd6-9756-c8c579a436db")
-		(property "Reference" "#PWR095"
+		(property "Reference" "#PWR094"
 			(at 134.62 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -5779,7 +5827,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR095")
+					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -5797,7 +5845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73625807-03e9-4b9a-bc3a-e8a37eea18f4")
-		(property "Reference" "M12"
+		(property "Reference" "M11"
 			(at 86.36 27.5068 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5875,7 +5923,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M12")
+					(reference "M11")
 					(unit 1)
 				)
 			)
@@ -5986,7 +6034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "796a9101-e045-4360-9a3f-cca999b763d8")
-		(property "Reference" "U17"
+		(property "Reference" "U18"
 			(at 172.974 54.356 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6060,7 +6108,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "U17")
+					(reference "U18")
 					(unit 1)
 				)
 			)
@@ -6078,7 +6126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95024818-e34d-4809-b202-3d15269c268c")
-		(property "Reference" "J21"
+		(property "Reference" "J18"
 			(at 175.26 24.1299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6153,7 +6201,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "J21")
+					(reference "J18")
 					(unit 1)
 				)
 			)
@@ -6161,7 +6209,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 219.71 41.91 0)
+		(at 219.71 45.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6170,8 +6218,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "96f6931b-d46f-47f8-8336-fb974b4ef98e")
-		(property "Reference" "#PWR094"
-			(at 219.71 48.26 0)
+		(property "Reference" "#PWR098"
+			(at 219.71 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6182,7 +6230,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 216.916 41.91 0)
+			(at 216.916 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6192,7 +6240,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 219.71 41.91 0)
+			(at 219.71 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6203,7 +6251,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 219.71 41.91 0)
+			(at 219.71 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6214,7 +6262,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 41.91 0)
+			(at 219.71 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6230,7 +6278,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR094")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -6248,7 +6296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e258184-67e2-4d72-bc10-dec1773399ba")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR088"
 			(at 46.99 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -6308,7 +6356,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR0102")
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -6325,7 +6373,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ae60a2d6-bb6a-4987-8642-f78349886829")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR089"
 			(at 46.99 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -6385,7 +6433,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR0103")
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -6403,7 +6451,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c85a7e61-321b-4ec6-a989-55cb5529c248")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR087"
 			(at 46.99 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6463,7 +6511,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR0101")
+					(reference "#PWR087")
 					(unit 1)
 				)
 			)
@@ -6471,7 +6519,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 227.33 39.37 0)
+		(at 227.33 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6481,8 +6529,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ceaebf06-9bae-4c37-8ec6-8468ea2ed81d")
-		(property "Reference" "M16"
-			(at 236.22 37.6668 0)
+		(property "Reference" "M15"
+			(at 236.22 41.4768 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6493,7 +6541,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_4"
-			(at 236.22 40.2068 0)
+			(at 236.22 44.0168 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6504,7 +6552,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 44.196 0)
+			(at 227.33 48.006 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6515,7 +6563,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 44.196 0)
+			(at 227.33 48.006 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6526,7 +6574,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 39.37 0)
+			(at 227.33 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6537,7 +6585,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 39.37 0)
+			(at 227.33 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6559,7 +6607,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M16")
+					(reference "M15")
 					(unit 1)
 				)
 			)
@@ -6567,7 +6615,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 219.71 16.51 0)
+		(at 219.71 20.32 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6576,8 +6624,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d93d4add-b333-4b60-ad93-063dd46af807")
-		(property "Reference" "#PWR092"
-			(at 219.71 22.86 0)
+		(property "Reference" "#PWR096"
+			(at 219.71 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6588,7 +6636,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 215.392 16.51 0)
+			(at 215.392 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6598,7 +6646,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 219.71 16.51 0)
+			(at 219.71 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6609,7 +6657,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 219.71 16.51 0)
+			(at 219.71 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6620,7 +6668,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 16.51 0)
+			(at 219.71 20.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6636,7 +6684,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR092")
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)
@@ -6654,7 +6702,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd0fbbf1-1b22-4d32-a7f9-fcd99588dd49")
-		(property "Reference" "J19"
+		(property "Reference" "J20"
 			(at 177.8 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6732,7 +6780,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "J19")
+					(reference "J20")
 					(unit 1)
 				)
 			)
@@ -6740,7 +6788,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_Servo")
-		(at 227.33 13.97 0)
+		(at 227.33 17.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6750,8 +6798,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6ec0402-325a-4978-bcec-ec642399976f")
-		(property "Reference" "M14"
-			(at 236.22 12.2668 0)
+		(property "Reference" "M13"
+			(at 236.22 16.0768 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6762,7 +6810,7 @@
 			)
 		)
 		(property "Value" "Rotation_Servo_3"
-			(at 236.22 14.8068 0)
+			(at 236.22 18.6168 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6773,7 +6821,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 18.796 0)
+			(at 227.33 22.606 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6784,7 +6832,7 @@
 			)
 		)
 		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 18.796 0)
+			(at 227.33 22.606 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6795,7 +6843,7 @@
 			)
 		)
 		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 13.97 0)
+			(at 227.33 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6806,7 +6854,7 @@
 			)
 		)
 		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 13.97 0)
+			(at 227.33 17.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6828,7 +6876,7 @@
 		(instances
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M14")
+					(reference "M13")
 					(unit 1)
 				)
 			)

@@ -25,6 +25,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 - [Science spectrometer tooling](#science-spectrometer-tooling)
 - [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
 - [UV science camera](#uv-science-camera)
+- [Battery charger control (ISDT Air8)](#battery-charger-control-isdt-air8)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
@@ -127,6 +128,7 @@ billee-hardware-2027/
 ├── BILLEE_Drivetrain_Module/             # KiCad schematic documenting the drivetrain wiring (ODESC + NEO + CAN)
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
 ├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module
+├── BILLEE-air8-charger-tool/             # Web UI + Python BLE backend to run the ISDT Air8 charger (git submodule)
 ├── BILLEE-odesc-config-tool/             # Python tool: USB ODESC motor calibration
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
 ├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
@@ -438,6 +440,27 @@ Then open `http://<camera-host-ip>:8090/`. See
 [`uv_scienceCam/README.md`](uv_scienceCam/README.md) for options and the HTTP
 API.
 
+## Battery charger control (ISDT Air8)
+
+[`BILLEE-air8-charger-tool`](https://github.com/LucaLanzi/BILLEE-air8-charger-tool)
+(git submodule) runs the team's ISDT Air8 charger from a laptop browser instead
+of its front buttons or the phone app. A Python backend talks to the charger
+over Bluetooth LE and checks every job against per-chemistry limits. A Node
+front end shows live pack voltage, current and cell balance, and stores
+shared battery presets. It needs Python with `uv`, Node 18+, and Bluetooth on
+the laptop (built-in or a USB dongle).
+
+```bash
+cd BILLEE-air8-charger-tool/frontend
+npm install
+npm start       # or `npm run sim` to try it without the charger
+```
+
+Then open `http://localhost:3000`. No Bluetooth stop command is known yet, so
+stop a job by unplugging the battery. See
+[`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md) for
+the safety notes and first-test procedure.
+
 ## Getting started
 
 1. Clone with submodules — the F´ component library is a separate repo:
@@ -454,6 +477,7 @@ API.
 6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
 7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 8. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
+9. To charge batteries with the ISDT Air8, run `npm install` then `npm start` inside `BILLEE-air8-charger-tool/frontend/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
 
 ## Design status
 

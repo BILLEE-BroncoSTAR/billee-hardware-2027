@@ -15,3 +15,7 @@
 [submodule "uv_scienceCam"]
 	path = uv_scienceCam
 	url = https://github.com/LucaLanzi/uv_scienceCam.git
+[submodule "BILLEE-air8-charger-tool"]
+	path = BILLEE-air8-charger-tool
+	url = https://github.com/LucaLanzi/BILLEE-air8-charger-tool.git
+	branch = main

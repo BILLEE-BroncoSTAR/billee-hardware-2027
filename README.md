@@ -451,13 +451,13 @@ shared battery presets. It needs Python with `uv`, Node 18+, and Bluetooth on
 the laptop (built-in or a USB dongle).
 
 ```bash
-cd BILLEE-air8-charger-tool/frontend
-npm install
-npm start       # or `npm run sim` to try it without the charger
+cd BILLEE-air8-charger-tool
+make setup
+make start      # or `make sim` to try it without the charger
 ```
 
-Then open `http://localhost:3000`. No Bluetooth stop command is known yet, so
-stop a job by unplugging the battery. See
+Then open `http://localhost:3000`. **Stop job** ends the running charge; if it
+reports "not confirmed", unplug the battery. See
 [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md) for
 the safety notes and first-test procedure.
 
@@ -477,7 +477,7 @@ the safety notes and first-test procedure.
 6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
 7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 8. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
-9. To charge batteries with the ISDT Air8, run `npm install` then `npm start` inside `BILLEE-air8-charger-tool/frontend/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
+9. To charge batteries with the ISDT Air8, run `make setup` then `make start` inside `BILLEE-air8-charger-tool/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
 
 ## Design status
 

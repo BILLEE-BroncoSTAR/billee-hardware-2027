@@ -8742,6 +8742,18 @@
 		(uuid "10523940-b61e-40bb-ac1a-8f51ccdf026d")
 	)
 	(rectangle
+		(start 199.39 29.845)
+		(end 245.11 34.29)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "44303f40-7c64-42e2-9465-28994d25fb78")
+	)
+	(rectangle
 		(start 281.94 180.34)
 		(end 405.13 250.19)
 		(stroke
@@ -9038,6 +9050,16 @@
 			(href "https://www.pjrc.com/store/teensy41.html")
 		)
 		(uuid "f6a7d8a4-d75e-428c-92d6-3dbd2ec0f3ab")
+	)
+	(text "S1 and S2 I/O pins are connected for both\n"
+		(exclude_from_sim no)
+		(at 221.234 32.766 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f8826e64-de92-4b85-8365-4b769518a4fb")
 	)
 	(text "UV Spectroscopy"
 		(exclude_from_sim no)
@@ -9942,16 +9964,6 @@
 			(type default)
 		)
 		(uuid "4b79f04a-9479-4539-b84c-2ba9bdde4ea5")
-	)
-	(wire
-		(pts
-			(xy 388.62 133.35) (xy 388.62 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c4a300d-9a92-42ce-a021-a1b298643f3d")
 	)
 	(wire
 		(pts

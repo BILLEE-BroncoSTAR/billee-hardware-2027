@@ -19,3 +19,7 @@
 	path = BILLEE-air8-charger-tool
 	url = https://github.com/LucaLanzi/BILLEE-air8-charger-tool.git
 	branch = main
+[submodule "BILLEE-creation-toolkit"]
+	path = BILLEE-creation-toolkit
+	url = https://github.com/LucaLanzi/BILLEE-creation-toolkit.git
+	branch = main

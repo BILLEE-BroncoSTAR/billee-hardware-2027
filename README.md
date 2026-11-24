@@ -26,6 +26,7 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
 - [Astronaut video/audio streamer](#astronaut-videoaudio-streamer)
 - [UV science camera](#uv-science-camera)
 - [Battery charger control (ISDT Air8)](#battery-charger-control-isdt-air8)
+- [Robot model builder (Blender)](#robot-model-builder-blender)
 - [Getting started](#getting-started)
 - [Design status](#design-status)
 - [Contributors](#contributors)
@@ -129,6 +130,7 @@ billee-hardware-2027/
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
 ├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module
 ├── BILLEE-air8-charger-tool/             # Web UI + Python BLE backend to run the ISDT Air8 charger (git submodule)
+├── BILLEE-creation-toolkit/              # Blender extension: build the rover and arm, export ROS 2 + MoveIt packages (git submodule)
 ├── BILLEE-odesc-config-tool/             # Python tool: USB ODESC motor calibration
 ├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
 ├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
@@ -461,6 +463,26 @@ reports "not confirmed", unplug the battery. See
 [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md) for
 the safety notes and first-test procedure.
 
+## Robot model builder (Blender)
+
+[`BILLEE-creation-toolkit`](https://github.com/LucaLanzi/BILLEE-creation-toolkit)
+(git submodule) is a Blender extension for building the rover and arm. It
+exports `robot_description` and `arm_description` packages that replace the
+ones in `billee-software-2027` without changing anything else in that repo,
+plus a MoveIt 2 package for arm planning. It needs Blender 5.3 or newer.
+
+```bash
+cd BILLEE-creation-toolkit
+make install
+```
+
+In Blender, press **N** in the 3D Viewport and open the **Robot** tab. Exports
+have been tested in simulation and with mock arm hardware, not on real motors.
+See [`BILLEE-creation-toolkit/README.md`](BILLEE-creation-toolkit/README.md) for
+the Windows and macOS installers and
+[`docs/LIMITATIONS.md`](BILLEE-creation-toolkit/docs/LIMITATIONS.md) before
+using real hardware.
+
 ## Getting started
 
 1. Clone with submodules — the F´ component library is a separate repo:
@@ -478,6 +500,7 @@ the safety notes and first-test procedure.
 7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
 8. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
 9. To charge batteries with the ISDT Air8, run `make setup` then `make start` inside `BILLEE-air8-charger-tool/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
+10. To build or change the rover and arm models in Blender, see [`BILLEE-creation-toolkit/README.md`](BILLEE-creation-toolkit/README.md).
 
 ## Design status
 

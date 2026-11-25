@@ -1,7 +1,7 @@
 # BILLEE Hardware 2027
 ### By Luca Lanzillotta
 
-This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, schematic diagrams for the Science Control Module, F´/Zephyr firmware, Science Arduino firmware, and all supporting resources required to operate BILLEE for URC 2027.
+This repository contains the hardware design and simulation files for the BILLEE Rover Control Module, the Science Control Module hardware and its F´ firmware, the RCM's F´/Zephyr firmware, wiring schematics for the drivetrain, arm and astronaut modules, and all supporting resources required to operate BILLEE for URC 2027.
 If you are looking for our ROS2 Humble Software Stack, refer to [billee-software-2027](https://github.com/BroncoSpace-BILLEE/URC-2027).
 
 ## Table of contents
@@ -16,7 +16,8 @@ If you are looking for our ROS2 Humble Software Stack, refer to [billee-software
   - [Subsystems](#subsystems)
   - [Connectors](#connectors)
   - [RCM Firmware](#rcm-firmware)
-- [BILLEE Science Control Module Schematic](#billee-science-control-module-schematic)
+- [BILLEE Science Control Module](#billee-science-control-module)
+  - [Science hardware](#science-hardware)
   - [SCM Firmware](#scm-firmware)
 - [BILLEE Drivetrain Module Schematic](#billee-drivetrain-module-schematic)
 - [BILLEE Arm Module Schematic](#billee-arm-module-schematic)
@@ -128,11 +129,11 @@ billee-hardware-2027/
 │   └── AstronautModuleAssembly/          # SolidWorks assembly: Raspberry Pi 4 mount + lid, Pi 4 datasheet
 ├── BILLEE_Drivetrain_Module/             # KiCad schematic documenting the drivetrain wiring (ODESC + NEO + CAN)
 ├── BILLEE_Rover_Control_Module_V1/       # KiCad project for the Rover Control Module
-├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module
+├── BILLEE_Science_Control_Module_V1/     # KiCad project for the Science Control Module (sheet per science subsystem)
 ├── BILLEE-air8-charger-tool/             # Web UI + Python BLE backend to run the ISDT Air8 charger (git submodule)
 ├── BILLEE-creation-toolkit/              # Blender extension: build the rover and arm, export ROS 2 + MoveIt packages (git submodule)
 ├── BILLEE-odesc-config-tool/             # Python tool: USB ODESC motor calibration
-├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson
+├── RunScienceSpectrometer/               # Offline Vernier spectrometer PWA + kiosk setup for the Jetson (git submodule)
 ├── astronaut-streamer/                   # Pi camera → Jetson → ground-station video + audio stream (git submodule)
 ├── fprime-billee-rcm/                    # F´ firmware for the RCM board (git submodule)
 ├── fprime-arduino-billee-scm/            # F´ firmware for the Science Control Module (git submodule)
@@ -195,7 +196,7 @@ this repo's scope — the RCM only switches and protects their power.
 | Hardware (KiCad project) | Firmware | Target | Role |
 |---|---|---|---|
 | [`BILLEE_Rover_Control_Module_V1/`](BILLEE_Rover_Control_Module_V1/) | [`fprime-billee-rcm`](fprime-billee-rcm/README.md) | RP2350 (F´ / Zephyr) | Power distribution/gating for DRIVE, ARM, and SCIENCE; powers the Jetson; reports subsystem/E-Stop/thermal telemetry over USB |
-| [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/) — | [`fprime-arduino-billee-scm`](fprime-arduino-billee-scm/README.md) | Teensy 4.1 (F´) | Science instrument control, USB CDC to Jetson |
+| [`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/) | [`fprime-arduino-billee-scm`](fprime-arduino-billee-scm/README.md) | Teensy 4.1 (F´) | Runs the science payload: drill and actuator motors (3 Roboclaws), 16 servos, pumps, stirrer and UV light relays, load cells, and the sample carousel stepper; USB CDC to Jetson |
 | [`BILLEE_Arm_Module/`](BILLEE_Arm_Module/) — arm wiring (off-the-shelf actuators, documented here) | — | — | Arm axis actuators and end-effector solenoid, powered from the RCM's switched ARM output |
 | [`BILLEE_Drivetrain_Module/`](BILLEE_Drivetrain_Module/) — ODESC motor controllers (third-party hardware, wiring documented here) | [`BILLEE-odesc-config-tool`](BILLEE-odesc-config-tool/README.md) | ODrive-based ODESC | One-time/occasional USB calibration tool (encoder/motor cal, CAN node ID) — not runtime firmware |
 
@@ -312,40 +313,164 @@ Each channel's overvoltage lockout trips at roughly the same ~32V threshold rega
 
 ## RCM Firmware
 
-The RCM's RP2350 runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr RTOS —
-subsystem power enable/disable, E-Stop handling, and MCP9808/INA780B thermal
-and power telemetry, communicating with the Jetson over USB CDC. To get
-started:
+The RCM's RP2350 runs [F´](https://fprime.jpl.nasa.gov/) (v4.2.2) on Zephyr
+RTOS (v4.3.0) and talks to the Jetson over USB CDC, carrying F´ CCSDS frames.
+Its project components are:
+
+| Component | What it does |
+|---|---|
+| `subsystemManager` | Turns DRIVETRAIN, ARM and SCIENCE power on and off; enforces E-STOP |
+| `mcpManager` | MCP9808 board temperatures, with tunable warning/fault thresholds |
+| `inaManager` | INA780B bus voltage and current on every switched channel |
+| `fpManager` | Software fault protection: overcurrent, over/undervoltage and over-temperature |
+
+How it behaves:
+
+- **All eight power enables are driven LOW at early boot**, before USB comes
+  up, so no output turns on by itself.
+- **E-STOP**: the hardware AND gates cut every channel at once. The firmware
+  polls the line at 10 Hz, forces any ON subsystem OFF in software, and rejects
+  power-ON commands while it is engaged. Releasing it turns nothing back on.
+- **Faults latch.** A tripped DRIVETRAIN, ARM or SCIENCE fault forces that
+  subsystem OFF until `fpManager.CLEAR_FAULT`. One wheel faulting shuts off the
+  whole drivetrain. A LOGIC fault only raises an alert, since LOGIC powers the
+  RP2350 itself.
+- **Rate groups**: E-STOP, subsystem control and INA polling run at 10 Hz;
+  telemetry and housekeeping at 1 Hz.
+
+To get started:
 
 ```bash
 cd fprime-billee-rcm
-make setup      # creates fprime-venv, inits submodules, installs requirements.txt
+make setup           # creates fprime-venv, inits submodules, installs requirements.txt
+make setup-zephyr    # Zephyr + SDK (slow, one-time)
+make build-rp2350    # builds build-artifacts/zephyr.uf2
 ```
 
-See [`fprime-billee-rcm/README.md`](fprime-billee-rcm/README.md) for the rest
-(`make setup-zephyr`, `make build-rp2350`, flashing, GDS), and
+On the Jetson, `make install-gds-service` runs the GDS at every boot in a
+detached `screen` session (dashboard on port **5000**), and a udev rule gives
+the board a stable `/dev/ttyBILLEE_RCM` name so it never swaps places with the
+SCM.
+
+See [`fprime-billee-rcm/README.md`](fprime-billee-rcm/README.md) for flashing
+on macOS, WSL2 and Linux, and
 [`docs/OPERATOR_MANUAL.md`](fprime-billee-rcm/docs/OPERATOR_MANUAL.md) for the
-command/telemetry reference.
+command/telemetry reference and the power-on checklist.
 
-## BILLEE Science Control Module Schematic
+## BILLEE Science Control Module
 
-[`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/)
-is an early-stage KiCad project; this section will be filled in with the
-schematic and hardware documentation once the module design is integrated.
+The Science Control Module (SCM) runs the science payload. A Teensy 4.1
+drives every motor, servo, pump and sensor on it, takes its power from the
+RCM's switched `SCIENCE` output, and reports to the Jetson over USB. The
+spectrometer and UV camera are the exceptions: they connect to the Jetson
+directly (see [Science spectrometer tooling](#science-spectrometer-tooling) and
+[UV science camera](#uv-science-camera)).
+
+[`BILLEE_Science_Control_Module_V1/`](BILLEE_Science_Control_Module_V1/) is
+the KiCad project. Its top sheet has one sheet per subsystem: Science Control
+Module, Regolith Extraction Module, Sample Cache and Rotation System, Chemical
+Management System, and UV Spectroscopy Module. Pin-level wiring is in
+[`fprime-arduino-billee-scm/PinTable.md`](fprime-arduino-billee-scm/PinTable.md),
+which follows the Science Hardware Architecture 2027 block diagram.
+
+### Science hardware
+
+```mermaid
+flowchart LR
+    JET["Jetson Orin AGX"]
+    RCM["RCM<br/>SCIENCE output (+22.2V)"]
+
+    subgraph SCM["Science Control Module"]
+        TEENSY["Teensy 4.1<br/>fprime-arduino-billee-scm"]
+        SD["microSD<br/>(sequence files)"]
+        TEENSY --- SD
+    end
+
+    RC["3x Roboclaw<br/>R1 0x80 · R2 0x81 · R3 0x82"]
+    MOT["Drill, drill tube, transfer tube<br/>and sample rotation actuators<br/>+ limit switches"]
+    PCA["PCA9685<br/>16 servo channels"]
+    REL["Relays<br/>4 pumps · stirrer · UV light"]
+    HX["2x HX711<br/>load cells"]
+    STEP["NEMA 17 carousel stepper<br/>(integrated driver)"]
+
+    JET <-->|"USB CDC · F´ GDS :5001"| TEENSY
+    RCM == "power" ==> SCM
+    TEENSY -- "Serial1 / Serial2 / Serial4" --> RC --> MOT
+    TEENSY -- "I2C (Wire, 100 kHz)" --> PCA
+    TEENSY -- "GPIO" --> REL
+    TEENSY -- "DAT/CLK" --> HX
+    TEENSY -- "open-drain step/dir" --> STEP
+```
+
+| Hardware | Connection to the Teensy | Firmware component |
+|---|---|---|
+| Roboclaw R1 (`0x80`): soil drill actuator (M1), transfer tube actuator (M2) | `Serial1` (pins 1/0), 38400 baud; limit switches 23/22 and 21/15 | `roboclawManager` |
+| Roboclaw R2 (`0x81`): transfer tube lead screw (M1), drill (M2) | `Serial2` (pins 8/7); M1 limit switches 14/41, the drill has none | `roboclawManager` |
+| Roboclaw R3 (`0x82`): sample rotation linear actuator (M1) | `Serial4` (pins 17/16); limit switches 33/32 | `roboclawManager` |
+| PCA9685 servo board, `S1`–`S16` (S1 cup tilt, S2 drape, S3 cache lid, S4 funnel flap) | I2C `Wire` (18 SDA / 19 SCL), address `0x40` | `pca9685Manager` |
+| Pump 1–4 relays (+12V) | GPIO 39, 38, 37, 36 | `relayManager` |
+| Magnetic stirrer relay (+12V) | GPIO 34 | `relayManager` |
+| UV light relay (+22.2V) | GPIO 40 | `relayManager` |
+| HX711 load cells `CELL1`, `CELL2` | DAT/CLK 24/25 and 26/27 | `loadCellManager` |
+| Carousel stepper (NEMA 17, integrated driver) | PU-/DR-/MF- on 2/3/4, open-drain | `stepperManager` |
+| microSD (on the Teensy) | SDIO | `fileManager`, `cmdSeq` |
+
+Wiring rules that apply to the whole board (details in the
+[pin table](fprime-arduino-billee-scm/PinTable.md#wiring-conventions)):
+
+- **Teensy 4.1 pins are 3.3V and not 5V tolerant.** Power the PCA9685 logic
+  and both HX711 boards from the Teensy's 3.3V; servo power goes on the
+  PCA9685's separate V+ rail with grounds tied.
+- **Limit switches close to GND** when tripped (internal pull-ups, an open
+  switch reads HIGH). `FORWARD` always moves a Roboclaw motor toward its upper
+  switch, and a motor moving into a tripped switch is stopped within 20 ms.
+- **Relays are active HIGH** and every relay pin is driven LOW at boot.
+- **Spare pins**: 6, 9–13 (SPI is entirely free), 20 (the only free analog
+  input), 28/29 (`Serial7`, the only free UART), 30, 31, 35, and 5 (reserved
+  for the stepper).
 
 ## SCM Firmware
 
-The SCM runs F´ on a Teensy 4.1, communicating with the Jetson over its own
-USB CDC connection (GDS on port 5001, alongside the RCM's on port 5000). To
-get started:
+The SCM runs [F´](https://fprime.jpl.nasa.gov/) (v4.1.1) on the Teensy 4.1
+through [fprime-arduino](https://github.com/fprime-community/fprime-arduino).
+It talks to the Jetson over its own USB CDC connection, with its GDS on port
+**5001** next to the RCM's on port 5000, so both dashboards can be open at
+once. A udev rule gives it a stable `/dev/ttyBILLEE_SCM` name.
+
+Each piece of hardware has one component, and every command that waits on
+hardware (`RUN_FOR`, `TO_LIMIT`, `ON_FOR`, `WAIT_MASS`, `MOVE_TO`, ...) answers
+when it finishes. That lets science procedures run as F´ command sequences
+from the SD card. For example, lowering the drill tube to its limit, dosing
+pump 1 for 3 s, then waiting for 50 g on load cell 1:
+
+```
+R00:00:00 billee_deployment.roboclawManager.TO_LIMIT R2_M1 REVERSE 30 20000
+R00:00:00 billee_deployment.relayManager.ON_FOR PUMP1 3000
+R00:00:00 billee_deployment.loadCellManager.WAIT_MASS CELL1 ABOVE 50 60000
+```
+
+To stop everything: `relayManager.ALL_OFF`, `roboclawManager.STOP_ALL`,
+`pca9685Manager.STOP_ALL`, `stepperManager.STOP`, and `cmdSeq.CS_CANCEL` for a
+running sequence.
+
+To get started:
 
 ```bash
 cd fprime-arduino-billee-scm
-make setup      # creates fprime-venv, inits submodules, installs Python deps
+make setup              # fprime-venv, submodules, Python deps, udev rule
+make setup-arduino      # arduino-cli + Teensy core
+make setup-flash-tools  # teensy_loader_cli, for headless flashing
+make generate && make build
+make flash              # build and flash with no button press
+make install-gds-service  # on the Jetson: GDS at every boot, port 5001
 ```
 
-See [`fprime-arduino-billee-scm/README.md`](fprime-arduino-billee-scm/README.md)
-for the rest (`make setup-arduino`, `make generate`, `make build`, flashing).
+If the board asserts, it reboots into the Teensy bootloader so `make flash`
+still reaches it, and `bootReporter` reports where the assert happened on the
+next boot. See
+[`fprime-arduino-billee-scm/README.md`](fprime-arduino-billee-scm/README.md)
+for the full command reference, the sequence workflow, and the RAM and table
+limits to check before adding a component.
 
 ## BILLEE Drivetrain Module Schematic
 
@@ -392,10 +517,21 @@ from runtime motor control.
 
 ## Science spectrometer tooling
 
-[`RunScienceSpectrometer`](RunScienceSpectrometer/README.md) sets up an
-offline-capable copy of Vernier's Spectral Analysis PWA on the Jetson, talking
-to a Go Direct spectrometer over Bluetooth LE, with an optional headless
-VNC kiosk mode.
+[`RunScienceSpectrometer`](RunScienceSpectrometer/README.md) (git submodule)
+sets up Vernier's Spectral Analysis PWA on the Jetson so it runs offline,
+talking to a Go Direct spectrometer over Bluetooth LE. It uses the app's own
+offline support and doesn't copy or repackage it. The Jetson runs it headless
+in a VNC kiosk that the ground station views remotely. Everything installs
+from this repo's root:
+
+```bash
+make science rover   # on the Jetson: Flatpak Chromium, BlueZ, VNC kiosk, caches the app (needs internet once)
+make science host    # on the ground-station laptop: the VNC viewer
+make science run     # on the Jetson: start the remote kiosk
+```
+
+See [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md) for
+the manual steps and for pairing the spectrometer.
 
 ## Astronaut video/audio streamer
 
@@ -494,17 +630,22 @@ using real hardware.
    recursively. `make help` lists all targets.
 2. Open `BILLEE_Rover_Control_Module_V1/BILLEE_Rover_Control_Module_V1.kicad_pro` in KiCad. The custom library footprints under `lib/` are wired up via the project's `fp-lib-table`/`sym-lib-table` — no extra setup needed.
 3. To order the board: everything JLCPCB needs is pre-generated in `BILLEE_Rover_Control_Module_V1/jlcpcb/production_files/` — `BOM-*.csv`, `CPL-*.csv`, and `GERBER-*.zip`. If you change the design, regenerate these (via the KiCad JLCPCB/Fabrication-Toolkit plugin) before ordering — the production files are a separate export step from the schematic/PCB and don't update automatically.
-4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule.
-5. To calibrate a drivetrain motor's ODESC, see [`BILLEE-odesc-config-tool/README.md`](BILLEE-odesc-config-tool/README.md).
-6. To set up the science spectrometer on the Jetson, run `make science` from the repo root, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
-7. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
-8. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
-9. To charge batteries with the ISDT Air8, run `make setup` then `make start` inside `BILLEE-air8-charger-tool/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
-10. To build or change the rover and arm models in Blender, see [`BILLEE-creation-toolkit/README.md`](BILLEE-creation-toolkit/README.md).
+4. Firmware for the RCM runs [F´](https://fprime.jpl.nasa.gov/) on Zephyr; the board-specific F´ components live in the `fprime-billee-rcm` submodule. See [RCM Firmware](#rcm-firmware).
+5. Firmware for the SCM runs F´ on a Teensy 4.1 in the `fprime-arduino-billee-scm` submodule; wire the science hardware from its [`PinTable.md`](fprime-arduino-billee-scm/PinTable.md). See [SCM Firmware](#scm-firmware).
+6. To calibrate a drivetrain motor's ODESC, see [`BILLEE-odesc-config-tool/README.md`](BILLEE-odesc-config-tool/README.md).
+7. To set up the science spectrometer, run `make science rover` on the Jetson and `make science host` on the ground-station laptop, or see [`RunScienceSpectrometer/README.md`](RunScienceSpectrometer/README.md).
+8. To set up the astronaut video/audio stream, run `make astronaut jetson` on the Jetson and `make astronaut pi` on the Pi, or see [`astronaut-streamer/docs/SETUP.md`](astronaut-streamer/docs/SETUP.md).
+9. To stream the UV science camera, run `make setup` then `make run` inside `uv_scienceCam/`, or see [`uv_scienceCam/README.md`](uv_scienceCam/README.md).
+10. To charge batteries with the ISDT Air8, run `make setup` then `make start` inside `BILLEE-air8-charger-tool/`, or see [`BILLEE-air8-charger-tool/README.md`](BILLEE-air8-charger-tool/README.md).
+11. To build or change the rover and arm models in Blender, see [`BILLEE-creation-toolkit/README.md`](BILLEE-creation-toolkit/README.md).
 
 ## Design status
 
-This board has been ordered and works almost perfectly. There are two open issues in this git repo that highlight two outstanding issues. Fortunately the two design flaws are minimal and do not affect the functionality of the board.
+| Module | Status |
+|---|---|
+| Rover Control Module | Ordered and working. Two open issues in this repo track two minor design flaws; neither affects the board's function. |
+| Science Control Module | Hardware nearly complete. The firmware drives every science device (Roboclaws, servos, relays, load cells, carousel stepper) and is wired per [`PinTable.md`](fprime-arduino-billee-scm/PinTable.md). |
+| Drivetrain, Arm, Astronaut modules | Off-the-shelf hardware; wiring documented in their KiCad schematics. |
 
 ## Contributors
 

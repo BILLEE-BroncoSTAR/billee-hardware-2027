@@ -11,6 +11,31 @@
 		(company "Bronco STAR")
 	)
 	(lib_symbols)
+	(arc
+		(start 280.67 208.28)
+		(mid 262.89 215.6447)
+		(end 245.11 208.28)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "22496b0d-928d-4ece-8e66-e6759495b7f3")
+	)
+	(circle
+		(center 251.46 193.04)
+		(radius 5.2363)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "74d621ea-daac-4c52-a643-a1970a85935b")
+	)
 	(rectangle
 		(start 207.01 12.7)
 		(end 407.67 250.19)
@@ -22,6 +47,54 @@
 			(type none)
 		)
 		(uuid "85cb5c90-6f38-49c4-9507-fd8760457153")
+	)
+	(circle
+		(center 271.78 193.04)
+		(radius 6.35)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "8718ee31-d176-4044-9883-90b9ef74ee22")
+	)
+	(rectangle
+		(start 257.81 214.63)
+		(end 261.62 219.71)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "967fb881-e851-4a9a-91ae-ec1099c4d85d")
+	)
+	(circle
+		(center 261.62 201.93)
+		(radius 26.7907)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "98bd4308-b2c7-4c5f-b0ed-77171a8e16ff")
+	)
+	(rectangle
+		(start 262.89 214.63)
+		(end 266.7 219.71)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "eba0a235-6a5b-454b-b744-0dabe57ecadc")
 	)
 	(rectangle
 		(start 12.7 12.7)
@@ -107,6 +180,17 @@
 			)
 		)
 		(uuid "535fdfa7-2e50-48ca-8573-089fe3af2c38")
+	)
+	(text "Everything is done just needs review from LUCA"
+		(exclude_from_sim no)
+		(at 305.562 170.18 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 0.625)
+			)
+		)
+		(uuid "57770f44-2995-4953-a1c0-9cecb45e2441")
 	)
 	(text "DONE"
 		(exclude_from_sim no)

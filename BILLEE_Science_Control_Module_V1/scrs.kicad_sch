@@ -2345,18 +2345,6 @@
 		)
 	)
 	(rectangle
-		(start 271.78 15.24)
-		(end 351.79 20.32)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "393f1ecf-7606-41ec-b5c7-1ce2e8923d37")
-	)
-	(rectangle
 		(start 155.575 32.385)
 		(end 190.5 57.15)
 		(stroke
@@ -2379,19 +2367,6 @@
 			(type none)
 		)
 		(uuid "84c5bf27-61be-4a5d-8b70-22feb8e9b8f7")
-	)
-	(arc
-		(start 256.0139 19.5761)
-		(mid 255.2699 17.78)
-		(end 256.0139 15.9839)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "8ddefd2c-bafc-4091-bee8-26583ff108c5")
 	)
 	(rectangle
 		(start 160.02 68.58)
@@ -2431,7 +2406,7 @@
 	)
 	(text "CENTER: RED\n\nEND B: WHITE"
 		(exclude_from_sim no)
-		(at 148.59 80.518 0)
+		(at 150.622 83.312 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2450,19 +2425,6 @@
 			)
 		)
 		(uuid "17f9416c-7264-4944-8c6d-de8015f171f9")
-	)
-	(text "I dont think that we have anything connected to PCA_s5 BUT COULD BE WRONG\n"
-		(exclude_from_sim no)
-		(at 311.658 18.034 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(italic yes)
-			)
-		)
-		(uuid "3467c9ce-2caf-4d72-ad47-075367655349")
 	)
 	(text "SERVOS"
 		(exclude_from_sim no)
@@ -2490,7 +2452,7 @@
 	)
 	(text "END A: Black "
 		(exclude_from_sim no)
-		(at 149.098 73.66 0)
+		(at 151.13 76.454 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2601,16 +2563,6 @@
 			(type default)
 		)
 		(uuid "02a6c5ea-1f04-4a87-aef1-a71e76f047d6")
-	)
-	(polyline
-		(pts
-			(xy 255.27 17.78) (xy 270.51 17.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17337e71-2556-471e-9b0d-15ce886476ed")
 	)
 	(wire
 		(pts
@@ -3559,30 +3511,6 @@
 			)
 		)
 	)
-	(global_label "PCA_S6"
-		(shape input)
-		(at 219.71 15.24 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "01cd8d61-3649-47c3-8385-97687a94712b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 15.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "PCA_S4"
 		(shape input)
 		(at 31.75 55.88 0)
@@ -3676,54 +3604,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "PCA_S7"
-		(shape input)
-		(at 219.71 40.64 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "255a2884-ac79-4cff-b0f9-cd05c682b421")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "+6V"
-		(shape input)
-		(at 219.71 43.18 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "25c7d22f-ff06-4b74-96f5-bcdb3ca886cd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -3895,30 +3775,6 @@
 			)
 		)
 	)
-	(global_label "+6V"
-		(shape input)
-		(at 219.71 17.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "729bd0d3-75be-4567-8c79-cee882cbf2eb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 17.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "+22.2V"
 		(shape input)
 		(at 162.56 41.91 180)
@@ -4036,30 +3892,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "PCA_S5"
-		(shape input)
-		(at 219.71 29.21 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "9725eebb-20e7-41bd-bc03-a75a6cc76ccc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.7095 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -4252,30 +4084,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "+6V"
-		(shape input)
-		(at 219.71 31.75 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.762 0.762)
-			)
-			(justify right)
-		)
-		(uuid "c5380ff1-ec75-4a3c-8ffa-71ad80b202e4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 215.5964 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -5098,102 +4906,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Motor:Motor_Servo")
-		(at 227.33 31.75 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1cb00ba9-716f-4de3-9161-10dc26f14a5f")
-		(property "Reference" "M14"
-			(at 236.22 30.0468 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Rotation_Servo_2"
-			(at 236.22 32.5868 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 36.576 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 36.576 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0352d57c-4300-4091-bbfe-82771028bc61")
-		)
-		(pin "1"
-			(uuid "b81c71b1-c5c9-4972-b452-d572be12a58b")
-		)
-		(pin "3"
-			(uuid "2aea8a42-9f5b-44c4-a1c5-4d4146a002b6")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 184.15 49.53 0)
 		(unit 1)
@@ -5595,83 +5307,6 @@
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
 					(reference "#PWR092")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 219.71 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "65833d62-a0d7-4063-bcf3-2d5fdfe0f7db")
-		(property "Reference" "#PWR097"
-			(at 219.71 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 216.662 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e634512f-49ce-4811-b696-38b8668ec8aa")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -6209,83 +5844,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 219.71 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "96f6931b-d46f-47f8-8336-fb974b4ef98e")
-		(property "Reference" "#PWR098"
-			(at 219.71 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 216.916 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "41257ac0-3f38-413f-9edc-58b6d88b4d40")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR098")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 46.99 76.2 0)
 		(unit 1)
 		(body_style 1)
@@ -6518,179 +6076,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Motor:Motor_Servo")
-		(at 227.33 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ceaebf06-9bae-4c37-8ec6-8468ea2ed81d")
-		(property "Reference" "M15"
-			(at 236.22 41.4768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Rotation_Servo_4"
-			(at 236.22 44.0168 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 48.006 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 48.006 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "1abd9270-22bd-4fe7-9730-d1fd5007c5a9")
-		)
-		(pin "1"
-			(uuid "0bd132db-a010-44d2-94b3-6116341b7119")
-		)
-		(pin "3"
-			(uuid "d36d3623-acbf-4de6-8928-63fbb6ecd21d")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 219.71 20.32 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d93d4add-b333-4b60-ad93-063dd46af807")
-		(property "Reference" "#PWR096"
-			(at 219.71 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 215.392 20.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 20.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aa637bf3-4a39-40bb-9dc6-a4d39bd1615f")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "#PWR096")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 175.26 87.63 0)
 		(unit 1)
@@ -6781,102 +6166,6 @@
 			(project "BILLEE_Science_Control_Module_V1"
 				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
 					(reference "J20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Motor:Motor_Servo")
-		(at 227.33 17.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f6ec0402-325a-4978-bcec-ec642399976f")
-		(property "Reference" "M13"
-			(at 236.22 16.0768 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Rotation_Servo_3"
-			(at 236.22 18.6168 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 22.606 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 227.33 22.606 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 227.33 17.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Purchase URL" "https://www.hiwonder.com/products/hps-2027?variant=39832021925975&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic"
-			(at 227.33 17.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b441bf62-4a11-4a9b-ac54-e02e697ccf78")
-		)
-		(pin "1"
-			(uuid "6f721ee2-98a7-49d6-9326-c4a8d475e142")
-		)
-		(pin "3"
-			(uuid "67ef6542-b399-48c3-8eed-78944e1bbcad")
-		)
-		(instances
-			(project "BILLEE_Science_Control_Module_V1"
-				(path "/0ccdd54c-cb66-4dbe-ac7e-21982bafb0a6/d9bdcb07-506c-4c87-923e-d52824c363f0"
-					(reference "M13")
 					(unit 1)
 				)
 			)
